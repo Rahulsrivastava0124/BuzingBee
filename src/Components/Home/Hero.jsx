@@ -1,5 +1,5 @@
 import React from "react";
-import { ReactComponent as ArrowReact } from "../../assets/svg/ArrowRight.svg";
+// import { ReactComponent as ArrowReact } from "../../assets/svg/ArrowRight.svg";
 import hero1 from "../../assets/image/hero1.jpg";
 import heroCart from "../../assets/image/cart_bar-hero.png";
 
@@ -20,7 +20,7 @@ export default function Hero() {
           <div className="mt-16 flex items-center ">
             <buttom className="btn btn-neutral text-white rounded-full ps-6">
               {" "}
-              Schedule call <ArrowReact className="size-6 ms-8" />
+              {/* Schedule call <ArrowReact className="size-6 ms-8" /> */}
             </buttom>
             <buttom className="underline font-bold ms-20">
               View Case Study
