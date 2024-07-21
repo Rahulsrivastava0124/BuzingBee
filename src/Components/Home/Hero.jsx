@@ -1,5 +1,5 @@
 import React from "react";
-import { ReactComponent as ArrowReact } from "../../assets/svg/ArrowRight.svg";
+import { ReactComponent as ArrowReact } from "../../assets/svg/arrowRight.svg";
 import hero1 from "../../assets/image/hero1.jpg";
 import heroCart from "../../assets/image/cart_bar-hero.png";
 import CountUp from 'react-countup'
