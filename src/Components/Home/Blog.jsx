@@ -1,5 +1,5 @@
 import React from "react";
-import { ReactComponent as ArrowReact } from "../../assets/svg/arrowRight.svg";
+import { ReactComponent as ArrowReact } from "../../assets/svg/ArrowRight.svg";
 
 export default function Blog() {
   return (
