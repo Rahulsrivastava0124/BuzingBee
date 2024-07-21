@@ -8,6 +8,8 @@ import Blog from './Components/Home/Blog.jsx'
 import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Contact from "./Components/Contact.jsx";
+
 
 function App() {
   useEffect(() => {
@@ -22,6 +24,7 @@ function App() {
       <Testimonial/>
       <FeedBack/>
       <Blog/>
+      <Contact/>
     </div>
   );
 }
