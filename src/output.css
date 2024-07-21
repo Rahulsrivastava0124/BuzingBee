@@ -2748,6 +2748,11 @@ details.collapse summary::-webkit-details-marker {
   border-color: rgb(209 213 219 / var(--tw-border-opacity));
 }
 
+.border-gray-400 {
+  --tw-border-opacity: 1;
+  border-color: rgb(156 163 175 / var(--tw-border-opacity));
+}
+
 .border-opacity-60 {
   --tw-border-opacity: 0.6;
 }
