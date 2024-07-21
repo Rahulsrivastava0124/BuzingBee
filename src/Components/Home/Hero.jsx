@@ -7,10 +7,10 @@ import CountUp from 'react-countup'
 export default function Hero() {
   return (
     <>
-      <div className=" mx-16 my-10 rounded-md flex">
+      <div className=" mx-16 my-10 rounded-md flex" >
         <div className="w-[50%] ">
-          <h1 className="text-7xl font-medium">
-            Stay ahead of the curve with our forword-thinking{" "}
+          <h1 className="text-7xl font-medium " >
+            <span data-aos="fade-up" data-aos-duration="1000">Stay ahead of the </span><span>curve with our</span><span> forword-thinking</span>{" "}
           </h1>
           <h5 className="mt-8 text-lg text-gray-500 pe-32">
             {" "}

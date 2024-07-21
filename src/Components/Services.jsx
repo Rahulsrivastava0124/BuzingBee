@@ -1,5 +1,5 @@
 import React from "react";
-import CountUp from 'react-countup'
+import CountUp from "react-countup";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 // Import Swiper styles
@@ -12,7 +12,7 @@ const Services = () => {
   return (
     <>
       <div className="mx-16 mb-20">
-        <div className="flex mb-10">
+        <div className="flex mb-10" data-aos="zoom-in">
           <div className="w-[2500px] me-10">
             <h1 className="text-5xl font-semibold">
               Provide the best service with out of the box ideas
@@ -33,13 +33,14 @@ const Services = () => {
           <div className={"w-[35%] h-[350px] rounded-3xl bg-black p-10"}>
             <div className="">
               <h1 className="text-8xl font-bold text-left text-white">
-               <CountUp end={109} duration={5} /> <span className={"text-green-500"}>+</span>
+                <CountUp end={109} duration={5} />{" "}
+                <span className={"text-green-500"}>+</span>
               </h1>
             </div>
             <h1 className={"text-2xl text-gray-400 font-semibold mt-3"}>
               Project finish with superbly{" "}
             </h1>
-            <div className={"flex mt-20 align-center"}>
+            <div className={"flex mt-20 align-center items-center"}>
               <div className="avatar ring-warning ring-offset-base-50 rounded-full ring ring-offset-0 ">
                 <div className="w-16 rounded-full">
                   <img
@@ -79,11 +80,7 @@ const Services = () => {
               </div>
             </div>
           </div>
-          <div
-            className={
-              "w-[60%]  h-[350px] rounded-3xl bg-gray-50 "
-            }
-          >
+          <div className={"w-[60%]  h-[350px] rounded-3xl bg-gray-50 "}>
             <Swiper
               spaceBetween={30}
               centeredSlides={true}
