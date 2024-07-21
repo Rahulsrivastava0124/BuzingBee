@@ -11,7 +11,7 @@ function Navbar() {
               {/* <!-- Mobile menu button--> */}
               <button
                 type="button"
-                class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-700 hover:text-black focus:outline-none 
+                class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-700 hover:text-black focus:outline-none
                 focus:ring-2 focus:ring-inset focus:ring-white"
                 aria-controls="mobile-menu"
                 aria-expanded="false"
@@ -98,7 +98,7 @@ function Navbar() {
               </div>
             </div>
             <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-              <button className="btn btn-outline btn-neutral rounded-full me-5 px-16">
+              <button className="btn btn-outline btn-neutral rounded-full me-5 px-10">
                 Get Started
               </button>
               <button
