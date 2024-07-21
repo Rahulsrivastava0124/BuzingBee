@@ -2,6 +2,7 @@ import React from "react";
 import { ReactComponent as ArrowReact } from "../../assets/svg/ArrowRight.svg";
 import hero1 from "../../assets/image/hero1.jpg";
 import heroCart from "../../assets/image/cart_bar-hero.png";
+import CountUp from 'react-countup'
 
 export default function Hero() {
   return (
@@ -58,7 +59,7 @@ export default function Hero() {
             </div>
             <div className=" bg-gray-50 rounded-xl w-[43%] h-[250px] p-5">
               <div className="">
-                <h1 className="text-8xl font-bold text-center ">250+</h1>
+                <h1 className="text-8xl font-bold text-center "><CountUp end={230} duration={2.75}/>+</h1>
               </div>
               <div className="m-auto">
                 <h1 className="ms-2 text-lg mt-2">

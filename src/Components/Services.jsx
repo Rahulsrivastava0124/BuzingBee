@@ -1,4 +1,5 @@
 import React from "react";
+import CountUp from 'react-countup'
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
 // Import Swiper styles
@@ -32,7 +33,7 @@ const Services = () => {
           <div className={"w-[35%] h-[350px] rounded-3xl bg-black p-10"}>
             <div className="">
               <h1 className="text-8xl font-bold text-left text-white">
-                190 <span className={"text-green-500"}>+</span>
+               <CountUp end={109} duration={5} /> <span className={"text-green-500"}>+</span>
               </h1>
             </div>
             <h1 className={"text-2xl text-gray-400 font-semibold mt-3"}>
