@@ -9,6 +9,7 @@ import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Contact from "./Components/Contact.jsx";
+import Objective from "./Components/Objective.jsx";
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
       <Navbar />
       <Hero />
       <Services />
+      <Objective/>
       <Testimonial/>
       <FeedBack/>
       <Blog/>
