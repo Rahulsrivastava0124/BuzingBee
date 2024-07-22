@@ -3,7 +3,7 @@ import { ReactComponent as ArrowReact } from "../../assets/svg/ArrowRight.svg";
 
 export default function Blog() {
   return (
-    <div className="mx-20 my-16 ">
+    <div className="mx-20 my-16 " data-aos="zoom-out-up">
       <div className="flex">
         <div className="w-[50%]">
           <h1 className="text-5xl font-semibold leading-[1.2]">

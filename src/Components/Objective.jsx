@@ -6,8 +6,8 @@ import img3 from "../assets/image/objective_pic_3.png";
 function Objective() {
     return (
         <>
-            <div className='flex justify-center mx-8'>
-                <div className='w-[100vw] min-h-[100vh] mx-auto pt-16 bg-black text-white rounded-md'>
+            <div className='flex justify-center mx-8 my-4' >
+                <div className='w-[100vw] min-h-[100vh] mx-auto pt-16 bg-black text-white rounded-xl' data-aos="fade-up" data-aos-duration="4000">
 
                     <div className='text-5xl mx-16 block text-center mt-2'>Real-World examples of how we have helped companies achieve their marketing objectives.</div>
                   

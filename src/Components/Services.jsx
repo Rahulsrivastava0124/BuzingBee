@@ -1,4 +1,4 @@
-import React from "react";
+import React , {useEffect} from "react";
 import CountUp from "react-countup";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper/modules";
@@ -9,6 +9,7 @@ import service1 from "../assets/image/services1.jpg";
 // import required modules
 
 const Services = () => {
+ 
   return (
     <>
       <div className="mx-16 mb-20">

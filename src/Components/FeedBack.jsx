@@ -2,7 +2,7 @@ import React from "react";
 
 export default function FeedBack() {
   return (
-    <div className="mx-16 my-10 bg-slate-50 rounded-2xl flex px-14 py-10 justify-between">
+    <div className="mx-16 my-10 bg-slate-50 rounded-2xl flex px-14 py-10 justify-between" data-aos="zoom-in-left">
       <div className=" w-[45%]">
         <h1 className="text-5xl font-semibold">Digital Marketing FAQs</h1>
 
