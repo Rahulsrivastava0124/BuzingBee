@@ -23,7 +23,7 @@ export default function FeedBack() {
         </div>
       </div>
       <div className="w-[50%]">
-        <div className="collapse collapse-plus border-b-2 border-black rounded-none">
+        <div className="collapse collapse-plus border-b-2 border-gray-400  rounded-none">
           <input
             type="radio"
             name="my-accordion-3"
@@ -43,7 +43,7 @@ export default function FeedBack() {
             </p>
           </div>
         </div>
-        <div className="collapse collapse-plus border-b-2 border-black rounded-none">
+        <div className="collapse collapse-plus border-b-2 border-gray-400  rounded-none">
           <input type="radio" name="my-accordion-3" />
           <div className="collapse-title text-2xl font-bold">
             How can Digital marketing help to improve my website visibility?
@@ -52,7 +52,7 @@ export default function FeedBack() {
             <p className="text-gray-600 font-semibold">hello</p>
           </div>
         </div>
-        <div className="collapse collapse-plus border-b-2 border-black rounded-none">
+        <div className="collapse collapse-plus border-b-2 border-gray-400 rounded-none">
           <input type="radio" name="my-accordion-3" />
           <div className="collapse-title text-2xl font-bold">
             How long does it take to see result from digital marketing efforts?
@@ -61,7 +61,7 @@ export default function FeedBack() {
             <p className="text-gray-600 font-semibold">hello</p>
           </div>
         </div>
-        <div className="collapse collapse-plus border-b-2 border-black rounded-none">
+        <div className="collapse collapse-plus border-b-2 border-gray-400 rounded-none">
           <input type="radio" name="my-accordion-3" />
           <div className="collapse-title text-2xl font-bold">
             How do you measure the success of digital marketing campaigns?
