@@ -19,7 +19,7 @@ export default function Hero() {
           </h5>
 
           <div className="mt-16 flex items-center ">
-            <buttom className="btn btn-neutral text-white rounded-full ps-6">
+            <buttom className="btn btn-warning text-white rounded-full ps-6">
               {" "}
               Schedule call <ArrowReact className="size-6 ms-8" />
             </buttom>
@@ -57,7 +57,7 @@ export default function Hero() {
                 <img src={hero1} alt="hero1" className="max-w-[135%]" />
               </div>
             </div>
-            <div className=" bg-gray-50 rounded-xl w-[43%] h-[250px] p-5">
+            <div className=" bg-yellow-100 rounded-xl w-[43%] h-[250px] p-5">
               <div className="">
                 <h1 className="text-8xl font-bold text-center "><CountUp end={230} duration={2.75}/>+</h1>
               </div>
@@ -65,7 +65,7 @@ export default function Hero() {
                 <h1 className="ms-2 text-lg mt-2">
                   Some big Companies that we work with,and trust us very much{" "}
                   <progress
-                    className="progress  progress-primary w-56 "
+                    className="progress  progress-warning w-56 "
                     value="70"
                     max="100"
                   ></progress>

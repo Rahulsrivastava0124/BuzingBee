@@ -18,7 +18,8 @@ const Portfolio = () => {
                   Our Portfolio
                 </span> */}
                 <h2 className="text-dark mb-3 mt-5 text-2xl leading-[1.8] sm:text-4xl md:text-5xl">
-                  Real world examples of how we have helped Companies achieve their marketing objectives.
+                  Real world examples of how we have helped Companies achieve
+                  their marketing objectives.
                 </h2>
                 {/* <p className="text-body-color text-base dark:text-dark-6">
                   There are many variations of passages of Lorem Ipsum available
@@ -168,6 +169,8 @@ const PortfolioCard = ({
             ? "block"
             : "hidden"
         }`}
+        data-aos="fade-right"
+        data-aos-duration="2000"
       >
         <div className="relative mb-12">
           {/* <div className="overflow-hidden rounded-[10px]">

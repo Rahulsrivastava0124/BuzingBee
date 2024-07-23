@@ -5,12 +5,14 @@ export default function Blog() {
   return (
     <div className="mx-20 my-16 " data-aos="zoom-out-up">
       <div className="flex">
-        <div className="w-[50%]">
+        <div className="w-[50%]" data-aos="fade-in"
+              data-aos-duration="1000">
           <h1 className="text-5xl font-semibold leading-[1.2]">
             Digital Marketing & SEO ServicesThat Grow Traffic & increase Revenue
           </h1>
         </div>
-        <div className="w-[50%]">
+        <div className="w-[50%]" data-aos="fade-in"
+              data-aos-duration="1000">
           <p className="text-xl leading-[1.5] font-semibold text-gray-500">
             we are the top digital ,arketing agency for branding corp . We offer
             a full range of services to help clients improve their search engine
@@ -25,7 +27,8 @@ export default function Blog() {
         <section class="text-gray-500 body-font">
           <div class="container px-5 py-16 mx-auto">
             <div class="flex flex-wrap -m-4">
-              <div class="p-4 lg:w-1/3">
+              <div class="p-4 lg:w-1/3" data-aos="fade-up"
+              data-aos-duration="1000">
                 <div class="h-full bg-gray-100 bg-opacity-75 px-10 py-10 rounded-3xl overflow-hidden text-center relative">
                   <h2 className="flex justify-between">
                     <span className="indicator-item indicator-middle indicator-start badge badge-sm  badge-secondary"></span>
@@ -45,7 +48,8 @@ export default function Blog() {
                   </div>
                 </div>
               </div>
-              <div class="p-4 lg:w-1/3">
+              <div class="p-4 lg:w-1/3" data-aos="fade-up"
+              data-aos-duration="2000">
                 <div class="h-full bg-gray-100 bg-opacity-75 px-10 py-10 rounded-3xl overflow-hidden text-center relative">
                   <h2 className="flex justify-between">
                     <span className="indicator-item indicator-middle indicator-start badge badge-sm  badge-warning"></span>
@@ -65,7 +69,8 @@ export default function Blog() {
                   </div>
                 </div>
               </div>
-              <div class="p-4 lg:w-1/3">
+              <div class="p-4 lg:w-1/3" data-aos="fade-up"
+              data-aos-duration="3000">
                 <div class="h-full bg-gray-100 bg-opacity-75 px-10 py-10 rounded-3xl overflow-hidden text-center relative">
                   <h2 className="flex justify-between">
                     <span className="indicator-item indicator-middle indicator-start badge badge-sm  badge-info"></span>

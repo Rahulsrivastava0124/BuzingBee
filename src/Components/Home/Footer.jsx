@@ -33,10 +33,10 @@ export default function Footer() {
               and many more. .
             </p>
             <div className="mt-10">
-            <i class="bi bi-instagram ms-3 p-4 bg-gray-50 text-xl btn btn-circle hover:bg-warning"></i>
-            <i class="bi bi-facebook ms-3 p-4 bg-gray-50 text-xl btn btn-circle hover:bg-warning"></i>
-            <i class="bi bi-twitter ms-3 p-4 bg-gray-50 text-xl btn btn-circle hover:bg-warning"></i>
-            <i class="bi bi-linkedin ms-3 p-4 bg-gray-50 text-xl btn btn-circle hover:bg-warning"></i>
+            <i class="bi bi-instagram ms-3 p-4  text-xl btn btn-circle hover:bg-gray-200 bg-warning"></i>
+            <i class="bi bi-facebook ms-3 p-4  text-xl btn btn-circle hover:bg-gray-200 bg-warning"></i>
+            <i class="bi bi-twitter ms-3 p-4  text-xl btn btn-circle hover:bg-gray-200 bg-warning"></i>
+            <i class="bi bi-linkedin ms-3 p-4  text-xl btn btn-circle hover:bg-gray-200 bg-warning"></i>
             </div>
           </div>
           <div class="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center justify-end">
