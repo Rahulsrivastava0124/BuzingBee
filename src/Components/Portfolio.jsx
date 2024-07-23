@@ -170,10 +170,10 @@ const PortfolioCard = ({
         }`}
       >
         <div className="relative mb-12">
-          <div className="overflow-hidden rounded-[10px]">
-            <img src={ImageHref} alt="portfolio" className="w-full" />
-          </div>
-          <div className="relative z-10 mx-7 -mt-20 rounded-lg bg-white dark:bg-dark-2 py-[34px] px-3 text-center shadow-portfolio dark:shadow-box-dark">
+          {/* <div className="overflow-hidden rounded-[10px]">
+            <img src={ImageHref} alt="portfolio" className="w-full h-[100px]" />
+          </div> */}
+          <div className="relative z-10 mx-7  rounded-2xl bg-white dark:bg-dark-2 py-[34px] px-3 text-center shadow-portfolio dark:shadow-box-dark">
             <span className="text-primary mb-2 block text-sm font-medium">
               {category}
             </span>

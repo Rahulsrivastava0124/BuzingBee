@@ -7,23 +7,23 @@ import CountUp from 'react-countup'
 export default function Hero() {
   return (
     <>
-      <div className=" mx-16 my-10 rounded-md flex" data-aos="fade-up" data-aos-anchor-placement="center-bottom" data-aos-duration="2000" >
+      <div className=" mx-16 my-10 rounded-md flex"  >
         <div className="w-[50%] ">
           <h1 className="text-7xl font-medium " >
-            <span data-aos="fade-up" data-aos-duration="1000">Stay ahead of the </span><span>curve with our</span><span> forword-thinking</span>{" "}
+            <div data-aos="fade-up" data-aos-duration="300">Stay ahead of the </div><div data-aos="fade-up"  data-aos-duration="600">curve with our</div><div data-aos="fade-up"  data-aos-duration="900"> forword-thinking</div>{" "}
           </h1>
-          <h5 className="mt-8 text-lg text-gray-500 pe-32">
+          <div data-oas="fade-in" data-aos-duration="1000" className="mt-8 text-lg text-gray-500 pe-32" >
             {" "}
             An award winning SEO agency with discplines in digital marketing,
             desing, and website development , focused on understanding you .
-          </h5>
+          </div>
 
           <div className="mt-16 flex items-center ">
-            <buttom className="btn btn-neutral text-white rounded-full ps-6">
+            <buttom className="btn btn-neutral text-white rounded-full ps-6" data-aos="fade-up" data-aos-duration="1500">
               {" "}
               Schedule call <ArrowReact className="size-6 ms-8" />
             </buttom>
-            <buttom className="underline font-bold ms-20">
+            <buttom className="underline font-bold ms-20" data-aos="fade-up" data-aos-duration="1500">
               View Case Study
             </buttom>
           </div>
