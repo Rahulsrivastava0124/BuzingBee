@@ -95,7 +95,8 @@ const Portfolio = () => {
               </ul>
             </div>
           </div>
-          <div className="flex flex-wrap -mx-4">
+          <div className="flex flex-wrap -mx-4" data-aos="fade-right"
+        data-aos-duration="2000">
             <PortfolioCard
               ImageHref="https://i.ibb.co/64WfFPt/image-01.jpg"
               category="Branding"
@@ -103,6 +104,7 @@ const Portfolio = () => {
               button="View Details"
               buttonHref="#"
               showCard={showCard}
+              
             />
             <PortfolioCard
               ImageHref="https://i.ibb.co/PT7ghRs/image-06.jpg"
@@ -169,8 +171,7 @@ const PortfolioCard = ({
             ? "block"
             : "hidden"
         }`}
-        data-aos="fade-right"
-        data-aos-duration="2000"
+        
       >
         <div className="relative mb-12">
           {/* <div className="overflow-hidden rounded-[10px]">

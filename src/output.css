@@ -1884,12 +1884,6 @@ details.collapse summary::-webkit-details-marker {
   background-color: var(--fallback-bc,oklch(var(--bc)/var(--tw-bg-opacity)));
 }
 
-.progress-primary::-moz-progress-bar {
-  border-radius: var(--rounded-box, 1rem);
-  --tw-bg-opacity: 1;
-  background-color: var(--fallback-p,oklch(var(--p)/var(--tw-bg-opacity)));
-}
-
 .progress-warning::-moz-progress-bar {
   border-radius: var(--rounded-box, 1rem);
   --tw-bg-opacity: 1;
@@ -1910,10 +1904,6 @@ details.collapse summary::-webkit-details-marker {
   animation: progress-loading 5s ease-in-out infinite;
 }
 
-.progress-primary:indeterminate {
-  --progress-color: var(--fallback-p,oklch(var(--p)/1));
-}
-
 .progress-warning:indeterminate {
   --progress-color: var(--fallback-wa,oklch(var(--wa)/1));
 }
@@ -1927,11 +1917,6 @@ details.collapse summary::-webkit-details-marker {
   border-radius: var(--rounded-box, 1rem);
   --tw-bg-opacity: 1;
   background-color: var(--fallback-bc,oklch(var(--bc)/var(--tw-bg-opacity)));
-}
-
-.progress-primary::-webkit-progress-value {
-  --tw-bg-opacity: 1;
-  background-color: var(--fallback-p,oklch(var(--p)/var(--tw-bg-opacity)));
 }
 
 .progress-warning::-webkit-progress-value {
@@ -2148,6 +2133,20 @@ details.collapse summary::-webkit-details-marker {
   padding-right: 0.438rem;
 }
 
+.btn-sm {
+  height: 2rem;
+  min-height: 2rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  font-size: 0.875rem;
+}
+
+.btn-square:where(.btn-sm) {
+  height: 2rem;
+  width: 2rem;
+  padding: 0px;
+}
+
 .btn-circle:where(.btn-xs) {
   height: 1.5rem;
   width: 1.5rem;
@@ -2302,6 +2301,10 @@ details.collapse summary::-webkit-details-marker {
   border-width: 0;
 }
 
+.visible {
+  visibility: visible;
+}
+
 .collapse {
   visibility: collapse;
 }
@@ -2371,6 +2374,10 @@ details.collapse summary::-webkit-details-marker {
   z-index: 10;
 }
 
+.z-20 {
+  z-index: 20;
+}
+
 .-m-4 {
   margin: -1rem;
 }
@@ -2392,6 +2399,11 @@ details.collapse summary::-webkit-details-marker {
 .mx-20 {
   margin-left: 5rem;
   margin-right: 5rem;
+}
+
+.mx-6 {
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
 }
 
 .mx-7 {
@@ -2492,6 +2504,10 @@ details.collapse summary::-webkit-details-marker {
   margin-left: 0.75rem;
 }
 
+.ms-10 {
+  margin-inline-start: 2.5rem;
+}
+
 .ms-16 {
   margin-inline-start: 4rem;
 }
@@ -2586,10 +2602,6 @@ details.collapse summary::-webkit-details-marker {
   height: 3rem;
 }
 
-.h-16 {
-  height: 4rem;
-}
-
 .h-5 {
   height: 1.25rem;
 }
@@ -2608,14 +2620,6 @@ details.collapse summary::-webkit-details-marker {
 
 .h-\[100px\] {
   height: 100px;
-}
-
-.h-\[200px\] {
-  height: 200px;
-}
-
-.h-\[250px\] {
-  height: 250px;
 }
 
 .h-\[350px\] {
@@ -2638,10 +2642,6 @@ details.collapse summary::-webkit-details-marker {
   width: 4rem;
 }
 
-.w-44 {
-  width: 11rem;
-}
-
 .w-5 {
   width: 1.25rem;
 }
@@ -2652,6 +2652,10 @@ details.collapse summary::-webkit-details-marker {
 
 .w-6 {
   width: 1.5rem;
+}
+
+.w-8 {
+  width: 2rem;
 }
 
 .w-9 {
@@ -2670,10 +2674,6 @@ details.collapse summary::-webkit-details-marker {
   width: 35%;
 }
 
-.w-\[43\%\] {
-  width: 43%;
-}
-
 .w-\[45\%\] {
   width: 45%;
 }
@@ -2684,10 +2684,6 @@ details.collapse summary::-webkit-details-marker {
 
 .w-\[60\%\] {
   width: 60%;
-}
-
-.w-\[86\%\] {
-  width: 86%;
 }
 
 .w-auto {
@@ -2702,20 +2698,12 @@ details.collapse summary::-webkit-details-marker {
   max-width: 135%;
 }
 
-.flex-1 {
-  flex: 1 1 0%;
-}
-
 .flex-shrink-0 {
   flex-shrink: 0;
 }
 
 .flex-grow {
   flex-grow: 1;
-}
-
-.cursor-\[url\(\.\/assets\/image\/bee1\.png\)\2c _auto\] {
-  cursor: url(./assets/image/bee1.png), auto;
 }
 
 .list-none {
@@ -2902,6 +2890,18 @@ details.collapse summary::-webkit-details-marker {
   --tw-bg-opacity: 0.75;
 }
 
+.bg-\[url\(\.\/assets\/image\/cart_bar-hero\.png\)\] {
+  background-image: url(./assets/image/cart_bar-hero.png);
+}
+
+.bg-right-bottom {
+  background-position: right bottom;
+}
+
+.bg-no-repeat {
+  background-repeat: no-repeat;
+}
+
 .object-cover {
   object-fit: cover;
 }
@@ -3021,10 +3021,6 @@ details.collapse summary::-webkit-details-marker {
   padding-bottom: 0.75rem;
 }
 
-.pe-32 {
-  padding-inline-end: 8rem;
-}
-
 .pl-4 {
   padding-left: 1rem;
 }
@@ -3043,6 +3039,14 @@ details.collapse summary::-webkit-details-marker {
 
 .pt-20 {
   padding-top: 5rem;
+}
+
+.pb-8 {
+  padding-bottom: 2rem;
+}
+
+.pb-12 {
+  padding-bottom: 3rem;
 }
 
 .text-left {
@@ -3070,6 +3074,11 @@ details.collapse summary::-webkit-details-marker {
 
 .text-5xl {
   font-size: 3rem;
+  line-height: 1;
+}
+
+.text-6xl {
+  font-size: 3.75rem;
   line-height: 1;
 }
 
@@ -3243,6 +3252,29 @@ details.collapse summary::-webkit-details-marker {
   transition-duration: 150ms;
 }
 
+@media (min-width: 640px) {
+  .sm\:btn-lg {
+    height: 4rem;
+    min-height: 4rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    font-size: 1.125rem;
+  }
+
+  .btn-square:where(.sm\:btn-lg) {
+    height: 4rem;
+    width: 4rem;
+    padding: 0px;
+  }
+
+  .btn-circle:where(.sm\:btn-lg) {
+    height: 4rem;
+    width: 4rem;
+    border-radius: 9999px;
+    padding: 0px;
+  }
+}
+
 .hover\:bg-gray-200:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(229 231 235 / var(--tw-bg-opacity));
@@ -3263,14 +3295,14 @@ details.collapse summary::-webkit-details-marker {
   color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 
-.hover\:text-gray-500:hover {
-  --tw-text-opacity: 1;
-  color: rgb(107 114 128 / var(--tw-text-opacity));
-}
-
 .hover\:text-gray-800:hover {
   --tw-text-opacity: 1;
   color: rgb(31 41 55 / var(--tw-text-opacity));
+}
+
+.hover\:text-warning:hover {
+  --tw-text-opacity: 1;
+  color: var(--fallback-wa,oklch(var(--wa)/var(--tw-text-opacity)));
 }
 
 .hover\:text-white:hover {
@@ -3299,6 +3331,10 @@ details.collapse summary::-webkit-details-marker {
 }
 
 @media (min-width: 640px) {
+  .sm\:visible {
+    visibility: visible;
+  }
+
   .sm\:static {
     position: static;
   }
@@ -3307,20 +3343,93 @@ details.collapse summary::-webkit-details-marker {
     inset: auto;
   }
 
+  .sm\:mx-16 {
+    margin-left: 4rem;
+    margin-right: 4rem;
+  }
+
+  .sm\:me-5 {
+    margin-inline-end: 1.25rem;
+  }
+
   .sm\:ml-6 {
     margin-left: 1.5rem;
+  }
+
+  .sm\:ms-20 {
+    margin-inline-start: 5rem;
+  }
+
+  .sm\:mt-0 {
+    margin-top: 0px;
+  }
+
+  .sm\:mt-16 {
+    margin-top: 4rem;
   }
 
   .sm\:block {
     display: block;
   }
 
+  .sm\:flex {
+    display: flex;
+  }
+
   .sm\:hidden {
     display: none;
   }
 
+  .sm\:h-16 {
+    height: 4rem;
+  }
+
+  .sm\:h-\[200px\] {
+    height: 200px;
+  }
+
+  .sm\:h-\[250px\] {
+    height: 250px;
+  }
+
   .sm\:w-1\/2 {
     width: 50%;
+  }
+
+  .sm\:w-16 {
+    width: 4rem;
+  }
+
+  .sm\:w-44 {
+    width: 11rem;
+  }
+
+  .sm\:w-\[250px\] {
+    width: 250px;
+  }
+
+  .sm\:w-\[43\%\] {
+    width: 43%;
+  }
+
+  .sm\:w-\[50\%\] {
+    width: 50%;
+  }
+
+  .sm\:w-\[60\%\] {
+    width: 60%;
+  }
+
+  .sm\:w-\[86\%\] {
+    width: 86%;
+  }
+
+  .sm\:flex-1 {
+    flex: 1 1 0%;
+  }
+
+  .sm\:cursor-\[url\(\.\/assets\/image\/bee1\.png\)\2c _auto\] {
+    cursor: url(./assets/image/bee1.png), auto;
   }
 
   .sm\:items-stretch {
@@ -3331,13 +3440,34 @@ details.collapse summary::-webkit-details-marker {
     justify-content: flex-start;
   }
 
+  .sm\:bg-\[url\(\.\/assets\/image\/cart_bar-hero\.png\)\] {
+    background-image: url(./assets/image/cart_bar-hero.png);
+  }
+
+  .sm\:p-5 {
+    padding: 1.25rem;
+  }
+
+  .sm\:px-10 {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+
   .sm\:px-6 {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
   }
 
+  .sm\:pe-32 {
+    padding-inline-end: 8rem;
+  }
+
   .sm\:pr-0 {
     padding-right: 0px;
+  }
+
+  .sm\:text-center {
+    text-align: center;
   }
 
   .sm\:text-2xl {
@@ -3345,9 +3475,24 @@ details.collapse summary::-webkit-details-marker {
     line-height: 2rem;
   }
 
+  .sm\:text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+
   .sm\:text-4xl {
     font-size: 2.25rem;
     line-height: 2.5rem;
+  }
+
+  .sm\:text-7xl {
+    font-size: 4.5rem;
+    line-height: 1;
+  }
+
+  .sm\:text-8xl {
+    font-size: 6rem;
+    line-height: 1;
   }
 }
 
