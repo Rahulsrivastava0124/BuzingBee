@@ -16,7 +16,7 @@ export default function Hero() {
             {" "}
             An award winning SEO agency with discplines in digital marketing,
             desing, and website development , focused on understanding you .
-          </div>
+          </h5>
 
           <div className="mt-16 flex items-center ">
             <buttom className="btn btn-neutral text-white rounded-full ps-6">
