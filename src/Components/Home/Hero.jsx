@@ -20,19 +20,19 @@ export default function Hero() {
             <span>curve with our</span>
             <span> forword-thinking</span>{" "}
           </h1>
-          <h5 className="mt-8 text-lg text-gray-500 sm:pe-32">
+          <h5 className="sm:mt-8 mt-4 md:text-lg text-sm text-gray-500 sm:pe-32">
             {" "}
             An award winning SEO agency with discplines in digital marketing,
             desing, and website development , focused on understanding you .
           </h5>
 
           <div className="sm:mt-16 mt-8 flex items-center ">
-            <buttom className="btn btn-warning text-white rounded-full ps-6">
+            <buttom className="btn btn-warning btn-sm sm:btn-md  text-white rounded-full ps-6">
               {" "}
-              Schedule call <ArrowReact className="size-6 ms-8" />
+              Schedule <ArrowReact className="sm:size-6 size-5 sm:ms-8" />
             </buttom>
             <buttom
-              className="hidden sm:visible  underline font-bold ms-20"
+              className="hidden sm:block  underline font-bold ms-20"
               data-aos="fade-up"
               data-aos-duration="1500"
             >
@@ -40,7 +40,7 @@ export default function Hero() {
             </buttom>
           </div>
           <div
-            className="sm:mt-16 mt-5 flex flex-wrap hidden show:visible "
+            className="sm:mt-16 mt-3 flex flex-wrap show:block "
             data-aos="fade-up"
             data-aos-anchor-placement="center-bottom"
             data-aos-duration="1300"
@@ -49,15 +49,15 @@ export default function Hero() {
               {" "}
               Trusted by the World's biggest brands
             </h1>
-            <div className="flex sm:ms-20">
-              <span className="me-3 text-lg font-bold text-gray-400">
+            <div className="flex sm:ms-20 mt-1 sm:mt-0">
+              <span className="me-3 sm:text-lg text-md sm:font-bold font-semibold text-gray-400 bg-gray-200 p-2 rounded-md">
                 Triconnix
               </span>
-              <span className="me-3 text-lg font-bold text-gray-400">
+              <span className="me-3 sm:text-lg text-md sm:font-bold font-semibold text-gray-400  bg-gray-200 p-2 rounded-md">
                 Leadorise
               </span>
-              <span className="me-3 text-lg font-bold text-gray-400">
-                Prakriti
+              <span className="me-3 sm:text-lg  text-md sm:font-bold font-semibold text-gray-400  bg-gray-200 p-2 rounded-md">
+                AstroPoints
               </span>
             </div>
           </div>
@@ -69,7 +69,7 @@ export default function Hero() {
             data-aos-anchor-placement="center-bottom"
             data-aos-duration="1000"
           >
-            <div className=" bg-gray-50 rounded-tl-[100%] rounded-lg  sm:w-[43%] hidden sm:visible sm:h-[250px]  relative">
+            <div className=" bg-gray-50 rounded-tl-[100%] rounded-lg  sm:w-[43%] hidden sm:block sm:h-[250px]  relative">
               {" "}
               <button className="btn btn-circle bg-black  p-10 w-10 h-10 absolute bottom-52 right-10 text-center">
                 {" "}
@@ -98,7 +98,7 @@ export default function Hero() {
             </div>
           </div>
           <div
-            className="pb-12 bg-black sm:w-[86%] bg-[url(./assets/image/cart_bar-hero.png)] bg-right-bottom bg-no-repeat m-auto rounded-xl sm:h-[200px] p-5 flex relative "
+            className="pb-12 bg-black sm:w-[86%] bg-[url(./assets/image/cart_bar-hero.png)] bg-right-bottom bg-no-repeat m-auto rounded-xl sm:h-[200px] p-5 flex relative sm:bg-contain"
             data-aos="fade-up"
             data-aos-anchor-placement="center-bottom"
             data-aos-duration="1200"
@@ -129,7 +129,7 @@ export default function Hero() {
               </div>
             </div>
             {/* <div
-              className="absolute bottom-0 right-5 sm:visible hidden"
+              className="absolute bottom-0 right-5 sm:block hidden"
               data-aos="fade-up"
               data-aos-anchor-placement="center-bottom"
               data-aos-duration="1400"

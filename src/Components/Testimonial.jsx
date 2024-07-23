@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Testimonial() {
   return (
-    <div className="my-0 mx-16">
+    <div className="my-0 sm:mx-16">
       <section class="text-gray-600 body-font" data-aos="fade-right" data-aos-offset="300"
      data-aos-easing="ease-in-sine">
         <div class="container px-5  mx-auto">

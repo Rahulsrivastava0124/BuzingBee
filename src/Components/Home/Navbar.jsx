@@ -5,7 +5,7 @@ function Navbar() {
   return (
     <>
       <nav class="bg-white mt-5">
-        <div class="mx-auto max-w-8xl sm:px-6 lg:px-14">
+        <div class="mx-auto max-w-8xl sm:px-6 lg:px-8">
           <div class="relative flex  sm:h-16 items-center justify-between">
             <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
               {/* <!-- Mobile menu button--> */}
@@ -99,7 +99,7 @@ function Navbar() {
               </div>
             </div>
             <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0 ">
-              <button className="btn btn-outline btn-sm sm:btn-lg px-4 btn-warning rounded-full me-5 sm:px-10 ">
+              <button className="btn btn-outline btn-sm sm:btn-md px-4 btn-warning rounded-full me-5  ">
                 Get Started
               </button>
               <button
