@@ -5,8 +5,8 @@ function Navbar() {
   return (
     <>
       <nav class="bg-white mt-5">
-        <div class="mx-auto max-w-8xl sm:px-6 lg:px-14">
-          <div class="relative flex h-16 items-center justify-between">
+        <div class="mx-auto max-w-8xl sm:px-6 lg:px-8">
+          <div class="relative flex  sm:h-16 items-center justify-between">
             <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
               {/* <!-- Mobile menu button--> */}
               <button
@@ -58,53 +58,53 @@ function Navbar() {
                 </svg>
               </button>
             </div>
-            <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
-              <div class="flex flex-shrink-0 items-center">
+            <div class="flex sm:flex-1 ms-10 items-center justify-center sm:items-stretch sm:justify-start">
+              <div class="flex flex-shrink-0 items-center ">
                 {/* <img
                   class="h-8 w-auto"
                   src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
                   alt="Your Company"
                 /> */}
-                <h1 className="text-warning text-3xl font-bold">BuzingBee</h1>
+                <h1 className="text-warning sm:text-3xl text-xl  font-bold">BuzingBee</h1>
               </div>
               <div class="hidden sm:ml-6 sm:block">
                 <div class="flex space-x-4">
                   {/* <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" --> */}
                   <a
                     href="/"
-                    class="rounded-md  px-3 py-2 text-sm font-medium text-gray-700 hover:text-gray-500"
+                    class="rounded-md  px-3 py-2 text-sm font-medium text-gray-700 hover:text-warning"
                     aria-current="page"
                   >
                     Dashboard
                   </a>
                   <a
                     href="/"
-                    class="rounded-md px-3 py-2 text-sm font-medium text-gray-700 hover:text-gray-500"
+                    class="rounded-md px-3 py-2 text-sm font-medium text-gray-700 hover:text-warning"
                   >
                     Team
                   </a>
                   <a
                     href="/"
-                    class="rounded-md px-3 py-2 text-sm font-medium text-gray-700 hover:text-gray-500"
+                    class="rounded-md px-3 py-2 text-sm font-medium text-gray-700 hover:text-warning"
                   >
                     Projects
                   </a>
                   <a
                     href="/"
-                    class="rounded-md px-3 py-2 text-sm font-medium  text-gray-700 hover:text-gray-500"
+                    class="rounded-md px-3 py-2 text-sm font-medium  text-gray-700 hover:text-warning"
                   >
                     Calendar
                   </a>
                 </div>
               </div>
             </div>
-            <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
-              <button className="btn btn-outline btn-neutral rounded-full me-5 px-10">
+            <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0 ">
+              <button className="btn btn-outline btn-sm sm:btn-md px-4 btn-warning rounded-full me-5  ">
                 Get Started
               </button>
               <button
                 type="button"
-                class="relative rounded-full bg-gray-800 p-3 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+                class="relative rounded-full bg-yellow-500 p-3 text-black hover:text-white focus:outline-none hidden sm:visible"
               >
                 <span class="absolute -inset-1.5"></span>
                 <span class="sr-only">View notifications</span>
@@ -128,7 +128,7 @@ function Navbar() {
         </div>
 
         {/* <!-- Mobile menu, show/hide based on menu state. --> */}
-        <div class="sm:hidden" id="mobile-menu">
+        <div class="sm:hidden hidden" id="mobile-menu">
           <div class="space-y-1 px-2 pb-3 pt-2">
             {/* <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" --> */}
             <a

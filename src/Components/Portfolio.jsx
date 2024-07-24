@@ -18,7 +18,8 @@ const Portfolio = () => {
                   Our Portfolio
                 </span> */}
                 <h2 className="text-dark mb-3 mt-5 text-2xl leading-[1.8] sm:text-4xl md:text-5xl">
-                  Real world examples of how we have helped Companies achieve their marketing objectives.
+                  Real world examples of how we have helped Companies achieve
+                  their marketing objectives.
                 </h2>
                 {/* <p className="text-body-color text-base dark:text-dark-6">
                   There are many variations of passages of Lorem Ipsum available
@@ -94,7 +95,8 @@ const Portfolio = () => {
               </ul>
             </div>
           </div>
-          <div className="flex flex-wrap -mx-4">
+          <div className="flex flex-wrap -mx-4" data-aos="fade-right"
+        data-aos-duration="2000">
             <PortfolioCard
               ImageHref="https://i.ibb.co/64WfFPt/image-01.jpg"
               category="Branding"
@@ -102,6 +104,7 @@ const Portfolio = () => {
               button="View Details"
               buttonHref="#"
               showCard={showCard}
+              
             />
             <PortfolioCard
               ImageHref="https://i.ibb.co/PT7ghRs/image-06.jpg"
@@ -168,12 +171,13 @@ const PortfolioCard = ({
             ? "block"
             : "hidden"
         }`}
+        
       >
         <div className="relative mb-12">
-          <div className="overflow-hidden rounded-[10px]">
-            <img src={ImageHref} alt="portfolio" className="w-full" />
-          </div>
-          <div className="relative z-10 mx-7 -mt-20 rounded-lg bg-white dark:bg-dark-2 py-[34px] px-3 text-center shadow-portfolio dark:shadow-box-dark">
+          {/* <div className="overflow-hidden rounded-[10px]">
+            <img src={ImageHref} alt="portfolio" className="w-full h-[100px]" />
+          </div> */}
+          <div className="relative z-10 mx-7  rounded-2xl bg-white dark:bg-dark-2 py-[34px] px-3 text-center shadow-portfolio dark:shadow-box-dark">
             <span className="text-primary mb-2 block text-sm font-medium">
               {category}
             </span>

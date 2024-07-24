@@ -2,13 +2,15 @@ import React from "react";
 
 export default function Testimonial() {
   return (
-    <div className="my-0 mx-2 sm:mx-16">
-      <section class="text-gray-600 body-font" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
+    <div className="my-0 sm:mx-16">
+      <section class="text-gray-600 body-font" data-aos="fade-right" data-aos-offset="300"
+     data-aos-easing="ease-in-sine">
         <div class="container px-5  mx-auto">
           <h1 class="text-3xl font-medium title-font text-gray-900 mb-12 text-center">
             Testimonials
           </h1>
-          <div class="flex flex-wrap -m-4">
+          <div class="flex flex-wrap -m-4" data-aos="fade-up"
+              data-aos-duration="2000">
             <div class="p-4 md:w-1/2 w-full">
               <div class="h-full bg-gray-100 p-8 rounded-2xl">
                 <svg
@@ -40,7 +42,8 @@ export default function Testimonial() {
                 </a>
               </div>
             </div>
-            <div class="p-4 hidden sm:visible md:w-1/2 w-full">
+            <div class="p-4 md:w-1/2 w-full" data-aos="fade-up"
+              data-aos-duration="2000">
               <div class="h-full bg-gray-100 p-8 rounded-2xl">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

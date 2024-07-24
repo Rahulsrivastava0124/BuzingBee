@@ -12,14 +12,14 @@ const Services = () => {
  
   return (
     <>
-      <div className="mx-4 mb-28 sm:mx-16 sm:mb-20">
-        <div className="flex flex-col sm:flex-row mb-10" data-aos="zoom-in">
-          <div className="w-full me-0 mb-6 sm:mb-0 sm:w-[2500px] sm:me-10">
-            <h1 className="text-3xl text-center sm:text-left sm:text-5xl font-semibold">
+      <div className="mx-16 mb-20">
+        <div className="flex mb-10">
+          <div className="w-[2500px] me-10">
+            <h1 className="text-5xl font-semibold" data-aos="fade-up" data-aos-duration="1000">
               Provide the best service with out of the box ideas
             </h1>
           </div>
-          <div className={"me-0 text-center sm:text-left sm:me-10"}>
+          <div className={"  me-10"} data-aos="fade-up" data-aos-duration="2000">
             <h1 className=" text-lg text-gray-500 ">
               {" "}
               we are a passionate team of digital marketing enthusiasm dedicated
@@ -30,8 +30,8 @@ const Services = () => {
             </h1>
           </div>
         </div>
-        <div className={"flex flex-col sm:flex-row sm:justify-between sm:me-10"}>
-          <div className={"w-full sm:w-[35%] sm:h-[350px] mb-4 sm:mb-0 rounded-3xl bg-black p-10"}>
+        <div className={"flex justify-between me-10"} >
+          <div className={"w-[35%] h-[350px] rounded-3xl bg-black p-10"} data-aos="fade-up" data-aos-duration="3000">
             <div className="">
               <h1 className="text-8xl font-bold text-left text-white">
                 <CountUp end={109} duration={5} />{" "}
@@ -81,7 +81,7 @@ const Services = () => {
               </div>
             </div>
           </div>
-          <div className={"w-full sm:w-[60%]  h-[350px] rounded-3xl bg-gray-50 "}>
+          <div className={"w-[60%]  h-[350px] rounded-3xl bg-gray-50 "} data-aos="fade-up" data-aos-duration="3000">
             <Swiper
               spaceBetween={30}
               centeredSlides={true}
