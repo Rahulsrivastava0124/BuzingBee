@@ -6,7 +6,7 @@ export default function Statistics() {
     <div className="my-10 mx-16 ">
       <section class="text-gray-600 body-font">
         <div class="container px-5  mx-auto">
-          <div class="flex -m-4 text-center">
+          <div class="flex flex-wrap -m-4 text-center">
             <div></div>
             <div class="p-4 md:w-1/4 sm:w-1/2 w-full"  data-aos="fade-down" data-aos-duration="1000">
               <div class="border-2 border-gray-200 px-4 py-6 rounded-lg">
