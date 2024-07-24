@@ -25,7 +25,7 @@ function App() {
   }
 
   return (
-    <div className="App cursor-[url(./assets/image/bee1.png),_auto] ">
+    <div className="App cursor-[url(./assets/image/bee1.png),_auto] " onClick={start}>
       <Navbar />
       <Hero />
       <Services />
