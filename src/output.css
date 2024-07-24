@@ -2370,6 +2370,22 @@ details.collapse summary::-webkit-details-marker {
   top: 38%;
 }
 
+.right-52 {
+  right: 13rem;
+}
+
+.right-32 {
+  right: 8rem;
+}
+
+.right-20 {
+  right: 5rem;
+}
+
+.top-\[30\%\] {
+  top: 30%;
+}
+
 .z-10 {
   z-index: 10;
 }
@@ -2385,11 +2401,6 @@ details.collapse summary::-webkit-details-marker {
 .-mx-4 {
   margin-left: -1rem;
   margin-right: -1rem;
-}
-
-.mx-10 {
-  margin-left: 2.5rem;
-  margin-right: 2.5rem;
 }
 
 .mx-16 {
@@ -2425,11 +2436,6 @@ details.collapse summary::-webkit-details-marker {
 .my-10 {
   margin-top: 2.5rem;
   margin-bottom: 2.5rem;
-}
-
-.my-16 {
-  margin-top: 4rem;
-  margin-bottom: 4rem;
 }
 
 .my-5 {
@@ -2489,6 +2495,10 @@ details.collapse summary::-webkit-details-marker {
 
 .mb-\[60px\] {
   margin-bottom: 60px;
+}
+
+.me-0 {
+  margin-inline-end: 0px;
 }
 
 .me-10 {
@@ -2569,6 +2579,22 @@ details.collapse summary::-webkit-details-marker {
 
 .mt-8 {
   margin-top: 2rem;
+}
+
+.me-0 {
+  margin-inline-end: 0px;
+}
+
+.mb-20 {
+  margin-bottom: 5rem;
+}
+
+.ms-10 {
+  margin-inline-start: 2.5rem;
+}
+
+.mt-1 {
+  margin-top: 0.25rem;
 }
 
 .block {
@@ -2678,8 +2704,12 @@ details.collapse summary::-webkit-details-marker {
   width: 2.25rem;
 }
 
-.w-\[2500px\] {
-  width: 2500px;
+.w-\[1000px\] {
+  width: 1000px;
+}
+
+.w-\[30\%\] {
+  width: 30%;
 }
 
 .w-\[35\%\] {
@@ -2997,6 +3027,11 @@ details.collapse summary::-webkit-details-marker {
   padding-right: 2rem;
 }
 
+.py-1 {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
 .py-10 {
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
@@ -3027,44 +3062,14 @@ details.collapse summary::-webkit-details-marker {
   padding-bottom: 34px;
 }
 
-.px-\[\] {
-  padding-left: ;
-  padding-right: ;
-}
-
-.px-\[80\] {
-  padding-left: 80;
-  padding-right: 80;
-}
-
-.px-\[80\%\] {
-  padding-left: 80%;
-  padding-right: 80%;
-}
-
-.px-\[\%\] {
-  padding-left: %;
-  padding-right: %;
-}
-
-.px-\[50\%\] {
-  padding-left: 50%;
-  padding-right: 50%;
-}
-
-.px-\[45\%\] {
-  padding-left: 45%;
-  padding-right: 45%;
-}
-
-.px-\[40\%\] {
-  padding-left: 40%;
-  padding-right: 40%;
-}
-
 .px-\[41\%\] {
   padding-left: 41%;
   padding-right: 41%;
+}
+
+.px-6 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 }
 
 .pb-10 {
@@ -3744,6 +3749,11 @@ details.collapse summary::-webkit-details-marker {
   background-color: rgb(229 231 235 / var(--tw-bg-opacity));
 }
 
+.hover\:bg-gray-200:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(229 231 235 / var(--tw-bg-opacity));
+}
+
 .hover\:bg-gray-700:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(55 65 81 / var(--tw-bg-opacity));
@@ -3807,6 +3817,11 @@ details.collapse summary::-webkit-details-marker {
     inset: auto;
   }
 
+  .sm\:-mx-16 {
+    margin-left: -4rem;
+    margin-right: -4rem;
+  }
+
   .sm\:mx-16 {
     margin-left: 4rem;
     margin-right: 4rem;
@@ -3817,14 +3832,21 @@ details.collapse summary::-webkit-details-marker {
     margin-right: 5rem;
   }
 
-  .sm\:my-10 {
-    margin-top: 2.5rem;
-    margin-bottom: 2.5rem;
-  }
-
   .sm\:my-16 {
     margin-top: 4rem;
     margin-bottom: 4rem;
+  }
+
+  .sm\:mb-10 {
+    margin-bottom: 2.5rem;
+  }
+
+  .sm\:mb-0 {
+    margin-bottom: 0px;
+  }
+
+  .sm\:mb-20 {
+    margin-bottom: 5rem;
   }
 
   .sm\:me-5 {
@@ -3833,6 +3855,18 @@ details.collapse summary::-webkit-details-marker {
 
   .sm\:ml-6 {
     margin-left: 1.5rem;
+  }
+
+  .sm\:mt-0 {
+    margin-top: 0px;
+  }
+
+  .sm\:mt-4 {
+    margin-top: 1rem;
+  }
+
+  .sm\:me-5 {
+    margin-inline-end: 1.25rem;
   }
 
   .sm\:ms-20 {
@@ -3851,12 +3885,12 @@ details.collapse summary::-webkit-details-marker {
     margin-top: 4rem;
   }
 
-  .sm\:mt-8 {
-    margin-top: 2rem;
-  }
-
   .sm\:mt-4 {
     margin-top: 1rem;
+  }
+
+  .sm\:mt-8 {
+    margin-top: 2rem;
   }
 
   .sm\:block {
@@ -3900,6 +3934,10 @@ details.collapse summary::-webkit-details-marker {
     width: 11rem;
   }
 
+  .sm\:w-\[2500px\] {
+    width: 2500px;
+  }
+
   .sm\:w-\[250px\] {
     width: 250px;
   }
@@ -3922,6 +3960,10 @@ details.collapse summary::-webkit-details-marker {
 
   .sm\:w-\[86\%\] {
     width: 86%;
+  }
+
+  .sm\:w-\[35\%\] {
+    width: 35%;
   }
 
   .sm\:flex-1 {
@@ -3964,6 +4006,10 @@ details.collapse summary::-webkit-details-marker {
     padding: 4rem;
   }
 
+  .sm\:p-4 {
+    padding: 1rem;
+  }
+
   .sm\:p-5 {
     padding: 1.25rem;
   }
@@ -3982,9 +4028,14 @@ details.collapse summary::-webkit-details-marker {
     padding-right: 5rem;
   }
 
-  .sm\:px-6 {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+  .sm\:px-0 {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .sm\:px-20 {
+    padding-left: 5rem;
+    padding-right: 5rem;
   }
 
   .sm\:px-5 {
@@ -3992,18 +4043,24 @@ details.collapse summary::-webkit-details-marker {
     padding-right: 1.25rem;
   }
 
+  .sm\:px-6 {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
   .sm\:px-8 {
     padding-left: 2rem;
     padding-right: 2rem;
   }
 
-  .sm\:px-4 {
-    padding-left: 1rem;
-    padding-right: 1rem;
+  .sm\:px-0 {
+    padding-left: 0px;
+    padding-right: 0px;
   }
 
-  .sm\:pe-32 {
-    padding-inline-end: 8rem;
+  .sm\:px-20 {
+    padding-left: 5rem;
+    padding-right: 5rem;
   }
 
   .sm\:pr-0 {
