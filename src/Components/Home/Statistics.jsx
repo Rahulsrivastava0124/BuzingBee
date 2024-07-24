@@ -3,11 +3,12 @@ import CountUp from 'react-countup'
 
 export default function Statistics() {
   return (
-    <div className="my-10 mx-16 ">
+    <div className="my-8 mx-2 sm:my-10 sm:mx-16 ">
       <section class="text-gray-600 body-font">
-        <div class="container px-5  mx-auto">
+        <div class="container px-2 sm:px-5  mx-auto">
           <div class="flex flex-wrap -m-4 text-center">
-            <div class="p-4 md:w-1/4 sm:w-1/2 w-full"  data-aos="fade-down" data-aos-duration="1000">
+            <div></div>
+            <div class="p-4  w-1/2 sm:w-1/4"  data-aos="fade-down" data-aos-duration="1000">
               <div class="border-2 border-gray-200 px-4 py-6 rounded-lg">
                 
                 <i class="bi bi-emoji-laughing-fill text-warning w-12 h-12 mb-3 inline-block text-5xl"></i>
@@ -17,7 +18,7 @@ export default function Statistics() {
                 <p class="leading-relaxed">Happy Clients</p>
               </div>
             </div>
-            <div class="p-4 md:w-1/4 sm:w-1/2 w-full"  data-aos="fade-down" data-aos-duration="2000">
+            <div class="p-4  w-1/2 sm:w-1/4"  data-aos="fade-down" data-aos-duration="2000">
               <div class="border-2 border-gray-200 px-4 py-6 rounded-lg">
                 <svg
                   fill="none"
@@ -38,7 +39,7 @@ export default function Statistics() {
                 <p class="leading-relaxed">Users</p>
               </div>
             </div>
-            <div class="p-4 md:w-1/4 sm:w-1/2 w-full"  data-aos="fade-down" data-aos-duration="3000">
+            <div class="p-4  w-1/2 sm:w-1/4"  data-aos="fade-down" data-aos-duration="3000">
               <div class="border-2 border-gray-200 px-4 py-6 rounded-lg">
                 {/* <svg
                   fill="none"
@@ -59,7 +60,7 @@ export default function Statistics() {
                 <p class="leading-relaxed">Projects</p>
               </div>
             </div>
-            <div class="p-4 md:w-1/4 sm:w-1/2 w-full"  data-aos="fade-down" data-aos-duration="3500">
+            <div class="p-4 w-1/2 sm:w-1/4"  data-aos="fade-down" data-aos-duration="3500">
               <div class="border-2 border-gray-200 px-4 py-6 rounded-lg">
                 <i class="bi bi-people-fill text-warning w-12 h-12 mb-3 inline-block text-5xl"></i>
                 <h2 class="title-font font-medium text-3xl text-gray-900">
