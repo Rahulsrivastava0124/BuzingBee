@@ -18,14 +18,14 @@ function App() {
     AOS.init();
   }, []);
 
-  let audio = new Audio("../src/assets/audios/clickSound.mp3")
+  // let audio = new Audio("../src/assets/audios/clickSound.mp3")
 
-  const start = () => {
-    audio.play()
-  }
+  // const start = () => {
+  //   audio.play()
+  // }
 
   return (
-    <div className="App cursor-[url(./assets/image/bee1.png),_auto] " onClick={start}>
+    <div className="App cursor-[url(./assets/image/bee1.png),_auto] overflow-x-hidden" >
       <Navbar />
       <Hero />
       <Services />
