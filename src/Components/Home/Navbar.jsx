@@ -99,12 +99,12 @@ function Navbar() {
               </div>
             </div>
             <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0 ">
-              <button className="btn btn-outline btn-sm sm:btn-md px-4 btn-warning rounded-full me-5  ">
+              <button className="btn btn-outline btn-sm sm:btn-md sm:px-8 px-4 btn-warning rounded-full me-5  ">
                 Get Started
               </button>
               <button
                 type="button"
-                class="relative rounded-full bg-yellow-500 p-3 text-black hover:text-white focus:outline-none hidden sm:visible"
+                class="relative rounded-full bg-yellow-500 p-3 text-black hover:text-white focus:outline-none hidden sm:block"
               >
                 <span class="absolute -inset-1.5"></span>
                 <span class="sr-only">View notifications</span>
