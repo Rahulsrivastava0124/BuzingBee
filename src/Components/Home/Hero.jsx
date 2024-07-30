@@ -8,6 +8,7 @@ export default function Hero() {
   return (
     <>
       <div
+      id="Home"
         className=" sm:mx-16 mx-6 my-10  rounded-md sm:flex"
         data-aos="fade-up"
         data-aos-duration="2000"
@@ -50,13 +51,13 @@ export default function Hero() {
               Trusted by the World's biggest brands
             </h1>
             <div className="flex sm:ms-20 mt-1 sm:mt-0">
-              <span className="me-3 sm:text-lg text-md sm:font-bold font-semibold text-gray-400 bg-gray-200 p-2 rounded-md">
+              <span className="me-3 sm:text-lg text-md font-semibold text-yellow-600 bg-yellow-200 p-2 rounded-md">
                 Triconnix
               </span>
-              <span className="me-3 sm:text-lg text-md sm:font-bold font-semibold text-gray-400  bg-gray-200 p-2 rounded-md">
+              <span className="me-3 sm:text-lg text-md font-semibold text-yellow-600  bg-yellow-200 p-2 rounded-md">
                 Leadorise
               </span>
-              <span className="me-3 sm:text-lg  text-md sm:font-bold font-semibold text-gray-400  bg-gray-200 p-2 rounded-md">
+              <span className="me-3 sm:text-lg  text-md font-semibold text-yellow-600  bg-yellow-200 p-2 rounded-md">
                 AstroPoints
               </span>
             </div>

@@ -8,7 +8,7 @@ const Portfolio = () => {
   };
 
   return (
-    <div className="mx-16 my-10 rounded-3xl bg-black p-10 px-20 text-white">
+    <div id="Projects" className="sm:mx-16 mx-4 hidden sm:block sm:my-10 my-5 rounded-3xl bg-black p-5 sm:p-10 sm:px-20 text-white">
       <section className=" dark:bg-dark">
         <div className="container mx-auto">
           <div className="flex flex-wrap -mx-4">
@@ -17,7 +17,7 @@ const Portfolio = () => {
                 {/* <span className="text-primary mb-2 block text-lg font-semibold">
                   Our Portfolio
                 </span> */}
-                <h2 className="text-dark mb-3 mt-5 text-2xl leading-[1.8] sm:text-4xl md:text-5xl">
+                <h2 className="text-dark sm:mb-3 mt-5 text-xl leading-[1.8] sm:text-4xl text-left  md:text-5xl">
                   Real world examples of how we have helped Companies achieve
                   their marketing objectives.
                 </h2>
@@ -29,7 +29,7 @@ const Portfolio = () => {
             </div>
           </div>
 
-          <div className="w-full flex flex-wrap justify-center -mx-4">
+          <div className="w-full flex flex-wrap justify-center sm:-mx-4">
             <div className="w-full px-4">
               <ul className="flex flex-wrap justify-center mb-12 space-x-2">
                 <li className="mb-1">
@@ -166,7 +166,7 @@ const PortfolioCard = ({
   return (
     <>
       <div
-        className={`w-full px-4 md:w-1/2 xl:w-1/3 ${
+        className={`w-full sm:px-4 md:w-1/2 xl:w-1/3 ${
           showCard === "all" || showCard === category.toLowerCase()
             ? "block"
             : "hidden"
