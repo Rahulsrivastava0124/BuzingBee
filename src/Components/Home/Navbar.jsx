@@ -1,5 +1,6 @@
 // import logoPic from "../../assets/image/slack.png";
 // import { FaBell } from "react-icons/fa";
+import buzing_bee from "../../assets/buzing_bee.gif";
 
 function Navbar() {
   return (
@@ -58,14 +59,14 @@ function Navbar() {
                 </svg>
               </button>
             </div>
-            <div class="flex sm:flex-1 ms-10 items-center justify-center sm:items-stretch sm:justify-start">
+            <div class="flex sm:flex-1 ms-10 items-center justify-center sm:items-center sm:justify-start">
               <div class="flex flex-shrink-0 items-center ">
-                {/* <img
-                  class="h-8 w-auto"
-                  src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
+                <img
+                  class="sm:h-24 h-16 w-auto"
+                  src={buzing_bee}
                   alt="Your Company"
-                /> */}
-                <h1 className="text-warning sm:text-3xl text-xl  font-bold">BuzingBee</h1>
+                />
+                <h1 className="text-warning sm:text-3xl text-xl  font-bold"></h1>
               </div>
               <div class="hidden sm:ml-6 sm:block">
                 <div class="flex space-x-4">
@@ -75,25 +76,31 @@ function Navbar() {
                     class="rounded-md  px-3 py-2 text-sm font-medium text-gray-700 hover:text-warning"
                     aria-current="page"
                   >
-                    Dashboard
+                    Home
                   </a>
                   <a
                     href="/"
                     class="rounded-md px-3 py-2 text-sm font-medium text-gray-700 hover:text-warning"
                   >
-                    Team
+                    Services
                   </a>
                   <a
                     href="/"
                     class="rounded-md px-3 py-2 text-sm font-medium text-gray-700 hover:text-warning"
                   >
-                    Projects
+                    About
                   </a>
                   <a
                     href="/"
                     class="rounded-md px-3 py-2 text-sm font-medium  text-gray-700 hover:text-warning"
                   >
-                    Calendar
+                    Blog
+                  </a>
+                  <a
+                    href="/"
+                    class="rounded-md px-3 py-2 text-sm font-medium  text-gray-700 hover:text-warning"
+                  >
+                    contact
                   </a>
                 </div>
               </div>
@@ -136,25 +143,31 @@ function Navbar() {
               class="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white"
               aria-current="page"
             >
-              Dashboard
+              Home
             </a>
             <a
               href="/"
               class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
             >
-              Team
+              Services
             </a>
             <a
               href="/"
               class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
             >
-              Projects
+              About
+            </a>
+            <a
+              href="/"
+              class="rounded-md px-3 py-2 text-sm font-medium  text-gray-700 hover:text-warning"
+            >
+              Blog
             </a>
             <a
               href="/"
               class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white"
             >
-              Calendar
+              contact
             </a>
           </div>
         </div>

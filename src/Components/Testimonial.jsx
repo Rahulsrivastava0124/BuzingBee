@@ -11,7 +11,7 @@ export default function Testimonial() {
           </h1>
           <div class="flex flex-wrap -m-4" data-aos="fade-up"
               data-aos-duration="2000">
-            <div class="p-4 md:w-1/2 w-full">
+            <div class="sm:p-4 p-2 md:w-1/2 w-full">
               <div class="h-full bg-gray-100 p-8 rounded-2xl">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -42,7 +42,7 @@ export default function Testimonial() {
                 </a>
               </div>
             </div>
-            <div class="p-4 md:w-1/2 w-full" data-aos="fade-up"
+            <div class="sm:p-4 p-2 md:w-1/2 w-full" data-aos="fade-up"
               data-aos-duration="2000">
               <div class="h-full bg-gray-100 p-8 rounded-2xl">
                 <svg

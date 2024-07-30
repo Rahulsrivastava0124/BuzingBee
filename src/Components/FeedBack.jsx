@@ -2,9 +2,9 @@ import React from "react";
 
 export default function FeedBack() {
   return (
-    <div className="mx-16 my-10 bg-slate-50 rounded-2xl flex px-14 py-10 justify-between" data-aos="zoom-in-left">
-      <div className=" w-[45%]">
-        <h1 className="text-5xl font-semibold" data-aos="fade-up"
+    <div id="FeedBack" className="sm:mx-16 mx-4 sm:my-10 my-5 bg-slate-50 rounded-2xl flex flex-wrap sm:px-14 px-4 py-10 justify-between" data-aos="zoom-in-left">
+      <div className=" sm:w-[45%]">
+        <h1 className="sm:text-5xl text-2xl font-semibold" data-aos="fade-up"
               data-aos-duration="1000">Digital Marketing FAQs</h1>
 
         <h1 className=" text-md font-semibold text-gray-500 mt-10 " data-aos="fade-up"
@@ -14,27 +14,27 @@ export default function FeedBack() {
           comprehensive educational resources and answering frequently asked
           questions to help our clients.
         </h1>
-        <div className="mt-16 flex items-center " data-aos="fade-up"
+        <div className="sm:mt-16 my-8 flex items-center " data-aos="fade-up"
               data-aos-duration="3000">
           <buttom className="btn btn-outline btn-neutral font-bold rounded-full ps-6">
             {" "}
             More Questions
           </buttom>
-          <buttom className="underline underline-offset-5 font-bold ms-16">
+          <buttom className="underline underline-offset-5 font-bold ms-16 hidden sm:block">
             Contact Us
           </buttom>
         </div>
       </div>
-      <div className="w-[50%]">
+      <div className="sm:w-[50%]">
         <div className="collapse collapse-plus border-b-2 border-gray-400  rounded-none" data-aos="fade-up"
               data-aos-duration="1000">
           <input
             type="radio"
             name="my-accordion-3"
             defaultChecked
-            className="ms-20"
+            className="sm:ms-20"
           />
-          <div className="collapse-title text-2xl font-bold">
+          <div className="collapse-title sm:text-2xl text-xl font-bold">
             Why is digital marketing important for my business?
           </div>
           <div className="collapse-content">
@@ -50,7 +50,7 @@ export default function FeedBack() {
         <div className="collapse collapse-plus border-b-2 border-gray-400  rounded-none" data-aos="fade-up"
               data-aos-duration="1000">
           <input type="radio" name="my-accordion-3" />
-          <div className="collapse-title text-2xl font-bold">
+          <div className="collapse-title sm:text-2xl text-xl font-bold">
             How can Digital marketing help to improve my website visibility?
           </div>
           <div className="collapse-content">
@@ -60,7 +60,7 @@ export default function FeedBack() {
         <div className="collapse collapse-plus border-b-2 border-gray-400 rounded-none" data-aos="fade-up"
               data-aos-duration="1000">
           <input type="radio" name="my-accordion-3" />
-          <div className="collapse-title text-2xl font-bold">
+          <div className="collapse-title sm:text-2xl text-xl font-bold">
             How long does it take to see result from digital marketing efforts?
           </div>
           <div className="collapse-content">
@@ -70,7 +70,7 @@ export default function FeedBack() {
         <div className="collapse collapse-plus border-b-2 border-gray-400 rounded-none" data-aos="fade-up"
               data-aos-duration="1000">
           <input type="radio" name="my-accordion-3" />
-          <div className="collapse-title text-2xl font-bold">
+          <div className="collapse-title sm:text-2xl text-xl font-bold">
             How do you measure the success of digital marketing campaigns?
           </div>
           <div className="collapse-content">
