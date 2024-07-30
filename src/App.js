@@ -12,6 +12,7 @@ import Portfolio from "./Components/Portfolio.jsx";
 import Footer from "./Components/Home/Footer.jsx";
 import ReadyToWork from "./Components/Home/ReadyToWork.jsx";
 import Statistics from './Components/Home/Statistics.jsx'
+import NewServices from "./Components/NewServices.jsx";
 
 function App() {
   useEffect(() => {
@@ -29,6 +30,7 @@ function App() {
       <Navbar />
       <Hero />
       <Services />
+      <NewServices/>
       <Statistics/>
       <Portfolio />
       <Testimonial />
