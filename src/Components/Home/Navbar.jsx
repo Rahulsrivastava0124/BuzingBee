@@ -67,7 +67,7 @@ function Navbar() {
                   src={buzing_bee}
                   alt="Your Company"
                 /> */}
-                <h1 className="text-black sm:text-3xl text-xl items-center font-bold">Buzing <span className="text-warning">Bee</span></h1>
+                <h1 className="text-black sm:text-3xl text-xl items-center font-bold">Buzing<span className="text-warning">Bee</span></h1>
               </div>
               <div class="hidden sm:ml-6 sm:block">
                 <div class="flex space-x-4">
@@ -85,7 +85,7 @@ function Navbar() {
                   spy={true}
                   smooth={true}
                   offset={-70}
-                  duration={500}
+                  duration={1000}
                 >
                   Home
                 </Link>
@@ -101,7 +101,7 @@ function Navbar() {
                   spy={true}
                   smooth={true}
                   offset={-70}
-                  duration={500}
+                  duration={1000}
                 >
                   Services
                 </Link>
@@ -117,7 +117,7 @@ function Navbar() {
                   spy={true}
                   smooth={true}
                   offset={-70}
-                  duration={500}
+                  duration={1000}
                 >
                   About
                 </Link>
@@ -133,7 +133,7 @@ function Navbar() {
                   spy={true}
                   smooth={true}
                   offset={-70}
-                  duration={500}
+                  duration={1000}
                 >
                   Blog
                 </Link>
@@ -150,7 +150,7 @@ function Navbar() {
                   spy={true}
                   smooth={true}
                   offset={-70}
-                  duration={500}
+                  duration={1000}
                 >
                   Contact
                 </Link>

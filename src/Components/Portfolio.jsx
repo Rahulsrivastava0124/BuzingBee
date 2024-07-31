@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { Element } from "react-scroll";
+import porfolio_1 from "../../src/assets/image/portfolio_1.jpg"
+import porfolio_2 from "../../src/assets/image/portfolio_2.jpg"
 
 const Portfolio = () => {
   const [showCard, setShowCard] = useState("all");
@@ -107,19 +109,19 @@ const Portfolio = () => {
             data-aos-duration="2000"
           >
             <PortfolioCard
-              ImageHref="https://i.ibb.co/64WfFPt/image-01.jpg"
-              category="Branding"
-              title="Creative Agency"
+              ImageHref={porfolio_1}
+              category="Astropoints"
+              title="this website for astrologer points "
               button="View Details"
-              buttonHref="#"
+              buttonHref="https://astropoints.in/"
               showCard={showCard}
             />
             <PortfolioCard
-              ImageHref="https://i.ibb.co/PT7ghRs/image-06.jpg"
-              category="marketing"
-              title="Creative Agency"
+              ImageHref={porfolio_2}
+              category="Triconnix"
+              title="digital marketing website to provide services"
               button="View Details"
-              buttonHref="#"
+              buttonHref="https://triconnix.com/ "
               showCard={showCard}
             />
             <PortfolioCard
@@ -186,14 +188,16 @@ const PortfolioCard = ({
           {/* <div className="overflow-hidden rounded-[10px]">
             <img src={ImageHref} alt="portfolio" className="w-full h-[100px]" />
           </div> */}
-          <div className="relative z-10 mx-7  rounded-2xl bg-white dark:bg-dark-2 py-[34px] px-3 text-center shadow-portfolio dark:shadow-box-dark">
+          <div className="relative z-10 mx-7  rounded-2xl bg-white dark:bg-dark-2 py-[34px] px-3 text-center shadow-portfolio dark:shadow-box-dark overflow-hidden">
+            
+          <img src={ImageHref} alt="portfolio" className="absolute w-full h-full left-0 right-0 bottom-0 top-0 opacity-50 bg-blend-lighten"  data-aos="fade-right" data-aos-duration="2000"/>
             <span className="block mb-2 text-sm font-medium text-primary">
               {category}
             </span>
-            <h3 className="mb-5 text-xl font-bold text-black">{title}</h3>
+            <h3 className="mb-5 text-xl font-bold text-black ">{title}</h3>
             <a
               href={buttonHref}
-              className="btn btn-outline btn-warning py-[10px] px-7 text-sm font-medium transition"
+              className="btn btn-outline btn-warning py-[10px] px-4 text-xs font-medium transition"
             >
               {button}
             </a>
