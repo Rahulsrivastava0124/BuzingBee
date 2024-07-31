@@ -8,20 +8,23 @@ const Portfolio = () => {
   };
 
   return (
-    <div id="Projects" className="sm:mx-16 mx-4 hidden sm:block sm:my-10 my-5 rounded-3xl bg-black p-5 sm:p-10 sm:px-20 text-white">
+    <div
+      id="Projects"
+      className="hidden p-5 mx-4 my-5 bg-yellow-400 text-dark sm:mx-16 sm:block sm:my-10 rounded-3xl sm:p-10 sm:px-20"
+    >
       <section className=" dark:bg-dark">
         <div className="container mx-auto">
           <div className="flex flex-wrap -mx-4">
             <div className="w-full px-4">
               <div className="mx-auto mb-[60px] text-center">
-                {/* <span className="text-primary mb-2 block text-lg font-semibold">
+                {/* <span className="block mb-2 text-lg font-semibold text-primary">
                   Our Portfolio
                 </span> */}
-                <h2 className="text-dark sm:mb-3 mt-5 text-xl leading-[1.8] sm:text-4xl text-left  md:text-5xl">
+                <h2 className="text-dark font-bold text-center sm:mb-3 mt-5 text-xl leading-[1.8] sm:text-4xl   md:text-5xl">
                   Real world examples of how we have helped Companies achieve
                   their marketing objectives.
                 </h2>
-                {/* <p className="text-body-color text-base dark:text-dark-6">
+                {/* <p className="text-base text-body-color dark:text-dark-6">
                   There are many variations of passages of Lorem Ipsum available
                   but the majority have suffered alteration in some form.
                 </p> */}
@@ -29,7 +32,7 @@ const Portfolio = () => {
             </div>
           </div>
 
-          <div className="w-full flex flex-wrap justify-center sm:-mx-4">
+          <div className="flex flex-wrap justify-center w-full sm:-mx-4">
             <div className="w-full px-4">
               <ul className="flex flex-wrap justify-center mb-12 space-x-2">
                 <li className="mb-1">
@@ -37,8 +40,8 @@ const Portfolio = () => {
                     onClick={() => handleProject("all")}
                     className={`inline-block rounded-full  py-2 px-5 text-center text-base font-semibold transition md:py-3 lg:px-8 ${
                       showCard === "all"
-                        ? "activeClasses bg-warning text-black"
-                        : "inactiveClasses text-body-color dark:text-dark-6 hover:bg-warning hover:text-black"
+                        ? "activeClasses bg-white text-black"
+                        : "inactiveClasses text-body-color dark:text-dark-6 hover:bg-white hover:text-black"
                     }`}
                   >
                     All Projects
@@ -49,8 +52,8 @@ const Portfolio = () => {
                     onClick={() => handleProject("branding")}
                     className={`inline-block rounded-full  py-2 px-5 text-center text-base font-semibold transition md:py-3 lg:px-8 ${
                       showCard === "branding"
-                        ? "activeClasses bg-warning text-black"
-                        : "inactiveClasses text-body-color dark:text-dark-6 hover:bg-warning hover:text-black"
+                        ? "activeClasses bg-white text-black"
+                        : "inactiveClasses text-body-color dark:text-dark-6 hover:bg-white hover:text-black"
                     }`}
                   >
                     Branding
@@ -61,8 +64,8 @@ const Portfolio = () => {
                     onClick={() => handleProject("design")}
                     className={`inline-block rounded-full  py-2 px-5 text-center text-base font-semibold transition md:py-3 lg:px-8 ${
                       showCard === "design"
-                        ? "activeClasses bg-warning text-black"
-                        : "inactiveClasses text-body-color dark:text-dark-6 hover:bg-warning hover:text-black"
+                        ? "activeClasses bg-white text-black"
+                        : "inactiveClasses text-body-color dark:text-dark-6 hover:bg-white hover:text-black"
                     }`}
                   >
                     Design
@@ -73,8 +76,8 @@ const Portfolio = () => {
                     onClick={() => handleProject("marketing")}
                     className={`inline-block rounded-full  py-2 px-5 text-center text-base font-semibold transition md:py-3 lg:px-8 ${
                       showCard === "marketing"
-                        ? "activeClasses bg-warning text-black"
-                        : "inactiveClasses text-body-color dark:text-dark-6 hover:bg-warning hover:text-white"
+                        ? "activeClasses bg-white text-black"
+                        : "inactiveClasses text-body-color dark:text-dark-6 hover:bg-white hover:text-black"
                     }`}
                   >
                     Marketing
@@ -85,8 +88,8 @@ const Portfolio = () => {
                     onClick={() => handleProject("development")}
                     className={`inline-block rounded-full  py-2 px-5 text-center text-base font-semibold transition md:py-3 lg:px-8 ${
                       showCard === "development"
-                        ? "activeClasses bg-warning text-black"
-                        : "inactiveClasses text-body-color dark:text-dark-6 hover:bg-warning hover:text-black"
+                        ? "activeClasses bg-white text-black"
+                        : "inactiveClasses text-body-color dark:text-dark-6 hover:bg-white hover:text-black"
                     }`}
                   >
                     Development
@@ -95,8 +98,11 @@ const Portfolio = () => {
               </ul>
             </div>
           </div>
-          <div className="flex flex-wrap -mx-4" data-aos="fade-right"
-        data-aos-duration="2000">
+          <div
+            className="flex flex-wrap -mx-4"
+            data-aos="fade-right"
+            data-aos-duration="2000"
+          >
             <PortfolioCard
               ImageHref="https://i.ibb.co/64WfFPt/image-01.jpg"
               category="Branding"
@@ -104,7 +110,6 @@ const Portfolio = () => {
               button="View Details"
               buttonHref="#"
               showCard={showCard}
-              
             />
             <PortfolioCard
               ImageHref="https://i.ibb.co/PT7ghRs/image-06.jpg"
@@ -171,17 +176,16 @@ const PortfolioCard = ({
             ? "block"
             : "hidden"
         }`}
-        
       >
         <div className="relative mb-12">
           {/* <div className="overflow-hidden rounded-[10px]">
             <img src={ImageHref} alt="portfolio" className="w-full h-[100px]" />
           </div> */}
           <div className="relative z-10 mx-7  rounded-2xl bg-white dark:bg-dark-2 py-[34px] px-3 text-center shadow-portfolio dark:shadow-box-dark">
-            <span className="text-primary mb-2 block text-sm font-medium">
+            <span className="block mb-2 text-sm font-medium text-primary">
               {category}
             </span>
-            <h3 className="text-black mb-5 text-xl font-bold">{title}</h3>
+            <h3 className="mb-5 text-xl font-bold text-black">{title}</h3>
             <a
               href={buttonHref}
               className="btn btn-outline btn-warning py-[10px] px-7 text-sm font-medium transition"
