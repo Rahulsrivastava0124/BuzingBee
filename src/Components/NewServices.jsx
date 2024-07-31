@@ -5,9 +5,12 @@ import graphics from "../assets/image/graphics.png";
 import youtube from "../assets/image/youtube.png";
 import SEO from "../assets/image/SEO.png";
 import Social from "../assets/image/social1.png";
+import { Element } from "react-scroll";
 
 const NewServices = () => {
   return (
+    <>
+    <Element id="services" name="services">
     <div className="w-[90%] my-14 sm:mx-16">
       <div className="container px-5 mx-auto">
         <h2 className="mb-4 text-2xl font-bold text-center">Services</h2>
@@ -186,6 +189,8 @@ const NewServices = () => {
         </div>
       </div>
     </div>
+    </Element>
+    </>
   );
 };
 

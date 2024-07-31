@@ -1,7 +1,10 @@
 import React from "react";
+import { Element } from "react-scroll";
 
 export default function Footer() {
   return (
+    <>
+    <Element id="footer" name="footer">
     <div>
       <footer class="text-gray-600 body-font">
         <div class="container sm:px-20 sm:pt-20 pt-10 pb-10 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col ">
@@ -88,5 +91,7 @@ export default function Footer() {
         </div> */}
       </footer>
     </div>
+    </Element>
+    </>
   );
 }

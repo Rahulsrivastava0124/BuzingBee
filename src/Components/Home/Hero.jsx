@@ -3,10 +3,12 @@ import { ReactComponent as ArrowReact } from "../../assets/svg/ArrowRight.svg";
 import hero1 from "../../assets/image/hero1.jpg";
 import heroCart from "../../assets/image/cart_bar-hero.png";
 import CountUp from "react-countup";
+import { Element } from 'react-scroll';
 
 export default function Hero() {
   return (
     <>
+    <Element id="home" name="home">
       <div
       id="Home"
         className=" sm:mx-16 mx-6 my-10  rounded-md sm:flex"
@@ -140,6 +142,7 @@ export default function Hero() {
           </div>
         </div>
       </div>
+      </Element>
     </>
   );
 }

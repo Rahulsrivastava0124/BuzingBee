@@ -1,8 +1,11 @@
 import React from "react";
+import { Element } from "react-scroll";
 // import { ReactComponent as ArrowReact } from "../../assets/svg/ArrowRight.svg";
 
 export default function Blog() {
   return (
+    <>
+    <Element id="blog" name="blog">
     <div className="sm:mx-20 mx-6 sm:my-16 " data-aos="zoom-out-up">
       <div className="flex flex-wrap">
         <div className="sm:w-[50%]" data-aos="fade-in" data-aos-duration="1000">
@@ -109,5 +112,7 @@ export default function Blog() {
         </section>
       </div>
     </div>
+    </Element>
+    </>
   );
 }

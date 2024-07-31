@@ -2,7 +2,11 @@
 module.exports = {
   content: ["./src/**/*.{html,js,jsx}"],
   theme: {
-    extend: {},
+    extend: {
+      // fontFamily: {
+      //   fontLogo :["Roboto Slab", serif]
+      // }
+    },
   },
   daisyui: {
     // themes: false, // false: only light + dark | true: all themes | array: specific themes like this ["light", "dark", "cupcake"]

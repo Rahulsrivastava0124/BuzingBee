@@ -1,6 +1,7 @@
 // import logoPic from "../../assets/image/slack.png";
 // import { FaBell } from "react-icons/fa";
-import buzing_bee from "../../assets/buzing_bee.gif";
+// import buzing_bee from "../../assets/buzing_bee.gif";
+import{Link, animateScroll as scroll} from "react-scroll";
 
 function Navbar() {
   return (
@@ -61,47 +62,100 @@ function Navbar() {
             </div>
             <div class="flex sm:flex-1 ms-10 items-center justify-center sm:items-center sm:justify-start">
               <div class="flex flex-shrink-0 items-center ">
-                <img
+                {/* <img
                   class="sm:h-24 h-16 w-auto"
                   src={buzing_bee}
                   alt="Your Company"
-                />
-                <h1 className="text-warning sm:text-3xl text-xl  font-bold"></h1>
+                /> */}
+                <h1 className="text-black sm:text-3xl text-xl items-center font-bold">Buzing <span className="text-warning">Bee</span></h1>
               </div>
               <div class="hidden sm:ml-6 sm:block">
                 <div class="flex space-x-4">
                   {/* <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" --> */}
-                  <a
+                  {/* <a
                     href="/"
                     class="rounded-md  px-3 py-2 text-sm font-medium text-gray-700 hover:text-warning"
                     aria-current="page"
                   >
                     Home
-                  </a>
-                  <a
+                  </a> */}
+                  <Link
+                  className="rounded-md  px-3 py-2 text-sm font-medium text-gray-700 hover:text-warning"
+                  to="home"
+                  spy={true}
+                  smooth={true}
+                  offset={-70}
+                  duration={500}
+                >
+                  Home
+                </Link>
+                  {/* <a
                     href="/"
                     class="rounded-md px-3 py-2 text-sm font-medium text-gray-700 hover:text-warning"
                   >
                     Services
-                  </a>
-                  <a
+                  </a> */}
+                  <Link
+                  className="rounded-md px-3 py-2 text-sm font-medium text-gray-700 hover:text-warning"
+                  to="services"
+                  spy={true}
+                  smooth={true}
+                  offset={-70}
+                  duration={500}
+                >
+                  Services
+                </Link>
+                  {/* <a
                     href="/"
                     class="rounded-md px-3 py-2 text-sm font-medium text-gray-700 hover:text-warning"
                   >
                     About
-                  </a>
-                  <a
+                  </a> */}
+                     <Link
+                  className="rounded-md px-3 py-2 text-sm font-medium text-gray-700 hover:text-warning"
+                  to="feedback"
+                  spy={true}
+                  smooth={true}
+                  offset={-70}
+                  duration={500}
+                >
+                  About
+                </Link>
+                  {/* <a
                     href="/"
                     class="rounded-md px-3 py-2 text-sm font-medium  text-gray-700 hover:text-warning"
                   >
                     Blog
-                  </a>
-                  <a
+                  </a> */}
+                     <Link
+                  className="rounded-md px-3 py-2 text-sm font-medium  text-gray-700 hover:text-warning"
+                  to="blog"
+                  spy={true}
+                  smooth={true}
+                  offset={-70}
+                  duration={500}
+                >
+                  Blog
+                </Link>
+
+                  {/* <a
                     href="/"
                     class="rounded-md px-3 py-2 text-sm font-medium  text-gray-700 hover:text-warning"
                   >
                     contact
-                  </a>
+                  </a> */}
+                     <Link
+                  className="rounded-md px-3 py-2 text-sm font-medium  text-gray-700 hover:text-warning"
+                  to="footer"
+                  spy={true}
+                  smooth={true}
+                  offset={-70}
+                  duration={500}
+                >
+                  Contact
+                </Link>
+
+
                 </div>
               </div>
             </div>

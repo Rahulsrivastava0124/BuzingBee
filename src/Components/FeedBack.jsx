@@ -1,7 +1,10 @@
 import React from "react";
+import { Element } from "react-scroll";
 
 export default function FeedBack() {
   return (
+    <>
+    <Element id="feedback" name="feedback">
     <div id="FeedBack" className="sm:mx-16 mx-4 sm:my-10 my-5 bg-slate-50 rounded-2xl flex flex-wrap sm:px-14 px-4 py-10 justify-between" data-aos="zoom-in-left">
       <div className=" sm:w-[45%]">
         <h1 className="sm:text-5xl text-2xl font-semibold" data-aos="fade-up"
@@ -79,5 +82,7 @@ export default function FeedBack() {
         </div>
       </div>
     </div>
+    </Element>
+    </>
   );
 }

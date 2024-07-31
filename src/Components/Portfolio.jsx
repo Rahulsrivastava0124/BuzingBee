@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Element } from "react-scroll";
 
 const Portfolio = () => {
   const [showCard, setShowCard] = useState("all");
@@ -8,6 +9,8 @@ const Portfolio = () => {
   };
 
   return (
+    <>
+    <Element id="portfolio" name="portfolio">
     <div
       id="Projects"
       className="hidden p-5 mx-4 my-5 bg-yellow-400 text-dark sm:mx-16 sm:block sm:my-10 rounded-3xl sm:p-10 sm:px-20"
@@ -155,6 +158,8 @@ const Portfolio = () => {
         </div>
       </section>
     </div>
+    </Element>
+    </>
   );
 };
 
@@ -195,6 +200,7 @@ const PortfolioCard = ({
           </div>
         </div>
       </div>
+      
     </>
   );
 };
