@@ -1,7 +1,7 @@
 // import logoPic from "../../assets/image/slack.png";
 // import { FaBell } from "react-icons/fa";
 // import buzing_bee from "../../assets/buzing_bee.gif";
-import{Link, animateScroll as scroll} from "react-scroll";
+import { Link, animateScroll as scroll } from "react-scroll";
 
 function Navbar() {
   return (
@@ -67,7 +67,9 @@ function Navbar() {
                   src={buzing_bee}
                   alt="Your Company"
                 /> */}
-                <h1 className="text-black sm:text-3xl text-xl items-center font-bold">Buzing<span className="text-warning">Bee</span></h1>
+                <h1 className="items-center text-xl font-bold text-black sm:text-3xl">
+                  Buzing<span className="text-warning">Bee</span>
+                </h1>
               </div>
               <div class="hidden sm:ml-6 sm:block">
                 <div class="flex space-x-4">
@@ -80,15 +82,15 @@ function Navbar() {
                     Home
                   </a> */}
                   <Link
-                  className="rounded-md  px-3 py-2 text-sm font-medium text-gray-700 hover:text-warning"
-                  to="home"
-                  spy={true}
-                  smooth={true}
-                  offset={-70}
-                  duration={1000}
-                >
-                  Home
-                </Link>
+                    className="px-3 py-2 text-sm font-medium text-gray-700 rounded-md hover:text-warning"
+                    to="home"
+                    spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration={1000}
+                  >
+                    Home
+                  </Link>
                   {/* <a
                     href="/"
                     class="rounded-md px-3 py-2 text-sm font-medium text-gray-700 hover:text-warning"
@@ -96,47 +98,47 @@ function Navbar() {
                     Services
                   </a> */}
                   <Link
-                  className="rounded-md px-3 py-2 text-sm font-medium text-gray-700 hover:text-warning"
-                  to="services"
-                  spy={true}
-                  smooth={true}
-                  offset={-70}
-                  duration={1000}
-                >
-                  Services
-                </Link>
+                    className="px-3 py-2 text-sm font-medium text-gray-700 rounded-md hover:text-warning"
+                    to="services"
+                    spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration={1000}
+                  >
+                    Services
+                  </Link>
                   {/* <a
                     href="/"
                     class="rounded-md px-3 py-2 text-sm font-medium text-gray-700 hover:text-warning"
                   >
                     About
                   </a> */}
-                     <Link
-                  className="rounded-md px-3 py-2 text-sm font-medium text-gray-700 hover:text-warning"
-                  to="feedback"
-                  spy={true}
-                  smooth={true}
-                  offset={-70}
-                  duration={1000}
-                >
-                  About
-                </Link>
+                  <Link
+                    className="px-3 py-2 text-sm font-medium text-gray-700 rounded-md hover:text-warning"
+                    to="feedback"
+                    spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration={1000}
+                  >
+                    About
+                  </Link>
                   {/* <a
                     href="/"
                     class="rounded-md px-3 py-2 text-sm font-medium  text-gray-700 hover:text-warning"
                   >
                     Blog
                   </a> */}
-                     <Link
-                  className="rounded-md px-3 py-2 text-sm font-medium  text-gray-700 hover:text-warning"
-                  to="blog"
-                  spy={true}
-                  smooth={true}
-                  offset={-70}
-                  duration={1000}
-                >
-                  Blog
-                </Link>
+                  <Link
+                    className="px-3 py-2 text-sm font-medium text-gray-700 rounded-md hover:text-warning"
+                    to="blog"
+                    spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration={1000}
+                  >
+                    Blog
+                  </Link>
 
                   {/* <a
                     href="/"
@@ -144,23 +146,26 @@ function Navbar() {
                   >
                     contact
                   </a> */}
-                     <Link
-                  className="rounded-md px-3 py-2 text-sm font-medium  text-gray-700 hover:text-warning"
-                  to="footer"
-                  spy={true}
-                  smooth={true}
-                  offset={-70}
-                  duration={1000}
-                >
-                  Contact
-                </Link>
-
-
+                  <Link
+                    className="px-3 py-2 text-sm font-medium text-gray-700 rounded-md hover:text-warning"
+                    to="footer"
+                    spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration={1000}
+                  >
+                    Contact
+                  </Link>
                 </div>
               </div>
             </div>
             <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0 ">
-              <button className="btn btn-outline btn-sm sm:btn-md sm:px-8 px-4 btn-warning rounded-full me-5  ">
+              <button
+                className="px-4 rounded-full btn btn-outline btn-sm sm:btn-md sm:px-8 btn-warning me-5 "
+                onClick={() =>
+                  document.getElementById("my_modal_2").showModal()
+                }
+              >
                 Get Started
               </button>
               <button

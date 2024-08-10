@@ -13,6 +13,7 @@ import Footer from "./Components/Home/Footer.jsx";
 import ReadyToWork from "./Components/Home/ReadyToWork.jsx";
 import Statistics from './Components/Home/Statistics.jsx'
 import NewServices from "./Components/NewServices.jsx";
+import Contact from './Components/Home/Contact.jsx'
 
 function App() {
   useEffect(() => {
@@ -38,6 +39,7 @@ function App() {
       <Blog />
       <ReadyToWork />
       <Footer />
+      <Contact/>
     </div>
   );
 }

@@ -11,31 +11,33 @@ export default function Hero() {
     <Element id="home" name="home">
       <div
       id="Home"
-        className=" sm:mx-16 mx-6 my-10  rounded-md sm:flex"
+        className="mx-6 my-10 rounded-md sm:mx-16 sm:flex"
         data-aos="fade-up"
         data-aos-duration="2000"
       >
         <div className="sm:w-[50%] ">
-          <h1 className="sm:text-7xl text-3xl font-medium ">
+          <h1 className="text-3xl font-medium sm:text-7xl ">
             <span data-aos="fade-up" data-aos-duration="1000">
               Stay ahead of the{" "}
             </span>
             <span>curve with our</span>
             <span> forword-thinking</span>{" "}
           </h1>
-          <h5 className="sm:mt-8 mt-4 md:text-lg text-sm text-gray-500 sm:pe-32">
+          <h5 className="mt-4 text-sm text-gray-500 sm:mt-8 md:text-lg sm:pe-32">
             {" "}
             An award winning SEO agency with discplines in digital marketing,
             desing, and website development , focused on understanding you .
           </h5>
 
-          <div className="sm:mt-16 mt-8 flex items-center ">
-            <buttom className="btn btn-warning btn-sm sm:btn-md  text-white rounded-full ps-6">
+          <div className="flex items-center mt-8 sm:mt-16 ">
+            <buttom className="text-white rounded-full btn btn-warning btn-sm sm:btn-md ps-6"  onClick={() =>
+                  document.getElementById("my_modal_2").showModal()
+                }>
               {" "}
               Schedule <ArrowReact className="sm:size-6 size-5 sm:ms-8" />
             </buttom>
             <buttom
-              className="hidden sm:block  underline font-bold ms-20"
+              className="hidden font-bold underline sm:block ms-20"
               data-aos="fade-up"
               data-aos-duration="1500"
             >
@@ -43,23 +45,23 @@ export default function Hero() {
             </buttom>
           </div>
           <div
-            className="sm:mt-16 mt-3 flex flex-wrap show:block "
+            className="flex flex-wrap mt-3 sm:mt-16 show:block "
             data-aos="fade-up"
             data-aos-anchor-placement="center-bottom"
             data-aos-duration="1300"
           >
-            <h1 className=" sm:w-44 font-bold mt-5 sm:mt-0">
+            <h1 className="mt-5 font-bold sm:w-44 sm:mt-0">
               {" "}
               Trusted by the World's biggest brands
             </h1>
-            <div className="flex sm:ms-20 mt-1 sm:mt-0">
-              <span className="me-3 sm:text-lg text-md font-semibold text-yellow-600 bg-yellow-200 p-2 rounded-md">
+            <div className="flex mt-1 sm:ms-20 sm:mt-0">
+              <span className="p-2 font-semibold text-yellow-600 bg-yellow-200 rounded-md me-3 sm:text-lg text-md">
                 Triconnix
               </span>
-              <span className="me-3 sm:text-lg text-md font-semibold text-yellow-600  bg-yellow-200 p-2 rounded-md">
+              <span className="p-2 font-semibold text-yellow-600 bg-yellow-200 rounded-md me-3 sm:text-lg text-md">
                 Leadorise
               </span>
-              <span className="me-3 sm:text-lg  text-md font-semibold text-yellow-600  bg-yellow-200 p-2 rounded-md">
+              <span className="p-2 font-semibold text-yellow-600 bg-yellow-200 rounded-md me-3 sm:text-lg text-md">
                 AstroPoints
               </span>
             </div>
@@ -67,14 +69,14 @@ export default function Hero() {
         </div>
         <div className="sm:w-[50%] py-10">
           <div
-            className="sm:flex flex-wrap items-center justify-evenly mb-3 sm:p-5"
+            className="flex-wrap items-center mb-3 sm:flex justify-evenly sm:p-5"
             data-aos="fade-up"
             data-aos-anchor-placement="center-bottom"
             data-aos-duration="1000"
           >
             <div className=" bg-gray-50 rounded-tl-[100%] rounded-lg  sm:w-[43%] hidden sm:block sm:h-[250px]  relative">
               {" "}
-              <button className="btn btn-circle bg-black  p-10 w-10 h-10 absolute bottom-52 right-10 text-center">
+              <button className="absolute w-10 h-10 p-10 text-center bg-black btn btn-circle bottom-52 right-10">
                 {" "}
                 <i class="bi bi-graph-up-arrow text-center font-extrabold text-lg  absolute bg-yellow-400 w-9 h-9  rounded-lg"></i>
               </button>
@@ -84,15 +86,15 @@ export default function Hero() {
             </div>
             <div className=" bg-yellow-100 rounded-xl sm:w-[43%] sm:h-[250px] p-5">
               <div className="">
-                <h1 className="sm:text-8xl text-6xl font-bold sm:text-center text-left ">
+                <h1 className="text-6xl font-bold text-left sm:text-8xl sm:text-center ">
                   <CountUp end={230} duration={2.75} />+
                 </h1>
               </div>
               <div className="m-auto">
-                <h1 className="ms-2 text-lg mt-2">
+                <h1 className="mt-2 text-lg ms-2">
                   Some big Companies that we work with,and trust us very much{" "}
                   <progress
-                    className="progress  progress-warning w-56 "
+                    className="w-56 progress progress-warning "
                     value="70"
                     max="100"
                   ></progress>
@@ -114,8 +116,8 @@ export default function Hero() {
                 data-aos-anchor-placement="center-bottom"
                 data-aos-duration="1300"
               >
-                <hr className="sm:w-16 w-8 font-bold sm:me-5 me-2 mt-5" />
-                <h1 className="text-white mt-5">
+                <hr className="w-8 mt-5 font-bold sm:w-16 sm:me-5 me-2" />
+                <h1 className="mt-5 text-white">
                   {" "}
                   Drive More Traffic and Sales{" "}
                 </h1>
@@ -126,13 +128,13 @@ export default function Hero() {
                 data-aos-anchor-placement="center-bottom"
                 data-aos-duration="1300"
               >
-                <h1 className="sm:text-4xl text-3xl text-white mt-4">
+                <h1 className="mt-4 text-3xl text-white sm:text-4xl">
                   Drive more traffic and product sales
                 </h1>
               </div>
             </div>
             {/* <div
-              className="absolute bottom-0 right-5 sm:block hidden"
+              className="absolute bottom-0 hidden right-5 sm:block"
               data-aos="fade-up"
               data-aos-anchor-placement="center-bottom"
               data-aos-duration="1400"

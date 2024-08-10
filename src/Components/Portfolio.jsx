@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { Element } from "react-scroll";
 import porfolio_1 from "../assets/image/portfolio_1.jpg";
 import porfolio_2 from "../../src/assets/image/portfolio_2.jpg";
+import BuzingBeeBannerMobile from "../assets/image/BuzzingBee_banner.jpg";
+
 
 const Portfolio = () => {
   const [showCard, setShowCard] = useState("all");
@@ -15,12 +17,12 @@ const Portfolio = () => {
       <Element id="portfolio" name="portfolio">
         <div
           id="Projects"
-          className="hidden p-5 mx-4 my-5 bg-yellow-400 text-dark sm:mx-16 sm:block sm:my-10 rounded-3xl sm:p-10 sm:px-20"
+          className="p-5 my-5 bg-yellow-50 text-dark sm:mx-16 sm:block sm:my-10 md:rounded-3xl sm:p-10 sm:px-20"
         >
           <section className=" dark:bg-dark">
             <div className="container mx-auto">
               <div className="flex flex-wrap -mx-4">
-                <div className="w-full px-4">
+                <div className="w-full px-2 md:px-4">
                   <div className="mx-auto mb-[60px] text-center">
                     {/* <span className="block mb-2 text-lg font-semibold text-primary">
                   Our Portfolio
@@ -38,8 +40,8 @@ const Portfolio = () => {
               </div>
 
               <div className="flex flex-wrap justify-center w-full sm:-mx-4">
-                <div className="w-full px-4">
-                  <ul className="flex flex-wrap justify-center mb-12 space-x-2">
+                <div className="w-full md:px-4">
+                  <ul className="flex flex-wrap justify-center mb-8 md:space-x-2">
                     <li className="mb-1">
                       <button
                         onClick={() => handleProject("all")}
@@ -112,15 +114,15 @@ const Portfolio = () => {
                   ImageHref={porfolio_1}
                   category="Astropoints"
                   title="This website for astrologer points "
-                  button="View Details"
+                  button="View"
                   buttonHref="https://astropoints.in/"
                   showCard={showCard}
                 />
                 <PortfolioCard
                   ImageHref={porfolio_2}
                   category="Triconnix"
-                  title="digital marketing website to provide services"
-                  button="View Details"
+                  title="digital services website "
+                  button="View"
                   buttonHref="https://triconnix.com/ "
                   showCard={showCard}
                 />
@@ -128,7 +130,7 @@ const Portfolio = () => {
                   ImageHref="https://i.ibb.co/vkt8C1P/image-02.jpg"
                   category="marketing"
                   title="Creative Agency"
-                  button="View Details"
+                  button="View"
                   buttonHref="#"
                   showCard={showCard}
                 />
@@ -136,7 +138,7 @@ const Portfolio = () => {
                   ImageHref="https://i.ibb.co/3FKqS1G/image-03.jpg"
                   category="Development"
                   title="Creative Agency"
-                  button="View Details"
+                  button="View"
                   buttonHref="#"
                   showCard={showCard}
                 />
@@ -144,7 +146,7 @@ const Portfolio = () => {
                   ImageHref="https://i.ibb.co/m6dq2fX/image-04.jpg"
                   category="Design"
                   title="Creative Agency"
-                  button="View Details"
+                  button="View"
                   buttonHref="#"
                   showCard={showCard}
                 />
@@ -152,7 +154,7 @@ const Portfolio = () => {
                   ImageHref="https://i.ibb.co/mCPjBsH/image-05.jpg"
                   category="Marketing"
                   title="Creative Agency"
-                  button="View Details"
+                  button="View"
                   buttonHref="#"
                   showCard={showCard}
                 />
@@ -184,7 +186,7 @@ const PortfolioCard = ({
             : "hidden"
         }`}
       >
-        <div className="relative mb-12 h-[220px]">
+        <div className="relative mb-8 h-[220px]">
           {/* <div className="overflow-hidden rounded-[10px]">
             <img src={ImageHref} alt="portfolio" className="w-full h-[100px]" />
           </div> */}
@@ -216,6 +218,11 @@ const PortfolioCard = ({
             </span>
           </div>
         </div>
+        <img
+        src={BuzingBeeBannerMobile}
+        alt="benner"
+        className="m-auto sm:hidden w-[90vw] rounded-2xl mt-5 sm:mt-0 h-40 sm:h-auto object-cover"
+      />
       </div>
     </>
   );
