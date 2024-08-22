@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Element } from "react-scroll";
 import porfolio_1 from "../assets/image/portfolio_1.jpg";
 import porfolio_2 from "../../src/assets/image/portfolio_2.jpg";
-import BuzingBeeBannerMobile from "../assets/image/BuzzingBee_banner.jpg";
 
 
 const Portfolio = () => {
@@ -218,11 +217,7 @@ const PortfolioCard = ({
             </span>
           </div>
         </div>
-        <img
-        src={BuzingBeeBannerMobile}
-        alt="benner"
-        className="m-auto sm:hidden w-[90vw] rounded-2xl mt-5 sm:mt-0 h-40 sm:h-auto object-cover"
-      />
+       
       </div>
     </>
   );

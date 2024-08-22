@@ -9,7 +9,6 @@ import service1 from "../assets/image/services1.png";
 import portfolio_1 from "../assets/image/portfolio_1.jpg";
 import services from "../assets/image/logo.png";
 import services4 from "../assets/image/logo4.jpeg";
-import BuzingBeeBanner from "../assets/image/BuzingBee_banner.png";
 // import required modules
 
 const Services = () => {
@@ -64,22 +63,22 @@ const Services = () => {
             </h1>
             <div className={"flex sm:mt-20 mt-10 align-center items-center"}>
               <div className="rounded-full avatar ring-warning ring-offset-base-50 ring ring-offset-0 ">
-                <div className="rounded-full size-12 sm:w-16">
+                <div className="rounded-full sm:size-12 size-6 w-12 sm:w-16">
                   <img
                     src="https://triconnix.com/img/navLogo.png"
                     alt={"test"}
-                    className="bg-contain bg-slate-50"
+                    className="bg-contain bg-slate-50 "
                     height={100}
                   />
                 </div>
               </div>
               <div className="rounded-full avatar ring-warning ring-offset-base-100 ring ring-offset-0 ">
-                <div className="rounded-full size-12 sm:w-16">
+                <div className="rounded-full sm:size-12 size-6 w-12 sm:w-16 ">
                   <img src={portfolio_1} alt={"test"} height={100} />
                 </div>
               </div>
               <div className="rounded-full avatar ring-warning ring-offset-base-100 ring ring-offset-0 ">
-                <div className="rounded-full size-12 sm:w-16">
+                <div className="rounded-full sm:size-12 size-6 w-12 sm:w-16">
                   <img
                     src={services}
                     alt={"test"}
@@ -89,7 +88,7 @@ const Services = () => {
                 </div>
               </div>
               <div className="rounded-full avatar ring-warning ring-offset-base-100 ring ring-offset-0 ">
-                <div className="rounded-full size-12 sm:w-16">
+                <div className="rounded-full sm:size-12 size-6 w-12 sm:w-16">
                   <img
                     src={services4}
                     alt={"test"}
@@ -155,12 +154,8 @@ const Services = () => {
           </div>
         </div>
       </div>
-      <img
-        src={BuzingBeeBanner}
-        alt="benner"
-        className="m-auto hidden sm:block w-[90vw] rounded-2xl mt-5 sm:mt-0 h-40 sm:h-auto object-contain"
-      />
-      
+
+
     </>
   );
 };

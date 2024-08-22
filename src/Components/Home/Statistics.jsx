@@ -1,9 +1,12 @@
 import React from "react";
 import CountUp from 'react-countup'
 
+
 export default function Statistics() {
   return (
-    <div className="my-8 mx-2 sm:my-10 sm:mx-16 ">
+    <>
+     
+    <div className="mx-2 my-8 sm:my-10 sm:mx-16 ">
       <section class="text-gray-600 body-font">
         <div class="container px-2 sm:px-5  mx-auto">
           <div class="flex flex-wrap -m-4 text-center">
@@ -73,5 +76,6 @@ export default function Statistics() {
         </div>
       </section>
     </div>
+    </>
   );
 }
