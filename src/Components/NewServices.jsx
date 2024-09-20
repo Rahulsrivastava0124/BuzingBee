@@ -170,7 +170,7 @@ const NewServices = () => {
                     #Animation
                   </span>
                   <span className="inline-block px-3 py-1 mb-2 mr-2 text-sm font-semibold bg-yellow-200 rounded-full text-100">
-                    #Reals
+                    #Reels
                   </span>
                   <span className="inline-block px-3 py-1 mb-2 mr-2 text-sm font-semibold bg-yellow-200 rounded-full text-100">
                     #Video

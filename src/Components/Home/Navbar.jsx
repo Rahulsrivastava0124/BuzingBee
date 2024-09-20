@@ -9,7 +9,7 @@ function Navbar() {
       <nav class="bg-white mt-5">
         <div class="mx-auto max-w-8xl sm:px-6 lg:px-8">
           <div class="relative flex  sm:h-16 items-center justify-between">
-            <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+            <div class="absolute inset-y-0 left-0 flex items-center hidden">
               {/* <!-- Mobile menu button--> */}
               <button
                 type="button"
@@ -61,15 +61,18 @@ function Navbar() {
               </button>
             </div>
             <div class="flex sm:flex-1 ms-10 items-center justify-center sm:items-center sm:justify-start">
-              <div class="flex flex-shrink-0 items-center ">
+              <div className="flex flex-shrink-0 items-center ">
                 {/* <img
                   class="sm:h-24 h-16 w-auto"
                   src={buzing_bee}
                   alt="Your Company"
                 /> */}
-                <h1 className="items-center text-xl font-bold text-black sm:text-3xl">
-                  Buzing<span className="text-warning">Bee</span>
-                </h1>
+                <div className="text-center">
+                  <h1 className="sm:text-4xl text-2xl font-extrabold">
+                    <span className="text-black">Buzing</span><span className="text-yellow-400">Bee</span>
+                  </h1>
+                  <p className="sm:text-xs text-[10px] sm:mt-1 text-gray-600 font-boldme">Buzzing Beyond Boundaries</p>
+                </div>
               </div>
               <div class="hidden sm:ml-6 sm:block">
                 <div class="flex space-x-4">

@@ -38,10 +38,10 @@ export default function Footer() {
                   designing, and many more. .
                 </p>
                 <div className="mt-10 m-left">
-                  <a href={"https://www.instagram.com/buzingbee_/"}>  <i class="bi bi-instagram ms-3 p-4  text-xl btn px-6 sm:px-0  sm:btn-circle hover:bg-gray-200 bg-warning"></i></a>
-                  <a href={"https://www.facebook.com/profile.php?id=61562079487441"}>  <i class="bi bi-facebook ms-3 p-4  text-xl btn px-6 sm:px-0 sm:btn-circle hover:bg-gray-200 bg-warning"></i></a>
-                  <a href={"https://x.com/BuzingBee_"}> <i class="bi bi-twitter ms-3 p-4  text-xl btn px-6 sm:px-0 sm:btn-circle hover:bg-gray-200 bg-warning"></i></a>
-                  <a href={"https://www.linkedin.com/company/buzing-bee/?viewAsMember=true"}>  <i class="bi bi-linkedin ms-3 p-4  text-xl btn px-6 sm:px-0 sm:btn-circle hover:bg-gray-200 bg-warning"></i></a>
+                  <a href={"https://www.instagram.com/buzingbee_/"}>  <i class="bi bi-instagram ms-3 p-4  text-xl btn px-6 sm:px-0 text-white sm:btn-circle hover:scale-x-105 hover:bg-black bg-pink-600"></i></a>
+                  <a href={"https://www.facebook.com/profile.php?id=61562079487441"}>  <i class="bi bi-facebook ms-3 p-4  text-xl btn px-6 sm:px-0 sm:btn-circle hover:scale-x-105 hover:bg-black bg-blue-500 text-white"></i></a>
+                  <a href={"https://x.com/BuzingBee_"}> <i class="bi bi-twitter ms-3 p-4  text-xl btn px-6 sm:px-0 sm:btn-circle hover:scale-x-105 hover:bg-black text-white bg-warning"></i></a>
+                  <a href={"https://www.linkedin.com/company/buzing-bee/?viewAsMember=true"}>  <i class="bi bi-linkedin ms-3 p-4 text-xl btn px-6 sm:px-0 sm:btn-circle bg-teal-300 hover:scale-x-105 hover:bg-black hover:text-white  "></i></a>
                 </div>
               </div>
               <div class="flex-grow flex justify-center flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center sm:justify-end">

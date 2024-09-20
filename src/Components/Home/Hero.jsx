@@ -37,13 +37,14 @@ export default function Hero() {
               {" "}
               Schedule <FaArrowRightLong class="text-xl"/>
             </buttom>
-            <buttom
+            <a
+                href='#blog'
               className="hidden font-bold underline sm:block ms-20"
               data-aos="fade-up"
               data-aos-duration="1500"
             >
               View Case Study
-            </buttom>
+            </a>
           </div>
           <div
             className="flex flex-wrap mt-3 sm:mt-16 show:block "
@@ -56,14 +57,14 @@ export default function Hero() {
               Trusted by the World's biggest brands
             </h1>
             <div className="flex mt-1 sm:ms-20 sm:mt-0">
-              <span className="p-2 font-semibold text-yellow-600 bg-yellow-200 rounded-md me-3 sm:text-lg text-md">
-                Triconnix
-              </span>
-              <span className="p-2 font-semibold text-yellow-600 bg-yellow-200 rounded-md me-3 sm:text-lg text-md">
-                Leadorise
-              </span>
-              <span className="p-2 font-semibold text-yellow-600 bg-yellow-200 rounded-md me-3 sm:text-lg text-md">
+              <span className="p-2 font-semibold text-red-600 bg-red-200 rounded-md me-3 sm:text-lg text-md">
                 AstroPoints
+              </span>
+              <span className="p-2 font-semibold text-yellow-600 bg-yellow-200 rounded-md me-3 sm:text-lg text-md">
+                TheBriyan
+              </span>
+              <span className="p-2 font-semibold text-blue-600 bg-blue-200 rounded-md me-3 sm:text-lg text-md">
+                Peachwav
               </span>
             </div>
           </div>
@@ -88,12 +89,12 @@ export default function Hero() {
             <div className=" bg-yellow-100 rounded-xl sm:w-[43%] sm:h-[250px] p-5">
               <div className="">
                 <h1 className="text-6xl font-bold text-left sm:text-8xl sm:text-center ">
-                  <CountUp end={230} duration={2.75} />+
+                  <CountUp end={63} duration={2.75} />+
                 </h1>
               </div>
               <div className="m-auto">
                 <h1 className="mt-2 text-lg ms-2">
-                  Some big Companies that we work with,and trust us very much{" "}
+                  BuzingBee guarantees an increase in ROI for our customers through our work.
                   <progress
                     className="w-56 progress progress-warning "
                     value="70"

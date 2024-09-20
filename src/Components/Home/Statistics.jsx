@@ -5,7 +5,7 @@ import CountUp from 'react-countup'
 export default function Statistics() {
   return (
     <>
-     
+
     <div className="mx-2 my-8 sm:my-10 sm:mx-16 ">
       <section class="text-gray-600 body-font">
         <div class="container px-2 sm:px-5  mx-auto">
@@ -13,10 +13,10 @@ export default function Statistics() {
             <div></div>
             <div class="p-4  w-1/2 sm:w-1/4"  data-aos="fade-down" data-aos-duration="1000">
               <div class="border-2 border-gray-200 px-4 py-6 rounded-lg">
-                
+
                 <i class="bi bi-emoji-laughing-fill text-warning w-12 h-12 mb-3 inline-block text-5xl"></i>
                 <h2 class="title-font font-medium text-3xl text-gray-900">
-                 <CountUp end={12} duration={5}/>
+                 <CountUp end={56} duration={5}/>
                 </h2>
                 <p class="leading-relaxed">Happy Clients</p>
               </div>
@@ -37,9 +37,9 @@ export default function Statistics() {
                   <path d="M23 21v-2a4 4 0 00-3-3.87m-4-12a4 4 0 010 7.75"></path>
                 </svg>
                 <h2 class="title-font font-medium text-3xl text-gray-900">
-                  <CountUp end={152} duration={5}/>
+                  <CountUp end={109} duration={5}/>
                 </h2>
-                <p class="leading-relaxed">Users</p>
+                <p class="leading-relaxed">Clients</p>
               </div>
             </div>
             <div class="p-4  w-1/2 sm:w-1/4"  data-aos="fade-down" data-aos-duration="3000">
@@ -58,7 +58,7 @@ export default function Statistics() {
                 </svg> */}
                 <i class="bi bi-window-dock text-warning w-12 h-12 mb-3 inline-block text-5xl"></i>
                 <h2 class="title-font font-medium text-3xl text-gray-900">
-                  <CountUp end={46} duration={5}/>
+                  <CountUp end={94} duration={5}/>
                 </h2>
                 <p class="leading-relaxed">Projects</p>
               </div>
@@ -67,7 +67,7 @@ export default function Statistics() {
               <div class="border-2 border-gray-200 px-4 py-6 rounded-lg">
                 <i class="bi bi-people-fill text-warning w-12 h-12 mb-3 inline-block text-5xl"></i>
                 <h2 class="title-font font-medium text-3xl text-gray-900">
-                  <CountUp end={6} duration={5}/>
+                  <CountUp end={10} duration={5}/>+
                 </h2>
                 <p class="leading-relaxed">Team</p>
               </div>

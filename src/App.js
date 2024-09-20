@@ -15,6 +15,7 @@ import Statistics from './Components/Home/Statistics.jsx'
 import NewServices from "./Components/NewServices.jsx";
 import Contact from './Components/Home/Contact.jsx'
 import ImageBanner from './Components/Home/ImageBanner.jsx'
+import {ChatBubble} from "./Components/ChatBubble";
 
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
 
   return (
     <div className="App sm:cursor-[url(./assets/image/bee1.png),_auto] overflow-x-hidden">
+        <ChatBubble/>
       <Navbar />
       <Hero />
       <Services />

@@ -23,9 +23,9 @@ export default function FeedBack() {
             {" "}
             More Questions
           </buttom>
-          <buttom className="underline underline-offset-5 font-bold ms-16 hidden sm:block">
-            Contact Us
-          </buttom>
+          {/*<a  className="underline underline-offset-5 font-bold ms-16 hidden sm:block">*/}
+          {/*  Contact Us*/}
+          {/*</a>*/}
         </div>
       </div>
       <div className="sm:w-[50%]">

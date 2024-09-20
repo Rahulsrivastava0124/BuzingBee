@@ -34,9 +34,9 @@ const Services = () => {
           >
             <h1 className="text-lg text-left text-gray-500 ">
               {" "}
-              we are a passionate team of digital marketing enthusiasm dedicated
-              to helping business succeed in the digital world world . with
-              years of experience and a deep understanding of the ever- evolving
+              We are a passionate team of digital marketing enthusiasm dedicated
+              to helping business succeed in the digital world. With
+              years of experience and a deep understanding of the ever-evolving
               online landscape, we stay at the forefront of industry trend and
               technologies.
             </h1>
@@ -56,7 +56,7 @@ const Services = () => {
           >
             <div className="">
               <h1 className="font-bold text-left text-white sm:text-8xl text-7xl">
-                <CountUp end={109} duration={5} />{" "}
+                <CountUp end={94} duration={5} />{" "}
                 <span className={"text-green-500"}>+</span>
               </h1>
             </div>
