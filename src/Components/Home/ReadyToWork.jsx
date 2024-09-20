@@ -1,5 +1,6 @@
 import React from "react";
-import { ReactComponent as ArrowReact } from "../../assets/svg/ArrowRight.svg";
+// import ArrowReact from "../../assets/svg/arrowRight.svg";
+import { FaArrowRightLong } from "react-icons/fa6";
 
 export default function ReadyToWork() {
   return (
@@ -9,7 +10,7 @@ export default function ReadyToWork() {
                   document.getElementById("my_modal_2").showModal()
                 }>
         {" "}
-        Contact <ArrowReact className="sm:size-6 size-4 sm:ms-8" />
+        Contact <FaArrowRightLong class="text-xl"/>
       </buttom>
     </div>
   );

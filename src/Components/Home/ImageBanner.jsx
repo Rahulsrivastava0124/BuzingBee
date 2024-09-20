@@ -5,7 +5,7 @@ import BuzingBeeBanner from "../../assets/image/BuzingBee_banner.png";
 
 export default function ImageBanner() {
   return (
-    <>
+    <div className="sm:mt-8 mt-3">
       <img
         src={BuzingBeeBannerMobile}
         alt="benner"
@@ -16,6 +16,6 @@ export default function ImageBanner() {
         alt="benner"
         className="m-auto hidden sm:block w-[90vw] rounded-2xl mt-5 sm:mt-0 h-40 sm:h-auto object-contain"
       />
-    </>
+    </div>
   );
 }

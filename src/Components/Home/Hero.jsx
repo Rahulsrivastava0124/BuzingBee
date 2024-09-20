@@ -1,5 +1,6 @@
 import React from "react";
-import { ReactComponent as ArrowReact } from "../../assets/svg/ArrowRight.svg";
+// import ArrowReact from "./assets/svg/arrowRight.svg";
+import { FaArrowRightLong } from "react-icons/fa6";
 import hero1 from "../../assets/image/hero1.jpg";
 import heroCart from "../../assets/image/cart_bar-hero.png";
 import CountUp from "react-countup";
@@ -34,7 +35,7 @@ export default function Hero() {
                   document.getElementById("my_modal_2").showModal()
                 }>
               {" "}
-              Schedule <ArrowReact className="sm:size-6 size-5 sm:ms-8" />
+              Schedule <FaArrowRightLong class="text-xl"/>
             </buttom>
             <buttom
               className="hidden font-bold underline sm:block ms-20"

@@ -9,11 +9,13 @@ import service1 from "../assets/image/services1.png";
 import portfolio_1 from "../assets/image/portfolio_1.jpg";
 import services from "../assets/image/logo.png";
 import services4 from "../assets/image/logo4.jpeg";
+import VideoModel from "./VideoModel";
 // import required modules
 
 const Services = () => {
   return (
     <>
+      <VideoModel />
       <div className="mx-4 mb-30 sm:mx-16 sm:mb-20" id="About">
         <div className="flex flex-col mb-8 sm:flex-row sm:mb-10">
           <div className="w-full me-0 sm:w-[2500px] sm:me-10 mb-10 sm:mb-0">
@@ -147,15 +149,18 @@ const Services = () => {
                   TEAM WE WORK
                 </span>
               </SwiperSlide>
-              <button className="absolute z-10 grid overflow-visible bg-yellow-300 rounded-full sm:size-16 bottom-3 right-3 ring-white ring-offset-base-100 ring ring-offset-1">
+              <button
+                className="absolute z-10 grid overflow-visible bg-yellow-300 rounded-full sm:size-16 bottom-3 right-3 ring-white ring-offset-base-100 ring ring-offset-1"
+                onClick={() =>
+                  document.getElementById("video_model").showModal()
+                }
+              >
                 <i class="bi bi-play-fill m-auto text-5xl"></i>
               </button>
             </Swiper>
           </div>
         </div>
       </div>
-
-
     </>
   );
 };

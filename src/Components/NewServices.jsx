@@ -157,7 +157,7 @@ const NewServices = () => {
                   alt="Mountain"
                 />
                 <div className="px-6 py-4">
-                  <div className="mb-2 text-xl font-bold">Vedio editing</div>
+                  <div className="mb-2 text-xl font-bold">Video editing</div>
                   <p className="hidden text-base text-gray-700 md:block">
                     Social media is one of the best platforms to grow your
                     business worldwide. we will help you to advertiseyour
