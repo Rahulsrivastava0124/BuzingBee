@@ -64,7 +64,7 @@ export default function Hero() {
                 TheBriyan
               </span>
               <span className="p-2 font-semibold text-blue-600 bg-blue-200 rounded-md me-3 sm:text-lg text-md">
-                Peachwav
+              Peachwave
               </span>
             </div>
           </div>
