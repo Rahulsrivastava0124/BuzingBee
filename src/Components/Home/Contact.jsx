@@ -65,10 +65,10 @@ export default function Contact() {
                     Contact to BuzingBee 🐝
                   </h2>
 
-                  <p className="mt-4 leading-relaxed text-white/90">
+                  {/* <p className="mt-4 leading-relaxed text-white/90">
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit.
                     Eligendi nam dolorum aliquam, quibusdam aperiam voluptatum.
-                  </p>
+                  </p> */}
                 </div>
               </section>
 
@@ -131,7 +131,7 @@ export default function Contact() {
                         id="FirstName"
                         name="name"
                         required
-                        className="w-full mt-1 text-sm text-gray-700 bg-white border-gray-200 rounded-md shadow-sm"
+                        className="w-full mt-1 text-sm bg-white border-yellow-400 rounded-md shadow text-g-ray-700"
                       />
                     </div>
 
@@ -149,7 +149,7 @@ export default function Contact() {
                         id="Email"
                         name="email"
                         required
-                        className="w-full mt-1 text-sm text-gray-700 bg-white border-gray-200 rounded-md shadow-sm"
+                        className="w-full mt-1 text-sm text-gray-700 bg-white border-yellow-400 rounded-md shadow"
                       />
                     </div>
 
@@ -167,7 +167,7 @@ export default function Contact() {
                         id="message"
                         name="message"
                         required
-                        className="w-full text-sm text-gray-700 bg-white border-gray-200 rounded-md shadow-sm mt-40-1 h-"
+                        className="w-full text-sm text-gray-700 bg-white border border-yellow-400 rounded-md shadow-sm mt-40-1 h-"
                       />
                     </div>
 
@@ -177,7 +177,7 @@ export default function Contact() {
                           type="checkbox"
                           id="MarketingAccept"
                           name="marketing_accept"
-                          className="bg-white border-gray-200 rounded-md shadow-sm size-5"
+                          className="bg-white border-yellow-400 rounded-md shadow size-5"
                         />
 
                         <span className="text-sm text-gray-700">

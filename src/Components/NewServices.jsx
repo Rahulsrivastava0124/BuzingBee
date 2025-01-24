@@ -64,10 +64,10 @@ const NewServices = () => {
                     Graphic Designing
                   </div>
                   <p className="hidden text-base text-gray-700 md:block">
-                    Today if you want to take your business ness to the peak
+                    Today if you want to take your business to the peak
                     then, advertisement through posters and an attractive logo
                     for your company is a must. Our team helps you to develop
-                    your logo, and poster according to your will. .
+                    your logo, and poster according to your will.
                   </p>
                 </div>
                 <div className="px-6 pt-4 pb-2">
@@ -108,7 +108,7 @@ const NewServices = () => {
                     #Video
                   </span>
                   <span className="inline-block px-3 py-1 mb-2 mr-2 text-sm font-semibold bg-yellow-200 rounded-full text-100">
-                    #Thumbnial
+                    #Thumbnail
                   </span>
                   <span className="inline-block px-3 py-1 mb-2 mr-2 text-sm font-semibold bg-yellow-200 rounded-full text-100">
                     #Ads
@@ -118,7 +118,7 @@ const NewServices = () => {
               </div>
                 
             </div>
-            <div className="flex flex-wrap justify-around sm:mt-10 mt-4">
+            <div className="flex flex-wrap justify-around mt-4 sm:mt-10">
               {/* card -1  */}
               <div style={{width:"-webkit-fill-available"}} className="max-w-sm mb-5 overflow-hidden border shadow-lg rounded-xl sm:mb-0 bg-yellow-50">
                 <img
@@ -160,9 +160,9 @@ const NewServices = () => {
                   <div className="mb-2 text-xl font-bold">Video editing</div>
                   <p className="hidden text-base text-gray-700 md:block">
                     Social media is one of the best platforms to grow your
-                    business worldwide. we will help you to advertiseyour
+                    business world wide. we will help you to advertise your
                     product on different social media platform which will
-                    enhance the productivity and quality of your service
+                    enhance the productivity and quality of your service.
                   </p>
                 </div>
                 <div className="px-6 pt-4 pb-2">
