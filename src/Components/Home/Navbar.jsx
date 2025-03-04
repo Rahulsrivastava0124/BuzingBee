@@ -61,14 +61,14 @@ function Navbar() {
               </button>
             </div>
             <div class="flex sm:flex-1 ms-10 items-center justify-center sm:items-center sm:justify-start">
-              <div className="flex flex-shrink-0 items-center ">
+              <div className="flex items-center flex-shrink-0 ">
                 {/* <img
                   class="sm:h-24 h-16 w-auto"
                   src={buzing_bee}
                   alt="Your Company"
                 /> */}
                 <div className="text-center">
-                  <h1 className="sm:text-4xl text-2xl font-extrabold">
+                  <h1 className="text-2xl font-extrabold sm:text-4xl">
                     <span className="text-black">Buzing</span><span className="text-yellow-400">Bee</span>
                   </h1>
                   <p className="sm:text-xs text-[10px] sm:mt-1 text-gray-600 font-boldme">Buzzing Beyond Boundaries</p>
@@ -164,7 +164,7 @@ function Navbar() {
             </div>
             <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0 ">
               <button
-                className="px-4 rounded-full btn btn-outline btn-sm sm:btn-md sm:px-8 btn-warning me-5 "
+                className="px-4 text-gray-800 rounded-full btn btn-outline btn-sm sm:btn-md sm:px-8 btn-warning me-5 "
                 onClick={() =>
                   document.getElementById("my_modal_2").showModal()
                 }
