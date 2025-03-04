@@ -164,7 +164,7 @@ function Navbar() {
             </div>
             <div class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0 ">
               <button
-                className="px-4 text-gray-800 rounded-full btn btn-outline btn-sm sm:btn-md sm:px-8 btn-warning me-5 "
+                className="px-4 text-gray-800 rounded-full btn btn-outline btn-sm sm:btn-md sm:px-8 btn-dark me-5 "
                 onClick={() =>
                   document.getElementById("my_modal_2").showModal()
                 }
@@ -173,7 +173,7 @@ function Navbar() {
               </button>
               <button
                 type="button"
-                class="relative rounded-full bg-yellow-500 p-3 text-black hover:text-white focus:outline-none hidden sm:block"
+                class="relative rounded-full bg-yellow-500 p-3 text-gray-700 hover:text-white focus:outline-none hidden sm:block"
               >
                 <span class="absolute -inset-1.5"></span>
                 <span class="sr-only">View notifications</span>
