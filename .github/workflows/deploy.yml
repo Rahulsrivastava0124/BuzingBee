@@ -1,12 +1,12 @@
-  name:Deploy the production
+  name: Deploy the production
 
   on:
     push:
       branches:
-        - main
+        - master
     pull_request:
       branches:
-        - main
+        - master
   permissions:
     contents: write
 
@@ -25,8 +25,8 @@
         - name: Deploy to production server with gh-pages
           uses: JamesIves/github-pages-deploy-action@v4.7.3
           with:
-              branch: gh-pages
-              folder: build
+            branch: gh-pages
+            folder: build
 
         - name: Install dependencies
           run: npm install
