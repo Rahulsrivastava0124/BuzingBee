@@ -5,6 +5,7 @@ import hero1 from "../../assets/image/hero1.jpg";
 import CountUp from "react-countup";
 import { Element } from 'react-scroll';
 
+
 export default function Hero() {
   return (
     <>
@@ -35,7 +36,7 @@ export default function Hero() {
               Schedule <FaArrowRightLong className="text-xl"/>
             </button>
             <a
-                href='#blog'
+                href='/'
               className="hidden font-bold underline sm:block ms-20"
               data-aos="fade-up"
               data-aos-duration="1500"
@@ -77,7 +78,7 @@ export default function Hero() {
                 <i className="absolute text-lg font-extrabold text-center bg-yellow-400 rounded-lg bi bi-graph-up-arrow w-9 h-9"></i>
               </button>
               <div className="rounded-tl-[100%] rounded-lg overflow-hidden">
-                <img src={hero1} alt="Hero Image 1" className="max-w-[135%]" />
+                <img src={hero1} alt="Hero" className="max-w-[135%]" />
               </div>
             </div>
             <div className="bg-yellow-100 rounded-xl sm:w-[43%] sm:h-[250px] p-5">
