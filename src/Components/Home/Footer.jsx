@@ -5,9 +5,8 @@ export default function Footer() {
   return (
     <>
       <Element id="footer" name="footer">
-        <div>
-          <footer className="text-gray-600 body-font">
-            <div className="container sm:px-20 sm:pt-20 pt-10 pb-10 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col ">
+          <footer className="text-gray-800 body-font  bg-gray-200">
+            <div className="container sm:px-20 sm:pt-10 pt-10 pb-10 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col ">
               <div className="sm:w-[30%] mx-4 flex-shrink-0 md:mx-0 text-center md:text-left ">
                 <span className="flex title-font font-medium sm:items-center md:justify-start sm:justify-center text-gray-900">
                   <svg
@@ -79,8 +78,27 @@ export default function Footer() {
                 </div>
               </div>
             </div>
+            <div className="bg-gray-600">
+                <div className="container mx-auto py-4 px-5 flex flex-wrap flex-col justify-between sm:flex-row">
+                  <p className="text-gray-200 text-sm text-center sm:text-left">
+                    © 2023 BuzingBee —
+                    <a
+                      href="https://www.instagram.com/buzingbee_/"
+                      className="text-gray-200 ml-1"
+                      rel="noopener noreferrer"
+                      target="_blank"
+                    >
+                      @BuzingBee
+                    </a>
+                  </p>
+                <p className={'text-sm'}>
+                  <a href={"https://github.com/Rahulsrivastava0124"} className="text-gray-200 ml-1" rel="noopener noreferrer" target="_blank">
+                    developed by <span className={"text-warning"}>@Rahul Srivastava</span>
+                  </a>
+                </p>
+                </div>
+            </div>
           </footer>
-        </div>
       </Element>
     </>
   );
