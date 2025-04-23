@@ -20,13 +20,7 @@
         - name: Set up Node.js
           uses: actions/setup-node@v2
           with:
-            node-version: '16'
-
-        - name: Deploy to production server with gh-pages
-          uses: JamesIves/github-pages-deploy-action@v4.7.3
-          with:
-            branch: gh-pages
-            folder: build
+            node-version: '22.x'
 
         - name: Install dependencies
           run: npm install
@@ -34,7 +28,11 @@
         - name: Build the project
           run: npm run build
 
-
+        - name: Deploy to production server with gh-pages
+          uses: JamesIves/github-pages-deploy-action@v4.7.3
+          with:
+            branch: gh-pages
+            folder: build
 
 
 
