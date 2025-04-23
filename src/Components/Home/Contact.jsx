@@ -131,7 +131,7 @@ export default function Contact() {
                         id="FirstName"
                         name="name"
                         required
-                        className="w-full mt-1 text-sm bg-white border-yellow-400 rounded-md shadow text-g-ray-700"
+                        className="w-full mt-1 h-10 text-sm bg-white outline-yellow-400 rounded-md shadow text-g-ray-700"
                       />
                     </div>
 
@@ -149,7 +149,7 @@ export default function Contact() {
                         id="Email"
                         name="email"
                         required
-                        className="w-full mt-1 text-sm text-gray-700 bg-white border-yellow-400 rounded-md shadow"
+                        className="w-full mt-1 h-10 text-sm text-gray-700 bg-white outline-yellow-400 rounded-md shadow"
                       />
                     </div>
 
@@ -161,7 +161,6 @@ export default function Contact() {
                         {" "}
                         Description{" "}
                       </label>
-
                       <textarea
                         type="text"
                         id="message"

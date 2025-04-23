@@ -3276,12 +3276,12 @@ details.collapse summary::-webkit-details-marker {
   flex-grow: 1;
 }
 
-.list-none {
-  list-style-type: none;
-}
-
 .list-disc {
   list-style-type: disc;
+}
+
+.list-none {
+  list-style-type: none;
 }
 
 .grid-cols-6 {
@@ -3865,6 +3865,11 @@ details.collapse summary::-webkit-details-marker {
   color: rgb(55 65 81 / var(--tw-text-opacity));
 }
 
+.text-gray-800 {
+  --tw-text-opacity: 1;
+  color: rgb(31 41 55 / var(--tw-text-opacity));
+}
+
 .text-gray-900 {
   --tw-text-opacity: 1;
   color: rgb(17 24 39 / var(--tw-text-opacity));
@@ -3962,6 +3967,10 @@ details.collapse summary::-webkit-details-marker {
 .shadow-green-500 {
   --tw-shadow-color: #22c55e;
   --tw-shadow: var(--tw-shadow-colored);
+}
+
+.outline-yellow-400 {
+  outline-color: #facc15;
 }
 
 .ring {
