@@ -8,7 +8,6 @@ import Blog from "./Components/Home/Blog.jsx";
 import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import Portfolio from "./Components/Portfolio.jsx";
 import Footer from "./Components/Home/Footer.jsx";
 import ReadyToWork from "./Components/Home/ReadyToWork.jsx";
 import Statistics from './Components/Home/Statistics.jsx'

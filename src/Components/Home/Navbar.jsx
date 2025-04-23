@@ -1,7 +1,7 @@
 // import logoPic from "../../assets/image/slack.png";
 // import { FaBell } from "react-icons/fa";
 // import buzing_bee from "../../assets/buzing_bee.gif";
-import { Link, animateScroll as scroll } from "react-scroll";
+import { Link } from "react-scroll";
 
 function Navbar() {
   return (
@@ -26,7 +26,7 @@ function Navbar() {
             Menu open: "hidden", Menu closed: "block"
           --> */}
                 <svg
-                  class="block h-6 w-6"
+                  className="block h-6 w-6"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke-width="1.5"
