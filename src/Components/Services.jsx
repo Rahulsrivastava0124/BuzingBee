@@ -13,6 +13,16 @@ import VideoModel from "./VideoModel";
 // import required modules
 
 const Services = () => {
+  // let audio = new Audio("../src/assets/audios/clickSound.mp3")
+
+  // const start = () => {
+  //   audio.play()
+  // }
+
+  // const handleClick = (e) => {
+  //   e.preventDefault()
+  //   start()
+  // }
   return (
     <>
       <VideoModel />
@@ -34,10 +44,10 @@ const Services = () => {
           >
             <h1 className="text-lg text-left text-gray-500 ">
               {" "}
-              We are a passionate team of digital marketing enthusiasm dedicated
-              to helping business succeed in the digital world. With
+              We are a passionate team of digital marketing enthusiasts dedicated
+              to helping businesses succeed in the digital world. With
               years of experience and a deep understanding of the ever-evolving
-              online landscape, we stay at the forefront of industry trend and
+              online landscape, we stay at the forefront of industry trends and
               technologies.
             </h1>
           </div>
@@ -99,9 +109,9 @@ const Services = () => {
                   />
                 </div>
               </div>
-              <div class="avatar me-2  placeholder">
-                <div class=" text-neutral-content size-12 sm:w-16  rounded-full">
-                  <span class="sm:text-8xl text-6xl font-bold">+</span>
+              <div className="avatar me-2  placeholder">
+                <div className=" text-neutral-content size-12 sm:w-16  rounded-full">
+                  <span className="sm:text-8xl text-6xl font-bold">+</span>
                 </div>
               </div>
             </div>
@@ -155,7 +165,7 @@ const Services = () => {
                   document.getElementById("video_model").showModal()
                 }
               >
-                <i class="bi bi-play-fill m-auto text-5xl"></i>
+                <i className="bi bi-play-fill m-auto text-5xl"></i>
               </button>
             </Swiper>
           </div>
