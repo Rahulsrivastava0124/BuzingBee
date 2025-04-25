@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Sitemap for BuzingBee website
+
+  changefreq: Indicates how frequently the content at a particular URL is likely to change.
+  Valid values: always, hourly, daily, weekly, monthly, yearly, never
+
+  - always: Content changes with every access
+  - hourly: Content changes every hour
+  - daily: Content changes every day
+  - weekly: Content changes every week
+  - monthly: Content changes every month
+  - yearly: Content changes every year
+  - never: Content never changes (archived content)
+
+  This value provides a hint to search engines about how often they should crawl the URL.
+-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://buzingbee.com/</loc>
+    <lastmod>2023-12-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://buzingbee.com/#home</loc>
+    <lastmod>2023-12-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://buzingbee.com/#services</loc>
+    <lastmod>2023-12-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://buzingbee.com/#blog</loc>
+    <lastmod>2023-12-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://buzingbee.com/#contact</loc>
+    <lastmod>2023-12-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://buzingbee.com/#features</loc>
+    <lastmod>2023-12-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+</urlset>
