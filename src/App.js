@@ -1,4 +1,5 @@
 import "./App.css";
+
 import Hero from "./Components/Home/Hero.jsx";
 import Navbar from "./Components/Home/Navbar.jsx";
 import Services from "./Components/Services.jsx";
@@ -10,12 +11,11 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import Footer from "./Components/Home/Footer.jsx";
 import ReadyToWork from "./Components/Home/ReadyToWork.jsx";
-import Statistics from './Components/Home/Statistics.jsx'
+import Statistics from "./Components/Home/Statistics.jsx";
 import NewServices from "./Components/NewServices.jsx";
-import Contact from './Components/Home/Contact.jsx'
-import ImageBanner from './Components/Home/ImageBanner.jsx'
-import {ChatBubble} from "./Components/ChatBubble";
-
+import Contact from "./Components/Home/Contact.jsx";
+import ImageBanner from "./Components/Home/ImageBanner.jsx";
+import { ChatBubble } from "./Components/ChatBubble";
 
 function App() {
   useEffect(() => {
@@ -30,22 +30,24 @@ function App() {
 
   return (
     <div className="App sm:cursor-[url(./assets/image/bee1.png),_auto] overflow-x-hidden">
-        <ChatBubble/>
+      <ChatBubble />
       <Navbar />
       <Hero />
       <Services />
-      <NewServices/>
-      <ImageBanner/>
-      <Statistics/>
+      <NewServices />
+      <ImageBanner />
+      <Statistics />
       {/*<Portfolio />*/}
       <Testimonial />
       <FeedBack />
       <Blog />
       <ReadyToWork />
       <Footer />
-      <Contact/>
+      <Contact />
     </div>
   );
+
+ 
 }
 
 export default App;
