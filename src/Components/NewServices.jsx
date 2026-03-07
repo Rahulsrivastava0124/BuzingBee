@@ -13,15 +13,19 @@ const NewServices = () => {
       <Element id="services" name="services">
         <div className="md:w-[90%] w-[100%] sm:my-14 my-6 sm:mx-16">
           <div className="container px-5 mx-auto">
-            <h2 className="mb-4 text-2xl font-bold text-center">Services</h2>
+            <h2 className="mb-4 text-2xl font-bold text-center">
+              Our Services
+            </h2>
             <h1 class="md:text-3xl text-xl font-medium title-font text-gray-900 mb-4 text-center">
-              Whether you’re just getting started with digital marketing or have
-              been doing it for years, our services are designed to meet all
-              your goals.
+              Comprehensive Digital Marketing Automation. From AI Agents to Paid
+              Ads, we deliver intelligent solutions that drive results.
             </h1>
             <div className="flex flex-wrap justify-around mt-10">
               {/* card -1  */}
-              <div style={{width:"-webkit-fill-available"}} className="max-w-sm mb-5 overflow-hidden border shadow-lg rounded-xl sm:mb-0 bg-yellow-50">
+              <div
+                style={{ width: "-webkit-fill-available" }}
+                className="max-w-sm mb-5 overflow-hidden border shadow-lg rounded-xl sm:mb-0 bg-yellow-50"
+              >
                 <img
                   className="w-[70%] m-auto h-60"
                   src={webDev}
@@ -30,30 +34,33 @@ const NewServices = () => {
                 />
                 <div className="px-6 py-4">
                   <div className="mb-2 text-xl font-bold">
-                    Web development <span className="text-gray-400">&</span> SEO
+                    AI Agent Development
                   </div>
                   <p className="hidden text-base text-gray-700 md:block">
-                    BuzingBee provides you with a total SEO-friendly and
-                    responsive website through which you can take your business
-                    to the next level.BuzingBee guarantees to the customer to
-                    increase in ROI with our work.
+                    Build intelligent AI agents that automate your entire
+                    marketing funnel. From lead qualification to customer
+                    nurturing, our AI agents work 24/7 to convert prospects into
+                    loyal customers. Powered by advanced machine learning.
                   </p>
                 </div>
                 <div className="px-6 pt-4 pb-2">
                   <span className="inline-block px-3 py-1 mb-2 mr-2 text-sm font-semibold bg-yellow-200 rounded-full text-100">
-                    #eCommerce
+                    #ChatBot
                   </span>
                   <span className="inline-block px-3 py-1 mb-2 mr-2 text-sm font-semibold bg-yellow-200 rounded-full text-100">
-                    #SEO
+                    #AI Workflow
                   </span>
                   <span className="inline-block px-3 py-1 mb-2 mr-2 text-sm font-semibold bg-yellow-200 rounded-full text-100">
-                    #Dashboard
+                    #Automation
                   </span>
                 </div>
                  
               </div>
               {/* card -2  */}
-              <div style={{width:"-webkit-fill-available"}} className="max-w-sm mb-5 overflow-hidden border shadow-lg rounded-xl sm:mb-0 bg-yellow-50">
+              <div
+                style={{ width: "-webkit-fill-available" }}
+                className="max-w-sm mb-5 overflow-hidden border shadow-lg rounded-xl sm:mb-0 bg-yellow-50"
+              >
                 <img
                   className="w-[70%] m-auto h-60"
                   src={graphics}
@@ -61,30 +68,33 @@ const NewServices = () => {
                 />
                 <div className="px-6 py-4">
                   <div className="mb-2 text-xl font-bold">
-                    Graphic Designing
+                    Website Agent Development
                   </div>
                   <p className="hidden text-base text-gray-700 md:block">
-                    Today if you want to take your business to the peak
-                    then, advertisement through posters and an attractive logo
-                    for your company is a must. Our team helps you to develop
-                    your logo, and poster according to your will.
+                    Deploy intelligent agents directly on your website to engage
+                    visitors. Smart visitor tracking, behavior prediction, and
+                    personalized experiences. Convert anonymous browsers into
+                    high-intent prospects automatically.
                   </p>
                 </div>
                 <div className="px-6 pt-4 pb-2">
                   <span className="inline-block px-3 py-1 mb-2 mr-2 text-sm font-semibold bg-yellow-200 rounded-full text-100">
-                    #3D
+                    #WebSite Bot
                   </span>
                   <span className="inline-block px-3 py-1 mb-2 mr-2 text-sm font-semibold bg-yellow-200 rounded-full text-100">
-                    #Animation
+                    #Personalization
                   </span>
                   <span className="inline-block px-3 py-1 mb-2 mr-2 text-sm font-semibold bg-yellow-200 rounded-full text-100">
-                    #Posts
+                    #CRM Integration
                   </span>
                 </div>
                  
               </div>
               {/* card -3  */}
-              <div style={{width:"-webkit-fill-available"}} className="max-w-sm mb-5 overflow-hidden border shadow-lg rounded-xl sm:mb-0 bg-yellow-50">
+              <div
+                style={{ width: "-webkit-fill-available" }}
+                className="max-w-sm mb-5 overflow-hidden border shadow-lg rounded-xl sm:mb-0 bg-yellow-50"
+              >
                 <img
                   className="w-[70%] m-auto h-60"
                   src={youtube}
@@ -92,26 +102,24 @@ const NewServices = () => {
                 />
                 <div className="px-6 py-4">
                   <div className="mb-2 text-xl font-bold">
-                    Youtube <span className="text-gray-400">&</span> Social
-                    media management
+                    Google <span className="text-gray-400">&</span> Meta Ads
                   </div>
                   <p className="hidden text-base text-gray-700 md:block">
-                    Social media is the biggest platform to boost any business
-                    and for that proper Social media handling is needed. Youtube
-                    management is one of the best platforms to grow your online
-                    business. It also include video editing, SEO management,
-                    thumbnail making, and Smo.
+                    Expert Google Ads and Meta (Facebook/Instagram) campaign
+                    management. Maximize ROAS with AI-optimized targeting,
+                    budget allocation, and creative testing. Our agents
+                    continuously learn and improve performance.
                   </p>
                 </div>
                 <div className="px-6 pt-4 pb-2">
                   <span className="inline-block px-3 py-1 mb-2 mr-2 text-sm font-semibold bg-yellow-200 rounded-full text-100">
-                    #Video
+                    #Google Ads
                   </span>
                   <span className="inline-block px-3 py-1 mb-2 mr-2 text-sm font-semibold bg-yellow-200 rounded-full text-100">
-                    #Thumbnail
+                    #Facebook Ads
                   </span>
                   <span className="inline-block px-3 py-1 mb-2 mr-2 text-sm font-semibold bg-yellow-200 rounded-full text-100">
-                    #Ads
+                    #ROAS Optimization
                   </span>
                 </div>
                  
@@ -120,7 +128,10 @@ const NewServices = () => {
             </div>
             <div className="flex flex-wrap justify-around mt-4 sm:mt-10">
               {/* card -1  */}
-              <div style={{width:"-webkit-fill-available"}} className="max-w-sm mb-5 overflow-hidden border shadow-lg rounded-xl sm:mb-0 bg-yellow-50">
+              <div
+                style={{ width: "-webkit-fill-available" }}
+                className="max-w-sm mb-5 overflow-hidden border shadow-lg rounded-xl sm:mb-0 bg-yellow-50"
+              >
                 <img
                   className="w-[70%] m-auto h-60"
                   src={mobile}
@@ -129,80 +140,85 @@ const NewServices = () => {
                 <div className="px-6 py-4">
                   <div className="mb-2 text-xl font-bold">App Development</div>
                   <p className="hidden text-base text-gray-700 md:block">
-                    App development is a good start for any business to get fast
-                    marketing. Buzingbee helps you to make your business more
-                    productive through apps. Our skilled professionals work on
-                    the specifications and the essentials which increase the
-                    ROI.
+                    Native and cross-platform mobile app development with
+                    integrated AI agents. Built for conversion with automated
+                    user engagement, push notifications, and in-app marketing
+                    automation. Boost your digital presence with powerful apps.
                   </p>
                 </div>
                 <div className="px-6 pt-4 pb-2">
                   <span className="inline-block px-3 py-1 mb-2 mr-2 text-sm font-semibold bg-yellow-200 rounded-full text-100">
-                    #E-Commerce
+                    #iOS/Android
                   </span>
                   <span className="inline-block px-3 py-1 mb-2 mr-2 text-sm font-semibold bg-yellow-200 rounded-full text-100">
-                    #Food
+                    #Push Automation
                   </span>
                   <span className="inline-block px-3 py-1 mb-2 mr-2 text-sm font-semibold bg-yellow-200 rounded-full text-100">
-                    #All
+                    #Engagement
                   </span>
                 </div>
                  
               </div>
               {/* card -2  */}
-              <div style={{width:"-webkit-fill-available"}} className="max-w-sm mb-5 overflow-hidden border shadow-lg rounded-xl sm:mb-0 bg-yellow-50">
-                <img
-                  className="w-[70%] m-auto h-60"
-                  src={SEO}
-                  alt="Mountain"
-                />
+              <div
+                style={{ width: "-webkit-fill-available" }}
+                className="max-w-sm mb-5 overflow-hidden border shadow-lg rounded-xl sm:mb-0 bg-yellow-50"
+              >
+                <img className="w-[70%] m-auto h-60" src={SEO} alt="Mountain" />
                 <div className="px-6 py-4">
-                  <div className="mb-2 text-xl font-bold">Video editing</div>
+                  <div className="mb-2 text-xl font-bold">
+                    AdSense & Monetization
+                  </div>
                   <p className="hidden text-base text-gray-700 md:block">
-                    Social media is one of the best platforms to grow your
-                    business world wide. we will help you to advertise your
-                    product on different social media platform which will
-                    enhance the productivity and quality of your service.
+                    Maximize revenue through Google AdSense optimization and
+                    multi-channel monetization. AI-driven ad placement, audience
+                    targeting, and traffic quality improvements. Scale your
+                    passive income while maintaining user experience.
                   </p>
                 </div>
                 <div className="px-6 pt-4 pb-2">
                   <span className="inline-block px-3 py-1 mb-2 mr-2 text-sm font-semibold bg-yellow-200 rounded-full text-100">
-                    #Animation
+                    #AdSense
                   </span>
                   <span className="inline-block px-3 py-1 mb-2 mr-2 text-sm font-semibold bg-yellow-200 rounded-full text-100">
-                    #Reels
+                    #Monetization
                   </span>
                   <span className="inline-block px-3 py-1 mb-2 mr-2 text-sm font-semibold bg-yellow-200 rounded-full text-100">
-                    #Video
+                    #Revenue
                   </span>
                 </div>
                  
               </div>
               {/* card -3  */}
-              <div style={{width:"-webkit-fill-available"}} className="max-w-sm mb-5 overflow-hidden border shadow-lg rounded-xl sm:mb-0 bg-yellow-50">
-                <img className="w-[70%] m-auto h-60" src={Social} alt="Mountain" />
+              <div
+                style={{ width: "-webkit-fill-available" }}
+                className="max-w-sm mb-5 overflow-hidden border shadow-lg rounded-xl sm:mb-0 bg-yellow-50"
+              >
+                <img
+                  className="w-[70%] m-auto h-60"
+                  src={Social}
+                  alt="Mountain"
+                />
                 <div className="px-6 py-4">
                   <div className="mb-2 text-xl font-bold">
-                    Meta and google ads
+                    Email Marketing Automation
                   </div>
                   <p className="hidden text-base text-gray-700 md:block">
-                    This type of marketing strategy is importantly and focused
-                    on improving the ranking of the website in search bars which
-                    results in an increase in traffic and also helps people to
-                    grow and advertise their brands to a higher level of
-                    customers.
+                    Intelligent email sequences powered by AI. Segment
+                    audiences, personalize content, and trigger campaigns
+                    automatically. Increase open rates, click-through rates, and
+                    conversions with data-driven email strategies.
                   </p>
                 </div>
                 <div className="px-6 pt-4 pb-2">
-
                   <span className="inline-block px-3 py-1 mb-2 mr-2 text-sm font-semibold bg-yellow-200 rounded-full text-100">
-                    #Ads
+                    #Email Sequences
                   </span>
                   <span className="inline-block px-3 py-1 mb-2 mr-2 text-sm font-semibold bg-yellow-200 rounded-full text-100">
-                    #leads
+                    #Segmentation
                   </span>
                   <span className="inline-block px-3 py-1 mb-2 mr-2 text-sm font-semibold bg-yellow-200 rounded-full text-100">
-                    #Social media
+                    #Personalization
                   </span>
                   {/* <span className="inline-block px-3 py-1 mb-2 mr-2 text-sm font-semibold bg-yellow-200 rounded-full text-100">
                 #winter
