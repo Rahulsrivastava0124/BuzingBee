@@ -1,0 +1,55 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "BuzingBee",
+  "url": "https://buzingbee.com",
+  "description": "BuzingBee - AI-Powered Marketing Automation Platform for digital marketing automation, AI agents, and intelligent marketing solutions.",
+  "logo": "https://buzingbee.com/logo.png",
+  "sameAs": [
+    "https://www.facebook.com/buzingbee",
+    "https://twitter.com/buzingbee",
+    "https://linkedin.com/company/buzingbee"
+  ],
+  "contact": {
+    "@type": "ContactPoint",
+    "contactType": "Sales",
+    "telephone": "+1-950-798-1942",
+    "areaServed": "Worldwide"
+  },
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "US"
+  },
+  "service": [
+    {
+      "@type": "Service",
+      "name": "AI Agent Development",
+      "description": "Custom AI agents for marketing automation and business intelligence"
+    },
+    {
+      "@type": "Service",
+      "name": "Website Agent Development",
+      "description": "Intelligent website automation with AI-powered features"
+    },
+    {
+      "@type": "Service",
+      "name": "Google & Meta Ads Management",
+      "description": "Professional paid advertising management across Google Ads and Meta platforms"
+    },
+    {
+      "@type": "Service",
+      "name": "App Development",
+      "description": "Custom mobile and web application development"
+    },
+    {
+      "@type": "Service",
+      "name": "AdSense & Monetization",
+      "description": "AdSense optimization and website monetization strategies"
+    },
+    {
+      "@type": "Service",
+      "name": "Email Marketing Automation",
+      "description": "Automated email campaigns and email marketing workflows"
+    }
+  ]
+}
