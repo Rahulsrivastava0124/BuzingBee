@@ -1,50 +1,40 @@
 import "./App.css";
-import Hero from "./Components/Home/Hero.jsx";
-import Navbar from "./Components/Home/Navbar.jsx";
-import Services from "./Components/Services.jsx";
-import Testimonial from "./Components/Testimonial.jsx";
-import FeedBack from "./Components/FeedBack.jsx";
-import Blog from "./Components/Home/Blog.jsx";
 import React, { useEffect } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import Footer from "./Components/Home/Footer.jsx";
-import ReadyToWork from "./Components/Home/ReadyToWork.jsx";
-import Statistics from './Components/Home/Statistics.jsx'
-import NewServices from "./Components/NewServices.jsx";
-import Contact from './Components/Home/Contact.jsx'
-import ImageBanner from './Components/Home/ImageBanner.jsx'
-import {ChatBubble} from "./Components/ChatBubble";
 
+import Navbar from "./Components/Home/Navbar.jsx";
+import Footer from "./Components/Home/Footer.jsx";
+import { ChatBubble } from "./Components/ChatBubble";
+
+// Import page components
+import HomePage from "./pages/HomePage.jsx";
+import ServicesPage from "./pages/ServicesPage.jsx";
+import AboutPage from "./pages/AboutPage.jsx";
+import BlogPage from "./pages/BlogPage.jsx";
+import ContactPage from "./pages/ContactPage.jsx";
 
 function App() {
   useEffect(() => {
     AOS.init();
   }, []);
 
-  // let audio = new Audio("../src/assets/audios/clickSound.mp3")
-
-  // const start = () => {
-  //   audio.play()
-  // }
-
   return (
-    <div className="App sm:cursor-[url(./assets/image/bee1.png),_auto] overflow-x-hidden">
-        <ChatBubble/>
-      <Navbar />
-      <Hero />
-      <Services />
-      <NewServices/>
-      <ImageBanner/>
-      <Statistics/>
-      {/*<Portfolio />*/}
-      <Testimonial />
-      <FeedBack />
-      <Blog />
-      <ReadyToWork />
-      <Footer />
-      <Contact/>
-    </div>
+    <Router>
+      <div className="App sm:cursor-[url(./assets/image/bee1.png),_auto] overflow-x-hidden">
+        <ChatBubble />
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/services" element={<ServicesPage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/blog" element={<BlogPage />} />
+          <Route path="/contact" element={<ContactPage />} />
+        </Routes>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 

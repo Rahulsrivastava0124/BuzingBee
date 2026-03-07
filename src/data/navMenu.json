@@ -1,0 +1,38 @@
+{
+  "navMenu": [
+    {
+      "id": "home",
+      "label": "Home",
+      "path": "/",
+      "icon": "bi-house-fill"
+    },
+    {
+      "id": "services",
+      "label": "Services",
+      "path": "/services",
+      "icon": "bi-gear-fill"
+    },
+    {
+      "id": "about",
+      "label": "About",
+      "path": "/about",
+      "icon": "bi-info-circle-fill"
+    },
+    {
+      "id": "blog",
+      "label": "Blog",
+      "path": "/blog",
+      "icon": "bi-newspaper"
+    },
+    {
+      "id": "contact",
+      "label": "Contact",
+      "path": "/contact",
+      "icon": "bi-telephone-fill"
+    }
+  ],
+  "cta": {
+    "phone": "9507981942",
+    "whatsapp": "919507981942"
+  }
+}

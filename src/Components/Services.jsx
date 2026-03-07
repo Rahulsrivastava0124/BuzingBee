@@ -34,7 +34,7 @@ const Services = () => {
               data-aos="fade-up"
               data-aos-duration="1000"
             >
-              Provide the best service with out of the box ideas
+              Intelligent Automation for Modern Digital Marketing
             </h1>
           </div>
           <div
@@ -44,11 +44,10 @@ const Services = () => {
           >
             <h1 className="text-lg text-left text-gray-500 ">
               {" "}
-              We are a passionate team of digital marketing enthusiasts dedicated
-              to helping businesses succeed in the digital world. With
-              years of experience and a deep understanding of the ever-evolving
-              online landscape, we stay at the forefront of industry trends and
-              technologies.
+              We build AI-powered automation workflows that transform your
+              digital marketing. From lead generation to customer retention, our
+              intelligent agents work 24/7 to optimize your campaigns, increase
+              conversions, and scale your business without manual intervention.
             </h1>
           </div>
         </div>
@@ -66,12 +65,12 @@ const Services = () => {
           >
             <div className="">
               <h1 className="font-bold text-left text-white sm:text-8xl text-7xl">
-                <CountUp end={94} duration={5} />{" "}
-                <span className={"text-green-500"}>+</span>
+                <CountUp end={450} duration={5} />{" "}
+                <span className={"text-yellow-400"}>+</span>
               </h1>
             </div>
             <h1 className={"text-2xl text-gray-400 font-semibold mt-3"}>
-              Project finish with superbly{" "}
+              Workflows Automated Daily{" "}
             </h1>
             <div className={"flex sm:mt-20 mt-10 align-center items-center"}>
               <div className="rounded-full avatar ring-warning ring-offset-base-50 ring ring-offset-0 ">
