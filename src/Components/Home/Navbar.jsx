@@ -1,7 +1,6 @@
 // import logoPic from "../../assets/image/slack.png";
 // import { FaBell } from "react-icons/fa";
 // import buzing_bee from "../../assets/buzing_bee.gif";
-import { Link as ScrollLink } from "react-scroll";
 import { Link as RouterLink, useLocation } from "react-router-dom";
 import { MessageCircle } from "lucide-react";
 import navMenuData from "../../data/navMenu.json";
