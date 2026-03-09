@@ -73,37 +73,61 @@ export default function Blog({ limit = null }) {
         )}
 
         {!isLoading && !error && (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {visibleBlogs.map((blog) => (
               <article
                 key={blog._id}
-                className="bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow"
+                className="group bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2"
+                data-aos="fade-up"
+                data-aos-duration="800"
               >
                 {blog.image && (
-                  <img
-                    src={blog.image}
-                    alt={blog.title}
-                    className="w-full h-48 object-cover"
-                    loading="lazy"
-                  />
+                  <div className="relative overflow-hidden h-56">
+                    <img
+                      src={blog.image}
+                      alt={blog.title}
+                      className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500"
+                      loading="lazy"
+                    />
+                    <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full">
+                      <span className="text-xs font-semibold text-gray-700">
+                        {formatDate(blog.publishedAt)}
+                      </span>
+                    </div>
+                  </div>
                 )}
-                <div className="p-6">
-                  <p className="text-xs text-gray-500 mb-2">
-                    {formatDate(blog.publishedAt)}
-                  </p>
-                  <h3 className="text-xl font-bold text-gray-900 leading-snug mb-3 line-clamp-2">
+                <div className="p-6 sm:p-8">
+                  {blog.category && (
+                    <span className="inline-block bg-yellow-400 text-gray-900 text-xs font-bold uppercase tracking-wide px-3 py-1 rounded-full mb-3">
+                      {blog.category}
+                    </span>
+                  )}
+                  <h3 className="text-xl sm:text-2xl font-bold text-gray-900 leading-snug mb-4 line-clamp-2 group-hover:text-yellow-600 transition-colors">
                     {blog.title}
                   </h3>
-                  <p className="text-gray-600 text-sm leading-relaxed line-clamp-4 mb-5">
+                  <p className="text-gray-600 text-sm sm:text-base leading-relaxed line-clamp-3 mb-6">
                     {blog.excerpt ||
                       blog.seo?.description ||
                       "Read full details in the article."}
                   </p>
                   <Link
                     to={`/blog/${blog.slug}`}
-                    className="btn btn-neutral rounded-full btn-sm px-6"
+                    className="inline-flex items-center gap-2 bg-gray-900 text-white px-6 py-3 rounded-full font-semibold hover:bg-yellow-400 hover:text-gray-900 transition-all duration-300"
                   >
                     Read more
+                    <svg
+                      className="w-4 h-4 transform group-hover:translate-x-1 transition-transform"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M17 8l4 4m0 0l-4 4m4-4H3"
+                      />
+                    </svg>
                   </Link>
                 </div>
               </article>
