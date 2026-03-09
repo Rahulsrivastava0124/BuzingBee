@@ -53,9 +53,14 @@ export default function Blog({ limit = null }) {
     <Element id="blog" name="blog">
       <section className="sm:mx-20 mx-6 sm:my-16 my-10" data-aos="zoom-out-up">
         <div className="flex items-end justify-between flex-wrap gap-4 mb-10">
-          <h2 className="sm:text-4xl text-2xl font-semibold">Latest Blog Posts</h2>
+          <h2 className="sm:text-4xl text-2xl font-semibold">
+            Latest Blog Posts
+          </h2>
           {limit && (
-            <Link to="/blog" className="btn btn-outline btn-sm sm:btn-md rounded-full px-8">
+            <Link
+              to="/blog"
+              className="btn btn-outline btn-sm sm:btn-md rounded-full px-8"
+            >
               See all
             </Link>
           )}
@@ -70,7 +75,10 @@ export default function Blog({ limit = null }) {
         {!isLoading && !error && (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {visibleBlogs.map((blog) => (
-              <article key={blog._id} className="bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+              <article
+                key={blog._id}
+                className="bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow"
+              >
                 {blog.image && (
                   <img
                     src={blog.image}
@@ -87,7 +95,9 @@ export default function Blog({ limit = null }) {
                     {blog.title}
                   </h3>
                   <p className="text-gray-600 text-sm leading-relaxed line-clamp-4 mb-5">
-                    {blog.excerpt || blog.seo?.description || "Read full details in the article."}
+                    {blog.excerpt ||
+                      blog.seo?.description ||
+                      "Read full details in the article."}
                   </p>
                   <Link
                     to={`/blog/${blog.slug}`}

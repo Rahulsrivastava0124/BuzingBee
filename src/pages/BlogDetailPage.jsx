@@ -68,7 +68,10 @@ export default function BlogDetailPage() {
     };
   }, []);
 
-  const blog = useMemo(() => blogs.find((item) => item.slug === slug), [blogs, slug]);
+  const blog = useMemo(
+    () => blogs.find((item) => item.slug === slug),
+    [blogs, slug],
+  );
 
   useEffect(() => {
     if (!blog) return;
@@ -79,7 +82,8 @@ export default function BlogDetailPage() {
       ? blog.seo.keywords.join(", ")
       : blog.seo?.keywords || "";
     const ogImage = blog.seo?.ogImage || blog.image || "";
-    const canonicalUrl = blog.seo?.canonicalUrl || `${window.location.origin}/blog/${blog.slug}`;
+    const canonicalUrl =
+      blog.seo?.canonicalUrl || `${window.location.origin}/blog/${blog.slug}`;
 
     document.title = title;
     createOrUpdateMeta('meta[name="description"]', {
@@ -143,14 +147,23 @@ export default function BlogDetailPage() {
 
   return (
     <main className="pt-24 pb-16 px-4 sm:px-8 max-w-5xl mx-auto">
-      <Link to="/blog" className="text-sm text-gray-600 hover:text-black font-medium">
+      <Link
+        to="/blog"
+        className="text-sm text-gray-600 hover:text-black font-medium"
+      >
         ← Back to blog
       </Link>
 
       <header className="mt-5 mb-8">
-        <p className="text-xs uppercase tracking-wide text-gray-500 mb-3">{blog.category}</p>
-        <h1 className="text-3xl sm:text-5xl font-bold leading-tight text-gray-900">{blog.title}</h1>
-        <p className="text-gray-600 mt-5 text-lg leading-relaxed">{blog.excerpt}</p>
+        <p className="text-xs uppercase tracking-wide text-gray-500 mb-3">
+          {blog.category}
+        </p>
+        <h1 className="text-3xl sm:text-5xl font-bold leading-tight text-gray-900">
+          {blog.title}
+        </h1>
+        <p className="text-gray-600 mt-5 text-lg leading-relaxed">
+          {blog.excerpt}
+        </p>
       </header>
 
       {blog.image && (
