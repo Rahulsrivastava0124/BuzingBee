@@ -123,6 +123,19 @@
         ]
       }
     </script>
+    <script>
+      // Add to your website
+      fetch(`http://api.buzingbee.com/api/analytics/track`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          website: "buzingbee", // Your website name
+          page: window.location.pathname,
+          device: /mobile/i.test(navigator.userAgent) ? "mobile" : "desktop",
+          location: null, // Optional
+        }),
+      });
+    </script>
 
     <link
       rel="stylesheet"
