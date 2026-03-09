@@ -13,6 +13,7 @@ import HomePage from "./pages/HomePage.jsx";
 import ServicesPage from "./pages/ServicesPage.jsx";
 import AboutPage from "./pages/AboutPage.jsx";
 import BlogPage from "./pages/BlogPage.jsx";
+import BlogDetailPage from "./pages/BlogDetailPage.jsx";
 import ContactPage from "./pages/ContactPage.jsx";
 
 function App() {
@@ -30,6 +31,7 @@ function App() {
           <Route path="/services" element={<ServicesPage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/blog" element={<BlogPage />} />
+          <Route path="/blog/:slug" element={<BlogDetailPage />} />
           <Route path="/contact" element={<ContactPage />} />
         </Routes>
         <Footer />

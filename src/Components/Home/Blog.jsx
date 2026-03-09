@@ -1,118 +1,110 @@
-import React from "react";
+import React, { useEffect, useMemo, useState } from "react";
+import { Link } from "react-router-dom";
 import { Element } from "react-scroll";
-// import { ReactComponent as ArrowReact } from "../../assets/svg/ArrowRight.svg";
+import { fetchBlogs } from "../../api/blogApi";
 
-export default function Blog() {
+const formatDate = (dateValue) => {
+  if (!dateValue) return "";
+  return new Date(dateValue).toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "short",
+    day: "numeric",
+  });
+};
+
+export default function Blog({ limit = null }) {
+  const [blogs, setBlogs] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState("");
+
+  useEffect(() => {
+    let isMounted = true;
+
+    const loadBlogs = async () => {
+      try {
+        const data = await fetchBlogs();
+        if (isMounted) {
+          setBlogs(data);
+        }
+      } catch (err) {
+        if (isMounted) {
+          setError(err.message || "Unable to load blogs right now");
+        }
+      } finally {
+        if (isMounted) {
+          setIsLoading(false);
+        }
+      }
+    };
+
+    loadBlogs();
+
+    return () => {
+      isMounted = false;
+    };
+  }, []);
+
+  const visibleBlogs = useMemo(() => {
+    if (!limit) return blogs;
+    return blogs.slice(0, limit);
+  }, [blogs, limit]);
+
   return (
-    <>
     <Element id="blog" name="blog">
-    <div className="sm:mx-20 mx-6 sm:my-16 " data-aos="zoom-out-up">
-      <div className="flex flex-wrap">
-        <div className="sm:w-[50%]" data-aos="fade-in" data-aos-duration="1000">
-          <h1 className="sm:text-5xl text-2xl font-semibold leading-[1.2]">
-            Digital Marketing & SEO ServicesThat Grow Traffic & increase Revenue
-          </h1>
+      <section className="sm:mx-20 mx-6 sm:my-16 my-10" data-aos="zoom-out-up">
+        <div className="flex items-end justify-between flex-wrap gap-4 mb-10">
+          <h2 className="sm:text-4xl text-2xl font-semibold">Latest Blog Posts</h2>
+          {limit && (
+            <Link to="/blog" className="btn btn-outline btn-sm sm:btn-md rounded-full px-8">
+              See all
+            </Link>
+          )}
         </div>
-        <div
-          className="sm:w-[50%] mt-5 sm:mt-0"
-          data-aos="fade-in"
-          data-aos-duration="1000"
-        >
-          <p className="text-xl leading-[1.5] font-semibold text-gray-500">
-            we are the top digital ,arketing agency for branding corp . We offer
-            a full range of services to help clients improve their search engine
-            ranking and drive more traffic to their websites.
-          </p>
-          <buttom className="btn btn-outline btn-wide sm:btn-md btn-neutral mt-8 rounded-full px-14 font-bold">
-            see more
-          </buttom>
-        </div>
-      </div>
-      <div>
-        <section class="text-gray-500 body-font">
-          <div class="container sm:px-5 py-16 mx-auto">
-            <div class="flex flex-wrap -m-4">
-              <div
-                class="p-4 lg:w-1/3"
-                data-aos="fade-up"
-                data-aos-duration="1000"
-              >
-                <div class="h-full bg-gray-100 bg-opacity-75 px-10 py-10 rounded-3xl overflow-hidden text-center relative">
-                  <h2 className="flex justify-between">
-                    <span className="indicator-item indicator-middle indicator-start badge badge-sm  badge-secondary"></span>
-                    <span className="text-gray-400 text-sm"> 5 min read</span>
-                  </h2>
-                  <h1 class="title-font sm:text-2xl text-xl text-left font-bold text-gray-900 my-5 ">
-                    How a Digital Marketing Agency Can boost your Business
-                  </h1>
-                  <div className="flex flex-wrap items-end">
-                    <p class="leading-relaxed text-left text-sm me-6">
-                      Photo booth fam kinfolk cold-pressed sriracha leggings
-                      jianbing microdosing tousled waistcoat.
-                    </p>
-                    <buttom className="btn btn-outline mt-4 sm:mt-4 sm:p-4 flex sm:block text-white btn-neutral rounded-full sm:px-8  sm:btn-md px-[41%] btn-active">
-                      More
-                      {/* <ArrowReact /> */}
-                    </buttom>
-                  </div>
+
+        {isLoading && <p className="text-gray-600">Loading blogs...</p>}
+
+        {error && !isLoading && (
+          <p className="text-red-500 font-medium">{error}</p>
+        )}
+
+        {!isLoading && !error && (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {visibleBlogs.map((blog) => (
+              <article key={blog._id} className="bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                {blog.image && (
+                  <img
+                    src={blog.image}
+                    alt={blog.title}
+                    className="w-full h-48 object-cover"
+                    loading="lazy"
+                  />
+                )}
+                <div className="p-6">
+                  <p className="text-xs text-gray-500 mb-2">
+                    {formatDate(blog.publishedAt)}
+                  </p>
+                  <h3 className="text-xl font-bold text-gray-900 leading-snug mb-3 line-clamp-2">
+                    {blog.title}
+                  </h3>
+                  <p className="text-gray-600 text-sm leading-relaxed line-clamp-4 mb-5">
+                    {blog.excerpt || blog.seo?.description || "Read full details in the article."}
+                  </p>
+                  <Link
+                    to={`/blog/${blog.slug}`}
+                    className="btn btn-neutral rounded-full btn-sm px-6"
+                  >
+                    Read more
+                  </Link>
                 </div>
-              </div>
-              <div
-                class="p-4 lg:w-1/3"
-                data-aos="fade-up"
-                data-aos-duration="1000"
-              >
-                <div class="h-full bg-gray-100 bg-opacity-75 px-10 py-10 rounded-3xl overflow-hidden text-center relative">
-                  <h2 className="flex justify-between">
-                    <span className="indicator-item indicator-middle indicator-start badge badge-sm  badge-info"></span>
-                    <span className="text-gray-400 text-sm"> 5 min read</span>
-                  </h2>
-                  <h1 class="title-font sm:text-2xl text-xl text-left font-bold text-gray-900 my-5 ">
-                    How a Digital Marketing Agency Can boost your Business
-                  </h1>
-                  <div className="flex flex-wrap items-end">
-                    <p class="leading-relaxed text-left text-sm me-6">
-                      Photo booth fam kinfolk cold-pressed sriracha leggings
-                      jianbing microdosing tousled waistcoat.
-                    </p>
-                    <buttom className="btn btn-outline mt-4 sm:mt-4 sm:p-4 flex sm:block text-white btn-neutral rounded-full sm:px-8  sm:btn-md px-[41%] btn-active">
-                      More
-                      {/* <ArrowReact /> */}
-                    </buttom>
-                  </div>
-                </div>
-              </div>
-              <div
-                class="p-4 lg:w-1/3"
-                data-aos="fade-up"
-                data-aos-duration="1000"
-              >
-                <div class="h-full bg-gray-100 bg-opacity-75 px-10 py-10 rounded-3xl overflow-hidden text-center relative">
-                  <h2 className="flex justify-between">
-                    <span className="indicator-item indicator-middle indicator-start badge badge-sm  badge-warning"></span>
-                    <span className="text-gray-400 text-sm"> 5 min read</span>
-                  </h2>
-                  <h1 class="title-font sm:text-2xl text-xl text-left font-bold text-gray-900 my-5 ">
-                    How a Digital Marketing Agency Can boost your Business
-                  </h1>
-                  <div className="flex flex-wrap items-end">
-                    <p class="leading-relaxed text-left text-sm me-6">
-                      Photo booth fam kinfolk cold-pressed sriracha leggings
-                      jianbing microdosing tousled waistcoat.
-                    </p>
-                    <buttom className="btn btn-outline mt-4 sm:mt-4 sm:p-4 flex sm:block text-white btn-neutral rounded-full sm:px-8  sm:btn-md px-[41%] btn-active">
-                      More
-                      {/* <ArrowReact /> */}
-                    </buttom>
-                  </div>
-                </div>
-              </div>
-            </div>
+              </article>
+            ))}
           </div>
-        </section>
-      </div>
-    </div>
+        )}
+
+        {!isLoading && !error && visibleBlogs.length === 0 && (
+          <p className="text-gray-600">No blog posts found.</p>
+        )}
+      </section>
     </Element>
-    </>
   );
 }

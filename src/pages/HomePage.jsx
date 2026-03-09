@@ -19,7 +19,7 @@ export default function HomePage() {
       <Statistics />
       <Testimonial />
       <FeedBack />
-      <Blog />
+      <Blog limit={3} />
       <ReadyToWork />
     </main>
   );
