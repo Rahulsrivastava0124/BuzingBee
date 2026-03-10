@@ -16,6 +16,8 @@
   --tw-prose-pre-bg: #1f2937;
   --tw-prose-th-borders: #d1d5db;
   --tw-prose-td-borders: #e5e7eb;
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
 
 .prose h1,
@@ -54,6 +56,9 @@
   color: var(--tw-prose-body);
   line-height: 1.75;
   margin-bottom: 1.25em;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 .prose a {
@@ -73,6 +78,8 @@
   color: var(--tw-prose-body);
   margin: 1.25em 0;
   padding-left: 2em;
+  word-break: break-word;
+  overflow-wrap: break-word;
 }
 
 .prose ol {

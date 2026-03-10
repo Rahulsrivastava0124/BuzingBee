@@ -302,7 +302,12 @@ export default function BlogDetailPage() {
 
       <article className="prose prose-lg max-w-none">
         <div
-          className="text-gray-700 leading-8"
+          className="text-gray-700 leading-8 break-words overflow-hidden word-break"
+          style={{
+            overflowWrap: "break-word",
+            wordBreak: "break-word",
+            hyphens: "auto",
+          }}
           dangerouslySetInnerHTML={{
             __html: formatContentAsHtml(blog.content),
           }}
