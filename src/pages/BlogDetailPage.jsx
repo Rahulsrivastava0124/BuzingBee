@@ -28,6 +28,106 @@ const createOrUpdateCanonical = (url) => {
   canonical.setAttribute("href", url);
 };
 
+const formatContentAsHtml = (content = "") => {
+  if (!content) return "<p>No content available</p>";
+
+  // Check if content is already HTML
+  if (/<[^>]*>/.test(content)) {
+    return content;
+  }
+
+  // Split by line breaks and process
+  const lines = content.split(/\r?\n/).filter((line) => line.trim());
+  let html = "";
+  let inList = false;
+  let buffer = [];
+
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i].trim();
+
+    // Check if line starts with a number (for numbered lists)
+    const numberedListMatch = line.match(/^(\d+)\.\s+(.+)$/);
+    if (numberedListMatch) {
+      if (!inList) {
+        if (buffer.length > 0) {
+          html += `<p>${buffer.join(" ")}</p>`;
+          buffer = [];
+        }
+        html += "<ol>";
+        inList = true;
+      }
+      html += `<li>${numberedListMatch[2]}</li>`;
+      continue;
+    }
+
+    // Check for bullet points
+    const bulletMatch = line.match(/^[•\-*]\s+(.+)$/);
+    if (bulletMatch) {
+      if (inList && !html.endsWith("<ul>")) {
+        html = html.replace(/<ol>/, "<ul>");
+      }
+      if (!inList) {
+        if (buffer.length > 0) {
+          html += `<p>${buffer.join(" ")}</p>`;
+          buffer = [];
+        }
+        html += "<ul>";
+        inList = true;
+      }
+      html += `<li>${bulletMatch[1]}</li>`;
+      continue;
+    }
+
+    // If we were in a list and hit regular text, close the list
+    if (inList) {
+      html += html.endsWith("<ul>") ? "</ul>" : "</ol>";
+      inList = false;
+    }
+
+    // Check if line looks like a heading (all caps or ends with colon)
+    if (line.match(/^[A-Z\s]+$/) && line.length < 80) {
+      if (buffer.length > 0) {
+        html += `<p>${buffer.join(" ")}</p>`;
+        buffer = [];
+      }
+      html += `<h3>${line}</h3>`;
+    } else if (line.endsWith(":") && line.length < 80) {
+      if (buffer.length > 0) {
+        html += `<p>${buffer.join(" ")}</p>`;
+        buffer = [];
+      }
+      html += `<h3>${line.slice(0, -1)}</h3>`;
+    } else {
+      // Regular paragraph text
+      buffer.push(line);
+
+      // Check if next line is empty or a special line (start new paragraph)
+      if (
+        i === lines.length - 1 ||
+        !lines[i + 1]?.trim() ||
+        lines[i + 1]?.match(/^(\d+)\.|^[•\-*]|^[A-Z\s]+$/)
+      ) {
+        if (buffer.length > 0) {
+          html += `<p>${buffer.join(" ")}</p>`;
+          buffer = [];
+        }
+      }
+    }
+  }
+
+  // Close any open list
+  if (inList) {
+    html += html.endsWith("<ul>") ? "</ul>" : "</ol>";
+  }
+
+  // Add any remaining buffer
+  if (buffer.length > 0) {
+    html += `<p>${buffer.join(" ")}</p>`;
+  }
+
+  return html;
+};
+
 export default function BlogDetailPage() {
   const { slug } = useParams();
   const [blogs, setBlogs] = useState([]);
@@ -202,9 +302,9 @@ export default function BlogDetailPage() {
 
       <article className="prose prose-lg max-w-none">
         <div
-          className="text-gray-700 leading-8 space-y-6"
+          className="text-gray-700 leading-8"
           dangerouslySetInnerHTML={{
-            __html: blog.content || "<p>No content available</p>",
+            __html: formatContentAsHtml(blog.content),
           }}
         />
       </article>
