@@ -30,3 +30,4 @@ Disallow: /
 
 # Specify sitemap location
 Sitemap: https://buzingbee.com/sitemap.xml
+Sitemap: https://www.buzingbee.com/sitemap.xml

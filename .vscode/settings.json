@@ -1,0 +1,12 @@
+{
+  "chat.tools.terminal.autoApprove": {
+    "/^docker build -t buzingbee \\.$/": {
+      "approve": true,
+      "matchCommandLine": true
+    },
+    "/^node scripts/generate-sitemap\\.mjs$/": {
+      "approve": true,
+      "matchCommandLine": true
+    }
+  }
+}

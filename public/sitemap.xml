@@ -1,41 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-  Sitemap for BuzingBee - AI-Powered Marketing Automation Platform
-
-  changefreq: Indicates how frequently the content at a particular URL is likely to change.
-  Valid values: always, hourly, daily, weekly, monthly, yearly, never
-
-  This value provides a hint to search engines about how often they should crawl the URL.
--->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://buzingbee.com/</loc>
-    <lastmod>2025-01-01</lastmod>
+    <lastmod>2026-03-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://buzingbee.com/services</loc>
-    <lastmod>2025-01-01</lastmod>
+    <lastmod>2026-03-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://buzingbee.com/about</loc>
-    <lastmod>2025-01-01</lastmod>
+    <lastmod>2026-03-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://buzingbee.com/blog</loc>
-    <lastmod>2025-01-01</lastmod>
+    <lastmod>2026-03-10</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://buzingbee.com/contact</loc>
-    <lastmod>2025-01-01</lastmod>
+    <lastmod>2026-03-10</lastmod>
     <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://buzingbee.com/blog/the-power-of-digital-marketing-unlocking-success-in-the-digital-age</loc>
+    <lastmod>2026-03-10</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
 </urlset>
