@@ -28,13 +28,6 @@ const createOrUpdateCanonical = (url) => {
   canonical.setAttribute("href", url);
 };
 
-const formatContentBlocks = (content = "") => {
-  return content
-    .split(/\r?\n\r?\n/)
-    .map((chunk) => chunk.trim())
-    .filter(Boolean);
-};
-
 export default function BlogDetailPage() {
   const { slug } = useParams();
   const [blogs, setBlogs] = useState([]);
@@ -143,42 +136,90 @@ export default function BlogDetailPage() {
     );
   }
 
-  const blocks = formatContentBlocks(blog.content);
-
   return (
-    <main className="pt-24 pb-16 px-4 sm:px-8 max-w-5xl mx-auto">
+    <main className="pt-24 pb-16 px-4 sm:px-8 max-w-4xl mx-auto">
       <Link
         to="/blog"
-        className="text-sm text-gray-600 hover:text-black font-medium"
+        className="inline-flex items-center gap-2 text-sm text-gray-600 hover:text-black font-medium transition-colors mb-8"
       >
-        ← Back to blog
+        <svg
+          className="w-4 h-4"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={2}
+            d="M15 19l-7-7 7-7"
+          />
+        </svg>
+        Back to blog
       </Link>
 
-      <header className="mt-5 mb-8">
-        <p className="text-xs uppercase tracking-wide text-gray-500 mb-3">
-          {blog.category}
-        </p>
-        <h1 className="text-3xl sm:text-5xl font-bold leading-tight text-gray-900">
+      <header className="mb-12">
+        <div className="flex items-center gap-3 mb-4">
+          <span className="badge badge-warning font-semibold text-sm">
+            {blog.category || "Technology"}
+          </span>
+          <span className="text-sm text-gray-500">
+            {new Date(blog.publishedAt).toLocaleDateString("en-US", {
+              year: "numeric",
+              month: "long",
+              day: "numeric",
+            })}
+          </span>
+        </div>
+
+        <h1 className="text-4xl sm:text-5xl font-bold leading-tight text-gray-900 mb-4">
           {blog.title}
         </h1>
-        <p className="text-gray-600 mt-5 text-lg leading-relaxed">
-          {blog.excerpt}
-        </p>
+
+        <p className="text-lg text-gray-600 leading-relaxed">{blog.excerpt}</p>
+
+        {blog.tags && blog.tags.length > 0 && (
+          <div className="flex flex-wrap gap-2 mt-6">
+            {blog.tags.map((tag, index) => (
+              <span
+                key={index}
+                className="text-sm bg-gray-100 text-gray-700 px-3 py-1 rounded-full"
+              >
+                #{tag}
+              </span>
+            ))}
+          </div>
+        )}
       </header>
 
       {blog.image && (
         <img
           src={blog.image}
           alt={blog.title}
-          className="w-full rounded-2xl mb-10 max-h-[480px] object-cover"
+          className="w-full rounded-3xl mb-12 max-h-[500px] object-cover shadow-lg"
         />
       )}
 
-      <article className="space-y-6 text-gray-700 leading-8 text-[17px]">
-        {blocks.map((paragraph, index) => (
-          <p key={`${blog._id}-${index}`}>{paragraph}</p>
-        ))}
+      <article className="prose prose-lg max-w-none">
+        <div
+          className="text-gray-700 leading-8 space-y-6"
+          dangerouslySetInnerHTML={{
+            __html: blog.content || "<p>No content available</p>",
+          }}
+        />
       </article>
+
+      <hr className="my-16" />
+
+      <div className="bg-gradient-to-r from-yellow-50 to-orange-50 rounded-2xl p-8 border border-yellow-100">
+        <h3 className="text-2xl font-bold text-gray-900 mb-2">
+          {blog.author || "Admin"}
+        </h3>
+        <p className="text-gray-600">
+          The author of this article brings valuable insights to digital
+          marketing and technology topics.
+        </p>
+      </div>
     </main>
   );
 }
