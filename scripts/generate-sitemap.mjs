@@ -1,8 +1,12 @@
 import { writeFile } from "node:fs/promises";
 import { resolve } from "node:path";
 
-const SITE_URL = (process.env.SITE_URL || "https://buzingbee.com").replace(/\/$/, "");
-const BLOG_API_URL = process.env.BLOG_API_URL || "https://api.buzingbee.com/api/blog?";
+const SITE_URL = (process.env.SITE_URL || "https://buzingbee.com").replace(
+  /\/$/,
+  "",
+);
+const BLOG_API_URL =
+  process.env.BLOG_API_URL || "https://api.buzingbee.com/api/blog?";
 
 const STATIC_ROUTES = [
   { path: "/", changefreq: "weekly", priority: "1.0" },
@@ -56,7 +60,10 @@ const fetchBlogRoutes = async () => {
 const blogLastmodFallback = (blogs, slug) => {
   const match = blogs.find((blog) => String(blog?.slug).trim() === slug);
   const source =
-    match?.updatedAt || match?.updated_at || match?.publishedAt || match?.createdAt;
+    match?.updatedAt ||
+    match?.updated_at ||
+    match?.publishedAt ||
+    match?.createdAt;
 
   if (!source) return today();
 
@@ -97,7 +104,9 @@ const run = async () => {
   const outputPath = resolve(process.cwd(), "public", "sitemap.xml");
   await writeFile(outputPath, xml, "utf8");
 
-  console.log(`Generated sitemap with ${allRoutes.length} URLs at public/sitemap.xml`);
+  console.log(
+    `Generated sitemap with ${allRoutes.length} URLs at public/sitemap.xml`,
+  );
 };
 
 run();
