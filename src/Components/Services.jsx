@@ -12,6 +12,9 @@ import services4 from "../assets/image/logo4.jpeg";
 import VideoModel from "./VideoModel";
 // import required modules
 
+const getAssetSrc = (asset) =>
+  typeof asset === "string" ? asset : asset?.src || "";
+
 const Services = () => {
   // let audio = new Audio("../src/assets/audios/clickSound.mp3")
 
@@ -85,13 +88,17 @@ const Services = () => {
               </div>
               <div className="rounded-full avatar ring-warning ring-offset-base-100 ring ring-offset-0 ">
                 <div className="rounded-full sm:size-12 size-6 w-12 sm:w-16 ">
-                  <img src={portfolio_1} alt={"test"} height={100} />
+                  <img
+                    src={getAssetSrc(portfolio_1)}
+                    alt={"test"}
+                    height={100}
+                  />
                 </div>
               </div>
               <div className="rounded-full avatar ring-warning ring-offset-base-100 ring ring-offset-0 ">
                 <div className="rounded-full sm:size-12 size-6 w-12 sm:w-16">
                   <img
-                    src={services}
+                    src={getAssetSrc(services)}
                     alt={"test"}
                     className={"bg-contain bg-slate-50"}
                     height="100"
@@ -101,7 +108,7 @@ const Services = () => {
               <div className="rounded-full avatar ring-warning ring-offset-base-100 ring ring-offset-0 ">
                 <div className="rounded-full sm:size-12 size-6 w-12 sm:w-16">
                   <img
-                    src={services4}
+                    src={getAssetSrc(services4)}
                     alt={"test"}
                     className={"bg-slate-50"}
                     height="100"
@@ -138,7 +145,7 @@ const Services = () => {
             >
               <SwiperSlide className="relative">
                 <img
-                  src={service1}
+                  src={getAssetSrc(service1)}
                   alt="this copy ima"
                   style={{ filter: " brightness(0.5)" }}
                   className="rounded-3xl"
@@ -149,7 +156,7 @@ const Services = () => {
               </SwiperSlide>
               <SwiperSlide className="relative">
                 <img
-                  src={service2}
+                  src={getAssetSrc(service2)}
                   alt="this copy ima"
                   style={{ filter: " brightness(0.5)" }}
                   className="rounded-3xl"

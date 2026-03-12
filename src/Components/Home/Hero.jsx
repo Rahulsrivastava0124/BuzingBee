@@ -2,6 +2,9 @@ import hero1 from "../../assets/image/hero1.jpg";
 import CountUp from "react-countup";
 import { Element } from "react-scroll";
 
+const getAssetSrc = (asset) =>
+  typeof asset === "string" ? asset : asset?.src || "";
+
 export default function Hero() {
   return (
     <>
@@ -88,7 +91,11 @@ export default function Hero() {
                   <i className="absolute text-lg font-extrabold text-center bg-yellow-400 rounded-lg bi bi-graph-up-arrow w-9 h-9"></i>
                 </button>
                 <div className="rounded-tl-[100%] rounded-lg overflow-hidden">
-                  <img src={hero1} alt="Hero" className="max-w-[135%]" />
+                  <img
+                    src={getAssetSrc(hero1)}
+                    alt="Hero"
+                    className="max-w-[135%]"
+                  />
                 </div>
               </div>
               <div className="bg-yellow-100 rounded-xl sm:w-[43%] sm:h-[250px] p-5">

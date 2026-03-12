@@ -1,5 +1,6 @@
 import React, { useEffect, useMemo, useState } from "react";
-import { Link, useParams } from "react-router-dom";
+import Link from "next/link";
+import { useRouter } from "next/router";
 import { fetchBlogs } from "../api/blogApi";
 
 const createOrUpdateMeta = (selector, attributes) => {
@@ -129,7 +130,9 @@ const formatContentAsHtml = (content = "") => {
 };
 
 export default function BlogDetailPage() {
-  const { slug } = useParams();
+  const router = useRouter();
+  const rawSlug = router.query.slug;
+  const slug = Array.isArray(rawSlug) ? rawSlug[0] : rawSlug;
   const [blogs, setBlogs] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState("");
@@ -214,11 +217,19 @@ export default function BlogDetailPage() {
     );
   }
 
+  if (!slug) {
+    return (
+      <main className="pt-28 px-4 sm:px-8 max-w-5xl mx-auto">
+        <p className="text-gray-600">Loading blog details...</p>
+      </main>
+    );
+  }
+
   if (error) {
     return (
       <main className="pt-28 px-4 sm:px-8 max-w-5xl mx-auto">
         <p className="text-red-500 font-medium mb-4">{error}</p>
-        <Link to="/blog" className="btn btn-neutral rounded-full px-8">
+        <Link href="/blog" className="btn btn-neutral rounded-full px-8">
           Back to blogs
         </Link>
       </main>
@@ -229,7 +240,7 @@ export default function BlogDetailPage() {
     return (
       <main className="pt-28 px-4 sm:px-8 max-w-5xl mx-auto">
         <h1 className="text-3xl font-bold mb-4">Blog post not found</h1>
-        <Link to="/blog" className="btn btn-neutral rounded-full px-8">
+        <Link href="/blog" className="btn btn-neutral rounded-full px-8">
           Back to blogs
         </Link>
       </main>
@@ -239,7 +250,7 @@ export default function BlogDetailPage() {
   return (
     <main className="pt-24 pb-16 px-4 sm:px-8 max-w-4xl mx-auto">
       <Link
-        to="/blog"
+        href="/blog"
         className="inline-flex items-center gap-2 text-sm text-gray-600 hover:text-black font-medium transition-colors mb-8"
       >
         <svg
@@ -330,7 +341,7 @@ export default function BlogDetailPage() {
               .map((relatedBlog) => (
                 <Link
                   key={relatedBlog.slug}
-                  to={`/blog/${relatedBlog.slug}`}
+                  href={`/blog/${relatedBlog.slug}`}
                   className="block p-4 rounded-lg border border-gray-200 hover:border-yellow-400 hover:shadow-md transition-all"
                 >
                   <h3 className="font-semibold text-gray-900 mb-2 hover:text-yellow-600">

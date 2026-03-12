@@ -1,5 +1,6 @@
 import React from "react";
 import { Element } from "react-scroll";
+import Link from "next/link";
 
 export default function Footer() {
   return (
@@ -62,40 +63,48 @@ export default function Footer() {
             <div className="flex-grow flex justify-center flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center sm:justify-end">
               <div className="lg:w-1/4 md:w-1/2  px-4">
                 <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">
-                  CATEGORIES
+                  QUICK LINKS
                 </h2>
                 <nav className="list-none mb-10">
                   <li>
-                    <a
+                    <Link
                       className="text-gray-600 hover:text-gray-800"
-                      href={"#Home"}
+                      href="/"
                     >
                       Home
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a
+                    <Link
                       className="text-gray-600 hover:text-gray-800"
-                      href={"#About"}
-                    >
-                      About
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      className="text-gray-600 hover:text-gray-800"
-                      href={"#Service"}
+                      href="/services"
                     >
                       Services
-                    </a>
+                    </Link>
                   </li>
                   <li>
-                    <a
+                    <Link
                       className="text-gray-600 hover:text-gray-800"
-                      href={"#Contact"}
+                      href="/about"
+                    >
+                      About
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      className="text-gray-600 hover:text-gray-800"
+                      href="/blog"
+                    >
+                      Blog
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      className="text-gray-600 hover:text-gray-800"
+                      href="/contact"
                     >
                       Contact
-                    </a>
+                    </Link>
                   </li>
                 </nav>
               </div>

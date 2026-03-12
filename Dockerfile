@@ -10,11 +10,15 @@ COPY . .
 RUN npm run build
 
 # Runtime stage
-FROM nginx:1.27-alpine
+FROM node:20-alpine AS runner
 
-COPY nginx.conf /etc/nginx/conf.d/default.conf
-COPY --from=builder /app/build /usr/share/nginx/html
+WORKDIR /app
+ENV NODE_ENV=production
 
-EXPOSE 80
+COPY --from=builder /app/public ./public
+COPY --from=builder /app/.next/standalone ./
+COPY --from=builder /app/.next/static ./.next/static
 
-CMD ["nginx", "-g", "daemon off;"]
+EXPOSE 3000
+
+CMD ["node", "server.js"]

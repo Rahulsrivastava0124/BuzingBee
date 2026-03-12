@@ -1,6 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{html,js,jsx}"],
+  content: [
+    "./pages/**/*.{js,jsx}",
+    "./src/**/*.{html,js,jsx}",
+    "./app/**/*.{js,jsx}",
+  ],
   theme: {
     extend: {
       // fontFamily: {
@@ -19,5 +23,8 @@ module.exports = {
     logs: true, // Shows info about daisyUI version and used config in the console when building your CSS
     themeRoot: ":root", // The element that receives theme color CSS variables
   },
-  plugins: [require("daisyui"), require('@tailwindcss/forms')({ strategy: 'class' })],
+  plugins: [
+    require("daisyui"),
+    require("@tailwindcss/forms")({ strategy: "class" }),
+  ],
 };

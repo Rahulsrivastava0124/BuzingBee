@@ -3,6 +3,8 @@ import { Element } from "react-scroll";
 import porfolio_1 from "../assets/image/portfolio_1.jpg";
 import porfolio_2 from "../../src/assets/image/portfolio_2.jpg";
 
+const getAssetSrc = (asset) =>
+  typeof asset === "string" ? asset : asset?.src || "";
 
 const Portfolio = () => {
   const [showCard, setShowCard] = useState("all");
@@ -110,7 +112,7 @@ const Portfolio = () => {
                 data-aos-duration="2000"
               >
                 <PortfolioCard
-                  ImageHref={porfolio_1}
+                  ImageHref={getAssetSrc(porfolio_1)}
                   category="Astropoints"
                   title="This website for astrologer points "
                   button="View"
@@ -118,7 +120,7 @@ const Portfolio = () => {
                   showCard={showCard}
                 />
                 <PortfolioCard
-                  ImageHref={porfolio_2}
+                  ImageHref={getAssetSrc(porfolio_2)}
                   category="Triconnix"
                   title="digital services website "
                   button="View"
@@ -205,7 +207,9 @@ const PortfolioCard = ({
               data-aos-duration="2000"
             /> */}
 
-            <h3 className="mb-3 text-lg font-bold text-left text-white ">{title}</h3>
+            <h3 className="mb-3 text-lg font-bold text-left text-white ">
+              {title}
+            </h3>
             <span className="flex items-center justify-between text-2xl font-medium text-white ">
               {category}{" "}
               <a
@@ -217,7 +221,6 @@ const PortfolioCard = ({
             </span>
           </div>
         </div>
-       
       </div>
     </>
   );

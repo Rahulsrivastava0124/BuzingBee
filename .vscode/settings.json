@@ -7,6 +7,14 @@
     "/^node scripts/generate-sitemap\\.mjs$/": {
       "approve": true,
       "matchCommandLine": true
+    },
+    "/^git rm -r --cached --ignore-unmatch \\.next build out && git status --short \\| head -n 40$/": {
+      "approve": true,
+      "matchCommandLine": true
+    },
+    "/^git add -A && git status --short \\| head -n 120$/": {
+      "approve": true,
+      "matchCommandLine": true
     }
   }
 }

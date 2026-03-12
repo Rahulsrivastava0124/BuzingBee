@@ -7,6 +7,9 @@ import SEO from "../assets/image/SEO.png";
 import Social from "../assets/image/social.png";
 import { Element } from "react-scroll";
 
+const getAssetSrc = (asset) =>
+  typeof asset === "string" ? asset : asset?.src || "";
+
 const NewServices = () => {
   return (
     <>
@@ -16,7 +19,7 @@ const NewServices = () => {
             <h2 className="mb-4 text-2xl font-bold text-center">
               Our Services
             </h2>
-            <h1 class="md:text-3xl text-xl font-medium title-font text-gray-900 mb-4 text-center">
+            <h1 className="md:text-3xl text-xl font-medium title-font text-gray-900 mb-4 text-center">
               Comprehensive Digital Marketing Automation. From AI Agents to Paid
               Ads, we deliver intelligent solutions that drive results.
             </h1>
@@ -28,7 +31,7 @@ const NewServices = () => {
               >
                 <img
                   className="w-[70%] m-auto h-60"
-                  src={webDev}
+                  src={getAssetSrc(webDev)}
                   alt="Mountain"
                   width="100"
                 />
@@ -63,7 +66,7 @@ const NewServices = () => {
               >
                 <img
                   className="w-[70%] m-auto h-60"
-                  src={graphics}
+                  src={getAssetSrc(graphics)}
                   alt="Mountain"
                 />
                 <div className="px-6 py-4">
@@ -97,7 +100,7 @@ const NewServices = () => {
               >
                 <img
                   className="w-[70%] m-auto h-60"
-                  src={youtube}
+                  src={getAssetSrc(youtube)}
                   alt="Mountain"
                 />
                 <div className="px-6 py-4">
@@ -134,7 +137,7 @@ const NewServices = () => {
               >
                 <img
                   className="w-[70%] m-auto h-60"
-                  src={mobile}
+                  src={getAssetSrc(mobile)}
                   alt="Mountain"
                 />
                 <div className="px-6 py-4">
@@ -164,7 +167,11 @@ const NewServices = () => {
                 style={{ width: "-webkit-fill-available" }}
                 className="max-w-sm mb-5 overflow-hidden border shadow-lg rounded-xl sm:mb-0 bg-yellow-50"
               >
-                <img className="w-[70%] m-auto h-60" src={SEO} alt="Mountain" />
+                <img
+                  className="w-[70%] m-auto h-60"
+                  src={getAssetSrc(SEO)}
+                  alt="Mountain"
+                />
                 <div className="px-6 py-4">
                   <div className="mb-2 text-xl font-bold">
                     AdSense & Monetization
@@ -196,7 +203,7 @@ const NewServices = () => {
               >
                 <img
                   className="w-[70%] m-auto h-60"
-                  src={Social}
+                  src={getAssetSrc(Social)}
                   alt="Mountain"
                 />
                 <div className="px-6 py-4">

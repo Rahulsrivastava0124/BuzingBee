@@ -9,13 +9,13 @@ export default function ReadyToWork() {
         {" "}
         Ready to automate your marketing?
       </h1>
-      <buttom
+      <button
         className="text-white rounded-full btn btn-neutral btn-sm sm:btn-md sm:ps-6"
         onClick={() => document.getElementById("my_modal_2").showModal()}
       >
         {" "}
-        Get Started <FaArrowRightLong class="text-xl" />
-      </buttom>
+        Get Started <FaArrowRightLong className="text-xl" />
+      </button>
     </div>
   );
 }

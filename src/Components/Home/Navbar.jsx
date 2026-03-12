@@ -2,17 +2,18 @@
 // import { FaBell } from "react-icons/fa";
 // import buzing_bee from "../../assets/buzing_bee.gif";
 import { useState } from "react";
-import { Link as RouterLink, useLocation } from "react-router-dom";
+import Link from "next/link";
+import { useRouter } from "next/router";
 import { MessageCircle, Menu, X } from "lucide-react";
 import navMenuData from "../../data/navMenu.json";
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const location = useLocation();
+  const router = useRouter();
   const { navMenu, cta } = navMenuData;
 
   const isActive = (path) => {
-    return location.pathname === path;
+    return router.pathname === path;
   };
 
   const toggleMenu = () => {
@@ -41,9 +42,9 @@ function Navbar() {
             <div className="hidden sm:flex flex-1 justify-center">
               <div className="flex space-x-2">
                 {navMenu.map((item) => (
-                  <RouterLink
+                  <Link
                     key={item.id}
-                    to={item.path}
+                    href={item.path}
                     className={`px-3 py-2 text-sm font-medium rounded-md transition-all relative ${
                       isActive(item.path)
                         ? "text-warning"
@@ -54,7 +55,7 @@ function Navbar() {
                     {isActive(item.path) && (
                       <div className="absolute bottom-1 left-0 right-0 h-1 bg-yellow-400 rounded-full"></div>
                     )}
-                  </RouterLink>
+                  </Link>
                 ))}
               </div>
             </div>
@@ -115,9 +116,9 @@ function Navbar() {
           >
             <div className="space-y-1 px-4 pb-3 pt-2">
               {navMenu.map((item) => (
-                <RouterLink
+                <Link
                   key={item.id}
-                  to={item.path}
+                  href={item.path}
                   onClick={() => setIsMenuOpen(false)}
                   className={`block rounded-md px-3 py-2 text-base font-medium transition-colors ${
                     isActive(item.path)
@@ -126,7 +127,7 @@ function Navbar() {
                   }`}
                 >
                   {item.label}
-                </RouterLink>
+                </Link>
               ))}
             </div>
           </div>

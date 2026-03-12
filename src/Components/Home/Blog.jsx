@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo, useState } from "react";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { Element } from "react-scroll";
 import { fetchBlogs } from "../../api/blogApi";
 
@@ -63,7 +63,7 @@ export default function Blog({ limit = null }) {
           </div>
           {limit && (
             <Link
-              to="/blog"
+              href="/blog"
               className="btn btn-outline btn-neutral btn-sm sm:btn-md rounded-full px-8 hover:bg-gray-900 hover:text-white transition-all"
             >
               See all
@@ -92,7 +92,7 @@ export default function Blog({ limit = null }) {
                 data-aos-delay={index * 100}
                 className="group bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100 hover:-translate-y-2"
               >
-                <Link to={`/blog/${blog.slug}`} className="block">
+                <Link href={`/blog/${blog.slug}`} className="block">
                   <div className="relative overflow-hidden">
                     {blog.image ? (
                       <img
