@@ -15,6 +15,10 @@
     "/^git add -A && git status --short \\| head -n 120$/": {
       "approve": true,
       "matchCommandLine": true
+    },
+    "/^git commit -m \"Migrate to Next\\.js, add SEO improvements, and remove build artifacts\"$/": {
+      "approve": true,
+      "matchCommandLine": true
     }
   }
 }
