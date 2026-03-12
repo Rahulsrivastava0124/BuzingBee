@@ -13,12 +13,12 @@ const getAssetSrc = (asset) =>
 const NewServices = () => {
   return (
     <>
-      <Element id="services" name="services">
-        <div className="md:w-[90%] w-[100%] sm:my-14 my-6 sm:mx-16">
+      <Element id="services"  name="services">
+        <div className="md:w-[90%] w-[100%] sm:my-16 my-6 sm:mx-16">
           <div className="container px-5 mx-auto">
-            <h2 className="mb-4 text-2xl font-bold text-center">
+            <h1 className="mb-4 text-2xl font-bold text-center">
               Our Services
-            </h2>
+            </h1>
             <h2 className="md:text-3xl text-xl font-medium title-font text-gray-900 mb-4 text-center">
               Comprehensive Digital Marketing Automation. From AI Agents to Paid
               Ads, we deliver intelligent solutions that drive results.

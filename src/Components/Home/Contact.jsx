@@ -1,8 +1,11 @@
 import React from "react";
+import { useRouter } from "next/router";
 import Alart from "./Alart.jsx";
 
 export default function Contact() {
   const [result, setResult] = React.useState(false);
+  const router = useRouter();
+  const isContactPage = router.pathname === "/contact";
 
   const onSubmit = async (event) => {
     event.preventDefault();
@@ -27,20 +30,18 @@ export default function Contact() {
     }
   };
 
-  return (
+  const contactContent = (
     <>
-      <dialog id="my_modal_2" className="modal">
-        <div className="w-11/12 max-w-5xl p-2 modal-box sm:p-5">
-          <Alart
-            message={result ? "Thanks for contacting BuzingBee" : "Req. Field"}
-            show={result}
-          />
+      <Alart
+        message={result ? "Thanks for contacting BuzingBee" : "Req. Field"}
+        show={result}
+      />
 
-          <section className="bg-white">
+      <section className="bg-white">
             <div className="lg:grid lg:min-h-96 lg:grid-cols-12">
               <section className="relative flex items-end h-32 bg-gray-900 lg:col-span-5 lg:h-full xl:col-span-6 rounded-xl">
                 <img
-                  alt=""
+                  alt="Customer support representative helping with digital marketing inquiries"
                   src="https://images.unsplash.com/photo-1617195737496-bc30194e3a19?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
                   className="absolute inset-0 object-cover w-full h-full rounded-xl opacity-80"
                 />
@@ -62,7 +63,7 @@ export default function Contact() {
                   </a>
 
                   <h2 className="mt-6 text-2xl font-bold text-white sm:text-2xl md:text-3xl">
-                    Contact to BuzingBee 🐝
+                    Contact Us
                   </h2>
 
                   {/* <p className="mt-4 leading-relaxed text-white/90">
@@ -94,7 +95,7 @@ export default function Contact() {
                     </a>
 
                     <h2 className="mt-2 text-xl font-bold text-gray-900 sm:text-3xl md:text-3xl">
-                      Contact to BuzingBee 🐝
+                      Contact Us
                     </h2>
 
                     {/* <p className="mt-4 leading-relaxed text-gray-500">
@@ -123,7 +124,7 @@ export default function Contact() {
                         htmlFor="FirstName"
                         className="block text-sm font-medium text-gray-700"
                       >
-                        First Name
+                        First Name *
                       </label>
 
                       <input
@@ -140,8 +141,7 @@ export default function Contact() {
                         htmlFor="Email"
                         className="block text-sm font-medium text-gray-700"
                       >
-                        {" "}
-                        Email{" "}
+                        Email *
                       </label>
 
                       <input
@@ -154,19 +154,21 @@ export default function Contact() {
                     </div>
 
                     <div className="col-span-6 sm:col-span-6">
+                      <p className="text-xs text-gray-500 mb-1">
+                        Fields marked with * are required.
+                      </p>
                       <label
                         htmlFor="text"
                         className="block text-sm font-medium text-gray-700"
                       >
-                        {" "}
-                        Description{" "}
+                        Description *
                       </label>
                       <textarea
                         type="text"
                         id="message"
                         name="message"
                         required
-                        className="w-full text-sm text-gray-700 bg-white border border-yellow-400 rounded-md shadow-sm mt-40-1 h-"
+                        className="w-full text-sm text-gray-700 bg-white border border-yellow-400 rounded-md shadow-sm mt-1 h-32 p-3"
                       />
                     </div>
 
@@ -216,12 +218,24 @@ export default function Contact() {
                 </div>
               </main>
             </div>
-          </section>
-        </div>
+      </section>
+    </>
+  );
+
+  return (
+    <>
+      {isContactPage ? (
+        <div className="w-11/12 max-w-6xl p-2 sm:p-5 mx-auto">{contactContent}</div>
+      ) : (
+        <dialog id="my_modal_2" className="modal">
+          <div className="w-11/12 max-w-5xl p-2 modal-box sm:p-5">
+            {contactContent}
+          </div>
         <form method="dialog" className="modal-backdrop">
           <button>close</button>
         </form>
-      </dialog>
+        </dialog>
+      )}
     </>
   );
 }

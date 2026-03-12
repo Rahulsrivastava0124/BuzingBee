@@ -8,7 +8,7 @@ export default function ContactPage() {
       <Element id="contact" name="contact">
         <section className="pt-20 px-4">
           <h1 className="text-5xl font-bold text-center mb-8">
-            Contact BuzingBee for AI Marketing Automation Support
+            Contact Us
           </h1>
           <p className="text-center text-gray-600 mb-12 max-w-3xl mx-auto">
             Ready to automate your marketing? Get in touch with our team today

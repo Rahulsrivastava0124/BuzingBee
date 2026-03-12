@@ -1,11 +1,3 @@
-# https://www.robotstxt.org/robotstxt.html
-# General rules for all search engines
-User-agent: *
-Allow: /
-
-# Specific crawl delays for better server performance
-Crawl-delay: 1
-
 # Block low-value bots
 User-agent: MJ12bot
 Disallow: /
@@ -19,15 +11,12 @@ Disallow: /
 User-agent: DotBot
 Disallow: /
 
-# Allow Google to crawl
-User-agent: Googlebot
-Allow: /
-Crawl-delay: 0
-
-# Block bad actors
 User-agent: baiduspider
 Disallow: /
 
-# Specify sitemap location
+# Allow all other crawlers
+User-agent: *
+Allow: /
+
+# Sitemap location
 Sitemap: https://buzingbee.com/sitemap.xml
-Sitemap: https://www.buzingbee.com/sitemap.xml

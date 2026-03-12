@@ -4,6 +4,7 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
+        <meta charSet="utf-8" />
         <link rel="preconnect" href="https://api.buzingbee.com" />
         <link rel="preconnect" href="https://cdn.jsdelivr.net" />
         <link rel="dns-prefetch" href="https://connect.facebook.net" />

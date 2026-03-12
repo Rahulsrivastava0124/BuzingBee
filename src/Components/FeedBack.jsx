@@ -34,10 +34,10 @@ export default function FeedBack() {
               data-aos="fade-up"
               data-aos-duration="3000"
             >
-              <buttom className="font-bold rounded-full btn btn-outline btn-neutral ps-6">
+              <button className="font-bold rounded-full btn btn-outline btn-neutral ps-6">
                 {" "}
                 More Questions
-              </buttom>
+              </button>
               {/*<a  className="hidden font-bold underline underline-offset-5 ms-16 sm:block">*/}
               {/*  Contact Us*/}
               {/*</a>*/}
@@ -101,8 +101,8 @@ export default function FeedBack() {
                 efforts?
               </div>
               <div className="collapse-content">
-                <p className="font-semibold text-gray-600">
-                  <ul className="list-disc *:text-lg}">
+                <div className="font-semibold text-gray-600">
+                  <ul className="list-disc *:text-lg">
                     <li> SEO: Results in 3-6 months.</li>
                     <li>
                       {" "}
@@ -120,9 +120,11 @@ export default function FeedBack() {
                       conversion may require 1-2 months.
                     </li>
                   </ul>
-                  In general, expect early signs of progress within 3 months,
-                  with long-term results becoming clearer over time.
-                </p>
+                  <p className="mt-2">
+                    In general, expect early signs of progress within 3 months,
+                    with long-term results becoming clearer over time.
+                  </p>
+                </div>
               </div>
             </div>
             <div
@@ -135,10 +137,10 @@ export default function FeedBack() {
                 How do you measure the success of digital marketing campaigns?
               </div>
               <div className="collapse-content">
-                <p className="font-semibold text-gray-600">
+                <div className="font-semibold text-gray-600">
                   The success of digital marketing campaigns is measured using
                   key performance indicators (KPIs) across various channels:
-                  <ul className="list-disc *:text-lg}">
+                  <ul className="list-disc *:text-lg">
                     <li>
                       {" "}
                       Website Traffic: Monitoring the increase in overall
@@ -176,7 +178,7 @@ export default function FeedBack() {
                       targeted keywords.
                     </li>
                   </ul>
-                </p>
+                </div>
               </div>
             </div>
           </div>
