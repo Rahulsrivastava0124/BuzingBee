@@ -5,9 +5,9 @@ export default function Page() {
   return (
     <>
       <Seo
-        title="Marketing Automation Services"
-        description="Explore BuzingBee services including AI agents, Google and Meta ads, website automation, and email marketing workflows."
-        keywords="marketing automation services, AI agents, Google ads management, Meta ads, email automation"
+        title="Digital Marketing Services and AI Services"
+        description="Explore BuzingBee digital marketing and AI services: AI agent development, SEO, Google Ads, Meta Ads, website automation, and email marketing automation."
+        keywords="digital marketing services, AI services, AI agent development, SEO services, Google Ads management, Meta Ads management, email marketing automation"
         canonicalPath="/services"
       />
       <ServicesPage />

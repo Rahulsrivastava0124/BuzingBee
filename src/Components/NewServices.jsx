@@ -13,7 +13,7 @@ const getAssetSrc = (asset) =>
 const NewServices = () => {
   return (
     <>
-      <Element id="services"  name="services">
+      <Element id="services" name="services">
         <div className="md:w-[90%] w-[100%] sm:my-16 my-6 sm:mx-16">
           <div className="container px-5 mx-auto">
             <h1 className="mb-4 text-2xl font-bold text-center">
@@ -23,12 +23,9 @@ const NewServices = () => {
               Comprehensive Digital Marketing Automation. From AI Agents to Paid
               Ads, we deliver intelligent solutions that drive results.
             </h2>
-            <div className="flex flex-wrap justify-around mt-10">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10">
               {/* card -1  */}
-              <div
-                style={{ width: "-webkit-fill-available" }}
-                className="max-w-sm mb-5 overflow-hidden border shadow-lg rounded-xl sm:mb-0 bg-yellow-50"
-              >
+              <div className="mb-5 overflow-hidden border shadow-lg rounded-xl sm:mb-0 bg-yellow-50">
                 <img
                   className="w-[70%] m-auto h-60"
                   src={getAssetSrc(webDev)}
@@ -60,10 +57,7 @@ const NewServices = () => {
                  
               </div>
               {/* card -2  */}
-              <div
-                style={{ width: "-webkit-fill-available" }}
-                className="max-w-sm mb-5 overflow-hidden border shadow-lg rounded-xl sm:mb-0 bg-yellow-50"
-              >
+              <div className="mb-5 overflow-hidden border shadow-lg rounded-xl sm:mb-0 bg-yellow-50">
                 <img
                   className="w-[70%] m-auto h-60"
                   src={getAssetSrc(graphics)}
@@ -94,10 +88,7 @@ const NewServices = () => {
                  
               </div>
               {/* card -3  */}
-              <div
-                style={{ width: "-webkit-fill-available" }}
-                className="max-w-sm mb-5 overflow-hidden border shadow-lg rounded-xl sm:mb-0 bg-yellow-50"
-              >
+              <div className="mb-5 overflow-hidden border shadow-lg rounded-xl sm:mb-0 bg-yellow-50">
                 <img
                   className="w-[70%] m-auto h-60"
                   src={getAssetSrc(youtube)}
@@ -129,12 +120,9 @@ const NewServices = () => {
               </div>
                 
             </div>
-            <div className="flex flex-wrap justify-around mt-4 sm:mt-10">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
               {/* card -1  */}
-              <div
-                style={{ width: "-webkit-fill-available" }}
-                className="max-w-sm mb-5 overflow-hidden border shadow-lg rounded-xl sm:mb-0 bg-yellow-50"
-              >
+              <div className="mb-5 overflow-hidden border shadow-lg rounded-xl sm:mb-0 bg-yellow-50">
                 <img
                   className="w-[70%] m-auto h-60"
                   src={getAssetSrc(mobile)}
@@ -163,10 +151,7 @@ const NewServices = () => {
                  
               </div>
               {/* card -2  */}
-              <div
-                style={{ width: "-webkit-fill-available" }}
-                className="max-w-sm mb-5 overflow-hidden border shadow-lg rounded-xl sm:mb-0 bg-yellow-50"
-              >
+              <div className="mb-5 overflow-hidden border shadow-lg rounded-xl sm:mb-0 bg-yellow-50">
                 <img
                   className="w-[70%] m-auto h-60"
                   src={getAssetSrc(SEO)}
@@ -197,10 +182,7 @@ const NewServices = () => {
                  
               </div>
               {/* card -3  */}
-              <div
-                style={{ width: "-webkit-fill-available" }}
-                className="max-w-sm mb-5 overflow-hidden border shadow-lg rounded-xl sm:mb-0 bg-yellow-50"
-              >
+              <div className="mb-5 overflow-hidden border shadow-lg rounded-xl sm:mb-0 bg-yellow-50">
                 <img
                   className="w-[70%] m-auto h-60"
                   src={getAssetSrc(Social)}

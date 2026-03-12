@@ -5,12 +5,15 @@
       "@type": "Organization",
       "name": "BuzingBee",
       "url": "https://buzingbee.com",
-      "description": "BuzingBee - AI-Powered Marketing Automation Platform for digital marketing automation, AI agents, and intelligent marketing solutions.",
+      "description": "BuzingBee provides digital marketing services and AI services for business growth, including SEO, paid ads, intelligent automation, and AI agents.",
       "logo": "https://buzingbee.com/logo.png",
+      "image": "https://buzingbee.com/og-image.png",
+      "keywords": "digital marketing services, AI services, business growth, SEO, Google Ads, Meta Ads, email marketing, AI agents",
       "sameAs": [
-        "https://www.facebook.com/buzingbee",
-        "https://twitter.com/buzingbee",
-        "https://linkedin.com/company/buzingbee"
+        "https://www.instagram.com/buzingbee_/",
+        "https://www.facebook.com/profile.php?id=61562079487441",
+        "https://x.com/BuzingBee_",
+        "https://www.linkedin.com/company/buzing-bee/?viewAsMember=true"
       ],
       "contactPoint": {
         "@type": "ContactPoint",
@@ -26,17 +29,17 @@
         {
           "@type": "Service",
           "name": "AI Agent Development",
-          "description": "Custom AI agents for marketing automation and business intelligence"
+          "description": "Custom AI agents that automate digital marketing tasks and improve lead conversion"
         },
         {
           "@type": "Service",
           "name": "Website Agent Development",
-          "description": "Intelligent website automation with AI-powered features"
+          "description": "Intelligent website automation and personalized user journeys powered by AI"
         },
         {
           "@type": "Service",
           "name": "Google & Meta Ads Management",
-          "description": "Professional paid advertising management across Google Ads and Meta platforms"
+          "description": "Performance marketing and paid ad management across Google Ads and Meta platforms"
         },
         {
           "@type": "Service",
@@ -59,6 +62,7 @@
       "@type": "WebSite",
       "name": "BuzingBee",
       "url": "https://buzingbee.com/",
+      "description": "Digital marketing services and AI services to grow your business online.",
       "potentialAction": {
         "@type": "SearchAction",
         "target": "https://buzingbee.com/?q={search_term_string}",

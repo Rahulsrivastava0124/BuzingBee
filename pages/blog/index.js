@@ -5,9 +5,9 @@ export default function Page() {
   return (
     <>
       <Seo
-        title="Blog & Resources"
-        description="Read BuzingBee blog articles on AI marketing automation, campaign optimization, lead generation, and digital growth strategies."
-        keywords="AI marketing blog, marketing automation blog, digital marketing insights"
+        title="Digital Marketing & AI Services Blog"
+        description="Read actionable guides from BuzingBee on digital marketing, AI services, automation, SEO, paid ads, and how to grow your business online."
+        keywords="digital marketing blog, AI services blog, SEO tips, paid ads strategy, automation guides, business growth content"
         canonicalPath="/blog"
         type="article"
       />

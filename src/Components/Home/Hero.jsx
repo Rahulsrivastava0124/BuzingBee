@@ -11,12 +11,12 @@ export default function Hero() {
       <Element id="home" name="home">
         <section
           id="Home"
-          className="mx-6 my-32 rounded-md sm:mx-16 sm:flex"
+          className="mx-6 my-20 md:my-28 lg:my-32 rounded-md sm:mx-16 sm:flex"
           data-aos="fade-up"
           data-aos-duration="2000"
         >
           <div className="sm:w-[50%]">
-            <h1 className="text-3xl font-medium sm:text-7xl">
+            <h1 className="text-3xl font-medium md:text-5xl lg:text-7xl">
               <span data-aos="fade-up" data-aos-duration="1000">
                 Automate your{" "}
               </span>
@@ -24,7 +24,7 @@ export default function Hero() {
               <span> AI-powered</span>
               <span className="text-yellow-400"> agents</span>
             </h1>
-            <h5 className="mt-4 text-sm text-gray-500 sm:mt-8 md:text-lg sm:pe-32">
+            <h5 className="mt-4 text-sm text-gray-500 sm:mt-6 md:mt-8 md:text-lg md:pe-32">
               Intelligent automation for digital marketing. Streamline your
               campaigns, optimize conversions, and scale your business with AI
               agents that work 24/7. No coding required.

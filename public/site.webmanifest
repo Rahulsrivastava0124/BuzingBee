@@ -1,6 +1,9 @@
 {
-  "name": "BuzingBee",
+  "name": "BuzingBee - Digital Marketing & AI Services",
   "short_name": "BuzingBee",
+  "description": "Digital marketing services and AI services for business growth.",
+  "start_url": "/",
+  "scope": "/",
   "icons": [
     {
       "src": "/android-chrome-192x192.png",

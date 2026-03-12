@@ -19,8 +19,8 @@ export default function Page() {
     <>
       <Seo
         title={`${readableTitle} - Blog`}
-        description="Read in-depth marketing and automation insights from BuzingBee blog resources."
-        keywords="marketing blog, automation insights, digital marketing"
+        description="Read this BuzingBee article for digital marketing and AI service insights to help your business grow with intelligent automation and better campaigns."
+        keywords="digital marketing article, AI services insights, business growth tips, intelligent automation, campaign optimization"
         canonicalPath={slug ? `/blog/${slug}` : "/blog"}
         type="article"
       />

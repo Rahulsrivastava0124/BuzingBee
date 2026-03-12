@@ -38,15 +38,15 @@ export default function Contact() {
       />
 
       <section className="bg-white">
-        <div className="lg:grid lg:min-h-96 lg:grid-cols-12">
-          <section className="relative flex items-end h-32 bg-gray-900 lg:col-span-5 lg:h-full xl:col-span-6 rounded-xl">
+        <div className="md:grid md:min-h-96 md:grid-cols-12">
+          <section className="relative flex items-end h-48 bg-gray-900 md:col-span-5 md:h-full xl:col-span-6 rounded-xl">
             <img
               alt="Customer support representative helping with digital marketing inquiries"
               src="https://images.unsplash.com/photo-1617195737496-bc30194e3a19?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
               className="absolute inset-0 object-cover w-full h-full rounded-xl opacity-80"
             />
 
-            <div className="hidden lg:relative lg:block lg:p-12">
+            <div className="hidden md:relative md:block md:p-12">
               <a className="block text-white" href="/">
                 <span className="sr-only">Home</span>
                 <svg
@@ -73,9 +73,9 @@ export default function Contact() {
             </div>
           </section>
 
-          <main className="flex items-center justify-center px-8 py-8 sm:px-12 lg:col-span-7 lg:px-16 lg:py-12 xl:col-span-6">
+          <main className="flex items-center justify-center px-8 py-8 sm:px-12 md:col-span-7 md:px-16 md:py-12 xl:col-span-6">
             <div className="max-w-xl lg:max-w-3xl">
-              <div className="relative block -mt-16 lg:hidden">
+              <div className="relative block -mt-16 md:hidden">
                 <a
                   className="inline-flex items-center justify-center text-blue-600 bg-white rounded-full size-16 sm:size-20"
                   href="/"

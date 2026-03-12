@@ -4,6 +4,10 @@ import { useRouter } from "next/router";
 const SITE_NAME = "BuzingBee";
 const SITE_URL = "https://buzingbee.com";
 const DEFAULT_IMAGE = "/og-image.png";
+const DEFAULT_DESCRIPTION =
+  "BuzingBee delivers digital marketing services and AI services to help businesses grow faster with intelligent automation, paid ads, SEO, and AI agents.";
+const DEFAULT_KEYWORDS =
+  "digital marketing services, AI services, business growth, AI marketing automation, AI agents, SEO services, lead generation, campaign optimization";
 
 const normalizePath = (path) => {
   if (!path || path === "/") return "/";
@@ -24,6 +28,8 @@ export default function Seo({
   const finalPath = normalizePath(canonicalPath || fallbackPath);
   const canonicalUrl = `${SITE_URL}${finalPath}`;
   const fullTitle = title ? `${title} | ${SITE_NAME}` : SITE_NAME;
+  const finalDescription = description || DEFAULT_DESCRIPTION;
+  const finalKeywords = keywords || DEFAULT_KEYWORDS;
   const robots = noindex
     ? "noindex, nofollow"
     : "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1";
@@ -31,25 +37,25 @@ export default function Seo({
   return (
     <Head>
       <title>{fullTitle}</title>
-      {description ? <meta name="description" content={description} /> : null}
-      {keywords ? <meta name="keywords" content={keywords} /> : null}
+      <meta name="description" content={finalDescription} />
+      <meta name="keywords" content={finalKeywords} />
       <meta name="robots" content={robots} />
 
       <meta property="og:type" content={type} />
       <meta property="og:site_name" content={SITE_NAME} />
       <meta property="og:locale" content="en_US" />
       <meta property="og:title" content={fullTitle} />
-      {description ? (
-        <meta property="og:description" content={description} />
-      ) : null}
+      <meta property="og:description" content={finalDescription} />
       <meta property="og:url" content={canonicalUrl} />
       <meta property="og:image" content={image} />
+      <meta
+        property="og:image:alt"
+        content="BuzingBee digital marketing and AI services"
+      />
 
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={fullTitle} />
-      {description ? (
-        <meta name="twitter:description" content={description} />
-      ) : null}
+      <meta name="twitter:description" content={finalDescription} />
       <meta name="twitter:image" content={image} />
 
       <link rel="canonical" href={canonicalUrl} />

@@ -22,7 +22,9 @@ const structuredData = {
       logo: "https://buzingbee.com/logo.png",
       image: "https://buzingbee.com/og-image.png",
       description:
-        "BuzingBee is an AI-powered marketing automation platform that helps businesses automate workflows, scale campaigns, and boost conversions with intelligent AI agents.",
+        "BuzingBee provides digital marketing services and AI services to help businesses grow through intelligent automation, SEO, paid ads, and AI agents.",
+      keywords:
+        "digital marketing services, AI services, business growth, SEO, Google Ads, Meta Ads, automation, AI agents",
       sameAs: [
         "https://www.instagram.com/buzingbee_/",
         "https://www.facebook.com/profile.php?id=61562079487441",
@@ -34,11 +36,29 @@ const structuredData = {
       "@type": "WebSite",
       name: "BuzingBee",
       url: "https://buzingbee.com/",
+      description:
+        "Digital marketing services and AI services for business growth by BuzingBee.",
       potentialAction: {
         "@type": "SearchAction",
         target: "https://buzingbee.com/?q={search_term_string}",
         "query-input": "required name=search_term_string",
       },
+    },
+    {
+      "@type": "Service",
+      name: "Digital Marketing Services",
+      provider: {
+        "@type": "Organization",
+        name: "BuzingBee",
+      },
+      serviceType: [
+        "SEO Services",
+        "Google Ads Management",
+        "Meta Ads Management",
+        "Email Marketing Automation",
+        "AI Agent Development",
+      ],
+      areaServed: "Worldwide",
     },
     {
       "@type": "ItemList",

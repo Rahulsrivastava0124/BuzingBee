@@ -51,10 +51,10 @@ export default function Blog({ limit = null }) {
 
   return (
     <Element id="blog" name="blog">
-      <section className="sm:mx-20 mx-6 sm:my-16 sm:py-10 my-10">
+      <section className="mx-4 md:mx-20 my-10 md:my-16 md:py-10">
         <div className="flex items-end justify-between flex-wrap gap-4 mb-12">
           <div>
-            <h1 className="sm:text-5xl text-3xl font-bold text-gray-900 mb-2">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-2">
               Latest Blog Posts
             </h1>
             <p className="text-gray-600">

@@ -5,9 +5,9 @@ export default function Page() {
   return (
     <>
       <Seo
-        title="AI Marketing Automation Platform"
-        description="Automate workflows, improve campaign performance, and scale conversions with AI-powered marketing automation from BuzingBee."
-        keywords="AI marketing automation, digital marketing automation, lead generation automation, campaign optimization"
+        title="Digital Marketing Services & AI Services for Business Growth"
+        description="BuzingBee helps you grow your business with digital marketing services and AI services, including SEO, paid ads, automation workflows, and intelligent AI agents, and shows how to scale faster."
+        keywords="digital marketing services, AI services, grow business online, AI agents, intelligent automation, SEO, Google Ads, Meta Ads, email marketing"
         canonicalPath="/"
       />
       <HomePage />
