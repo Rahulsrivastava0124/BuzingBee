@@ -103,7 +103,7 @@ export default function FeedBack() {
               <div className="collapse-content">
                 <p className="font-semibold text-gray-600">
                   <ul className="list-disc *:text-lg}">
-                    <li>{" "}SEO: Results in 3-6 months.</li>
+                    <li> SEO: Results in 3-6 months.</li>
                     <li>
                       {" "}
                       Content Marketing: Takes about 6-9 months for noticeable
