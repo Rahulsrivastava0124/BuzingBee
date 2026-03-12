@@ -28,10 +28,10 @@ function Navbar() {
             {/* Logo */}
             <div className="flex items-center gap-3 flex-shrink-0">
               <div className="text-left sm:text-center">
-                <h1 className="text-xl sm:text-2xl font-extrabold whitespace-nowrap">
+                <div className="text-xl sm:text-2xl font-extrabold whitespace-nowrap">
                   <span className="text-black">Buzing</span>
                   <span className="text-yellow-400">Bee</span>
-                </h1>
+                </div>
                 <p className="hidden sm:block sm:text-xs text-gray-600 font-boldme">
                   Buzzing Beyond Boundaries
                 </p>

@@ -8,7 +8,9 @@ export default function AboutPage() {
     <main className="overflow-x-hidden">
       <Element id="feedback" name="feedback">
         <section className="pt-20 px-4">
-          <h1 className="text-5xl font-bold text-center mb-8">About Us</h1>
+          <h1 className="text-5xl font-bold text-center mb-8">
+            About BuzingBee AI Marketing Automation Team
+          </h1>
           <p className="text-center text-gray-600 mb-12 max-w-3xl mx-auto">
             BuzingBee is the leading AI-powered marketing automation platform.
             We help businesses automate their digital marketing workflows, from

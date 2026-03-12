@@ -8,7 +8,9 @@ export default function ServicesPage() {
     <main className="overflow-x-hidden">
       <Element id="services" name="services">
         <section className="pt-20">
-          <h1 className="text-5xl font-bold text-center mb-8">Our Services</h1>
+          <h1 className="text-5xl font-bold text-center mb-8">
+            AI Marketing Automation Services for Business Growth
+          </h1>
           <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto px-4">
             Comprehensive Digital Marketing Automation Solutions. From AI Agents
             to Paid Ads, we deliver intelligent solutions that drive results.

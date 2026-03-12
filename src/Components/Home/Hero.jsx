@@ -54,7 +54,7 @@ export default function Hero() {
               data-aos-anchor-placement="center-bottom"
               data-aos-duration="1400"
             >
-              <h1 className="font-bold sm:w-44 mb-3"> Our Certificate </h1>
+              <h2 className="font-bold sm:w-44 mb-3"> Our Certificate </h2>
               <div className="flex flex-wrap gap-4">
                 <img
                   src="/certificate1.webp"
@@ -100,19 +100,19 @@ export default function Hero() {
               </div>
               <div className="bg-yellow-100 rounded-xl sm:w-[43%] sm:h-[250px] p-5">
                 <div>
-                  <h1 className="text-6xl font-bold text-left sm:text-8xl sm:text-center">
+                  <p className="text-6xl font-bold text-left sm:text-8xl sm:text-center">
                     <CountUp end={87} duration={2.75} />%
-                  </h1>
+                  </p>
                 </div>
                 <div className="m-auto">
-                  <h1 className="mt-2 text-lg ms-2">
+                  <p className="mt-2 text-lg ms-2">
                     Automation saves time & increases conversion rates.
                     <progress
                       className="w-56 progress progress-warning"
                       value="87"
                       max="100"
                     ></progress>
-                  </h1>
+                  </p>
                 </div>
               </div>
             </div>
@@ -130,9 +130,9 @@ export default function Hero() {
                   data-aos-duration="1300"
                 >
                   <hr className="w-8 mt-5 font-bold sm:w-16 sm:me-5 me-2" />
-                  <h1 className="mt-5 text-white">
+                  <p className="mt-5 text-white">
                     AI-Powered Marketing Automation
-                  </h1>
+                  </p>
                 </div>
                 <div
                   className="sm:w-[60%]"
@@ -140,9 +140,9 @@ export default function Hero() {
                   data-aos-anchor-placement="center-bottom"
                   data-aos-duration="1300"
                 >
-                  <h1 className="mt-4 text-3xl text-white sm:text-4xl">
+                  <h2 className="mt-4 text-3xl text-white sm:text-4xl">
                     Intelligent workflows that drive results
-                  </h1>
+                  </h2>
                 </div>
               </div>
             </div>

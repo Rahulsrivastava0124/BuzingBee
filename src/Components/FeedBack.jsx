@@ -11,15 +11,15 @@ export default function FeedBack() {
           data-aos="zoom-in-left"
         >
           <div className=" sm:w-[45%]">
-            <h1
+            <h2
               className="text-2xl font-semibold sm:text-5xl"
               data-aos="fade-up"
               data-aos-duration="1000"
             >
               Digital Marketing FAQs
-            </h1>
+            </h2>
 
-            <h1
+            <p
               className="mt-10 font-semibold text-gray-500 text-md"
               data-aos="fade-up"
               data-aos-duration="2000"
@@ -28,7 +28,7 @@ export default function FeedBack() {
               As a leading digital marketing agency. We are dedicated to
               providing comprehensive educational resources and answering
               frequently asked questions to help our clients.
-            </h1>
+            </p>
             <div
               className="flex items-center my-8 sm:mt-16 "
               data-aos="fade-up"

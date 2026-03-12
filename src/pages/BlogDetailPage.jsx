@@ -17,18 +17,6 @@ const createOrUpdateMeta = (selector, attributes) => {
   element.setAttribute("content", attributes.content || "");
 };
 
-const createOrUpdateCanonical = (url) => {
-  let canonical = document.head.querySelector('link[rel="canonical"]');
-
-  if (!canonical) {
-    canonical = document.createElement("link");
-    canonical.setAttribute("rel", "canonical");
-    document.head.appendChild(canonical);
-  }
-
-  canonical.setAttribute("href", url);
-};
-
 const formatContentAsHtml = (content = "") => {
   if (!content) return "<p>No content available</p>";
 
@@ -178,9 +166,6 @@ export default function BlogDetailPage() {
       ? blog.seo.keywords.join(", ")
       : blog.seo?.keywords || "";
     const ogImage = blog.seo?.ogImage || blog.image || "";
-    const canonicalUrl =
-      blog.seo?.canonicalUrl || `${window.location.origin}/blog/${blog.slug}`;
-
     document.title = title;
     createOrUpdateMeta('meta[name="description"]', {
       name: "description",
@@ -204,9 +189,8 @@ export default function BlogDetailPage() {
     });
     createOrUpdateMeta('meta[property="og:url"]', {
       property: "og:url",
-      content: canonicalUrl,
+      content: `${window.location.origin}/blog/${blog.slug}`,
     });
-    createOrUpdateCanonical(canonicalUrl);
   }, [blog]);
 
   if (isLoading) {

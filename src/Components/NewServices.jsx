@@ -19,10 +19,10 @@ const NewServices = () => {
             <h2 className="mb-4 text-2xl font-bold text-center">
               Our Services
             </h2>
-            <h1 className="md:text-3xl text-xl font-medium title-font text-gray-900 mb-4 text-center">
+            <h2 className="md:text-3xl text-xl font-medium title-font text-gray-900 mb-4 text-center">
               Comprehensive Digital Marketing Automation. From AI Agents to Paid
               Ads, we deliver intelligent solutions that drive results.
-            </h1>
+            </h2>
             <div className="flex flex-wrap justify-around mt-10">
               {/* card -1  */}
               <div

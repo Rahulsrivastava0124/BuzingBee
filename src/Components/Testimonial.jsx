@@ -14,9 +14,9 @@ export default function Testimonial() {
         data-aos-easing="ease-in-sine"
       >
         <div className="container px-5  mx-auto">
-          <h1 className="text-3xl font-medium title-font text-gray-900 mb-12 text-center">
+          <h2 className="text-3xl font-medium title-font text-gray-900 mb-12 text-center">
             Testimonials
-          </h1>
+          </h2>
           <div
             className="flex flex-wrap -m-4"
             data-aos="fade-up"

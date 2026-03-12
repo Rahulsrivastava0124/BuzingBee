@@ -93,9 +93,9 @@ export default function Contact() {
                       </svg>
                     </a>
 
-                    <h1 className="mt-2 text-xl font-bold text-gray-900 sm:text-3xl md:text-3xl">
+                    <h2 className="mt-2 text-xl font-bold text-gray-900 sm:text-3xl md:text-3xl">
                       Contact to BuzingBee 🐝
-                    </h1>
+                    </h2>
 
                     {/* <p className="mt-4 leading-relaxed text-gray-500">
                       Lorem, ipsum dolor sit amet consectetur adipisicing elit.

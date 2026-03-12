@@ -2,7 +2,7 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 
 const SITE_NAME = "BuzingBee";
-const SITE_URL = "https://www.buzingbee.com";
+const SITE_URL = "https://buzingbee.com";
 const DEFAULT_IMAGE = "/og-image.png";
 
 const normalizePath = (path) => {
@@ -53,7 +53,9 @@ export default function Seo({
       <meta name="twitter:image" content={image} />
 
       <link rel="canonical" href={canonicalUrl} />
+      <link rel="alternate" hrefLang="en" href={canonicalUrl} />
       <link rel="alternate" hrefLang="en-US" href={canonicalUrl} />
+      <link rel="alternate" hrefLang="x-default" href={canonicalUrl} />
     </Head>
   );
 }

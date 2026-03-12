@@ -32,26 +32,26 @@ const Services = () => {
       <div className="mx-4 mb-30 sm:mx-16 sm:mb-20" id="About">
         <div className="flex flex-col mb-8 sm:flex-row sm:mb-10">
           <div className="w-full me-0 sm:w-[2500px] sm:me-10 mb-10 sm:mb-0">
-            <h1
+            <h2
               className="text-2xl font-semibold text-center sm:text-left sm:text-5xl"
               data-aos="fade-up"
               data-aos-duration="1000"
             >
               Intelligent Automation for Modern Digital Marketing
-            </h1>
+            </h2>
           </div>
           <div
             className="text-center me-0 sm:text-left sm:me-10"
             data-aos="fade-up"
             data-aos-duration="2000"
           >
-            <h1 className="text-lg text-left text-gray-500 ">
+            <p className="text-lg text-left text-gray-500 ">
               {" "}
               We build AI-powered automation workflows that transform your
               digital marketing. From lead generation to customer retention, our
               intelligent agents work 24/7 to optimize your campaigns, increase
               conversions, and scale your business without manual intervention.
-            </h1>
+            </p>
           </div>
         </div>
         <div
@@ -67,14 +67,14 @@ const Services = () => {
             data-aos-duration="3000"
           >
             <div className="">
-              <h1 className="font-bold text-left text-white sm:text-8xl text-7xl">
+              <p className="font-bold text-left text-white sm:text-8xl text-7xl">
                 <CountUp end={450} duration={5} />{" "}
                 <span className={"text-yellow-400"}>+</span>
-              </h1>
+              </p>
             </div>
-            <h1 className={"text-2xl text-gray-400 font-semibold mt-3"}>
+            <h3 className={"text-2xl text-gray-400 font-semibold mt-3"}>
               Workflows Automated Daily{" "}
-            </h1>
+            </h3>
             <div className={"flex sm:mt-20 mt-10 align-center items-center"}>
               <div className="rounded-full avatar ring-warning ring-offset-base-50 ring ring-offset-0 ">
                 <div className="rounded-full sm:size-12 size-6 w-12 sm:w-16">
