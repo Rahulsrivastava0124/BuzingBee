@@ -323,7 +323,9 @@ export default function BlogDetailPage() {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {blogs
-              .filter((item) => item.slug !== slug && item.category === blog.category)
+              .filter(
+                (item) => item.slug !== slug && item.category === blog.category,
+              )
               .slice(0, 4)
               .map((relatedBlog) => (
                 <Link
