@@ -272,6 +272,7 @@ export default function BlogDetailPage() {
           </span>
         </div>
 
+        {/* Primary H1 for SEO - main page heading */}
         <h1 className="text-4xl sm:text-5xl font-bold leading-tight text-gray-900 mb-4">
           {blog.title}
         </h1>
@@ -313,6 +314,34 @@ export default function BlogDetailPage() {
           }}
         />
       </article>
+
+      {/* Related Articles - Internal Links Section */}
+      {blogs.length > 1 && (
+        <div className="my-16 border-t border-b py-12">
+          <h2 className="text-2xl font-bold mb-6 text-gray-900">
+            Related Articles
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {blogs
+              .filter((item) => item.slug !== slug && item.category === blog.category)
+              .slice(0, 4)
+              .map((relatedBlog) => (
+                <Link
+                  key={relatedBlog.slug}
+                  to={`/blog/${relatedBlog.slug}`}
+                  className="block p-4 rounded-lg border border-gray-200 hover:border-yellow-400 hover:shadow-md transition-all"
+                >
+                  <h3 className="font-semibold text-gray-900 mb-2 hover:text-yellow-600">
+                    {relatedBlog.title}
+                  </h3>
+                  <p className="text-sm text-gray-600 line-clamp-2">
+                    {relatedBlog.excerpt}
+                  </p>
+                </Link>
+              ))}
+          </div>
+        </div>
+      )}
 
       <hr className="my-16" />
 
