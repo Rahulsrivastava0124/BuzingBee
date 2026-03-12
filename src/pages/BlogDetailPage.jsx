@@ -292,7 +292,7 @@ export default function BlogDetailPage() {
         <img
           src={blog.image}
           alt={blog.title}
-          className="w-full rounded-3xl mb-12 max-h-[500px] object-cover shadow-lg"
+          className="w-full h-[240px] sm:h-[360px] md:h-[500px] rounded-3xl mb-12 object-contain shadow-lg"
         />
       )}
 
