@@ -1,5 +1,8 @@
+const DEFAULT_BLOG_API_URL = "https://api.buzingbee.com/api/blog?";
+
 const readBlogApiUrl = () => {
-  const value = process.env.NEXT_PUBLIC_BLOG_API_URL;
+  const value =
+    process.env.NEXT_PUBLIC_BLOG_API_URL || process.env.BLOG_API_URL || "";
 
   if (typeof value !== "string") {
     return "";
@@ -7,8 +10,6 @@ const readBlogApiUrl = () => {
 
   return value.trim();
 };
-
-const BLOG_API_URL = readBlogApiUrl();
 
 const normalizeBlogPayload = (payload) => {
   if (Array.isArray(payload)) {
@@ -27,13 +28,9 @@ const normalizeBlogPayload = (payload) => {
 };
 
 export const fetchBlogs = async () => {
-  if (!BLOG_API_URL) {
-    throw new Error(
-      "Missing NEXT_PUBLIC_BLOG_API_URL in .env.local. Restart dev server after updating env.",
-    );
-  }
+  const blogApiUrl = readBlogApiUrl() || DEFAULT_BLOG_API_URL;
 
-  const response = await fetch(BLOG_API_URL);
+  const response = await fetch(blogApiUrl);
 
   if (!response.ok) {
     throw new Error("Unable to fetch blog posts");
