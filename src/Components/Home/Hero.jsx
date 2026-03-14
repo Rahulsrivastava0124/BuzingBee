@@ -11,7 +11,7 @@ export default function Hero() {
       <Element id="home" name="home">
         <section
           id="Home"
-          className="mx-6 my-20 md:my-28 lg:my-32 rounded-md sm:mx-16 sm:flex"
+          className="mx-6 my-20 md:my-48 lg:my-32 rounded-md sm:mx-16 sm:flex"
           data-aos="fade-up"
           data-aos-duration="2000"
         >

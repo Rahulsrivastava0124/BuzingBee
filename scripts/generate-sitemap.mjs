@@ -6,7 +6,9 @@ const SITE_URL = (process.env.SITE_URL || "https://buzingbee.com").replace(
   "",
 );
 const BLOG_API_URL =
-  process.env.BLOG_API_URL || "https://api.buzingbee.com/api/blog?";
+  process.env.BLOG_API_URL ||
+  process.env.NEXT_PUBLIC_BLOG_API_URL ||
+  "https://api.buzingbee.com/api/blog?";
 
 const STATIC_ROUTES = [
   { path: "/", changefreq: "weekly", priority: "1.0" },

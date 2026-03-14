@@ -27,6 +27,7 @@
     "/^python3 /tmp/check_alt\\.py$/": {
       "approve": true,
       "matchCommandLine": true
-    }
+    },
+    "npx tailwindcss": true
   }
 }

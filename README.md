@@ -2,6 +2,14 @@
 
 This project is now migrated to Next.js (JavaScript, Pages Router).
 
+## Environment Variables
+
+Create `.env.local` from `.env.example` and set values as needed:
+
+- `NEXT_PUBLIC_BLOG_API_URL` — blog API URL used in browser requests
+- `BLOG_API_URL` — optional server/script override for sitemap generation
+- `SITE_URL` — canonical website URL used by sitemap generator
+
 ## Scripts
 
 - `npm run dev` — start development server on port 3000

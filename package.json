@@ -21,7 +21,7 @@
     "three": "^0.167.1"
   },
   "scripts": {
-    "dev": "next dev",
+    "dev": "tailwindcss -i ./src/input.css -o ./src/output.css --watch & next dev",
     "start": "next start",
     "build": "node scripts/generate-sitemap.mjs && tailwindcss -i ./src/input.css -o ./src/output.css --minify && next build",
     "test": "jest",
