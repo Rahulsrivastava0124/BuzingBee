@@ -3,6 +3,14 @@ FROM node:20-alpine AS builder
 
 WORKDIR /app
 
+ARG NEXT_PUBLIC_BLOG_API_URL=https://api.buzingbee.com/api/blog?
+ARG BLOG_API_URL=https://api.buzingbee.com/api/blog?
+ARG SITE_URL=https://buzingbee.com
+
+ENV NEXT_PUBLIC_BLOG_API_URL=$NEXT_PUBLIC_BLOG_API_URL
+ENV BLOG_API_URL=$BLOG_API_URL
+ENV SITE_URL=$SITE_URL
+
 COPY package*.json ./
 RUN npm ci
 
