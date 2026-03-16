@@ -66,15 +66,16 @@ export default function ServicesPage() {
                     {activeCategory.label}
                   </span>
                   <span className="text-xs text-textMuted font-medium">
-                    {service.items.length} key deliverable{service.items.length > 1 ? "s" : ""}
+                    {service.items.length} key deliverable
+                    {service.items.length > 1 ? "s" : ""}
                   </span>
                 </div>
                 <h3 className="text-xl font-bold text-textHeading font-heading mb-2">
                   {service.title}
                 </h3>
                 <p className="text-sm text-textMuted leading-relaxed mb-4">
-                  Tailored execution designed to help your business move faster with stronger visibility,
-                  conversion, and long-term growth.
+                  Tailored execution designed to help your business move faster
+                  with stronger visibility, conversion, and long-term growth.
                 </p>
                 <div className="mb-4 rounded-xl bg-bgSection/60 border border-border/60 px-4 py-3">
                   <p className="text-xs font-semibold uppercase tracking-[0.16em] text-accent mb-2">
@@ -91,8 +92,12 @@ export default function ServicesPage() {
                 </div>
                 <div className="mt-auto flex items-center justify-between gap-3 pt-3 border-t border-border/70">
                   <div>
-                    <p className="text-xs uppercase tracking-[0.12em] text-textMuted">Ideal for</p>
-                    <p className="text-sm font-medium text-textHeading mt-1">Brands ready to scale this channel</p>
+                    <p className="text-xs uppercase tracking-[0.12em] text-textMuted">
+                      Ideal for
+                    </p>
+                    <p className="text-sm font-medium text-textHeading mt-1">
+                      Brands ready to scale this channel
+                    </p>
                   </div>
                   <Link
                     href={`/contact?service=${encodeURIComponent(service.title)}`}

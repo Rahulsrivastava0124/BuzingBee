@@ -17,6 +17,29 @@ export const metadata: Metadata = {
   title: "Blog — Digital Marketing & AI Insights",
   description:
     "Read the latest insights, tips, and strategies on digital marketing, web development, AI, and business growth from the BuzingBee team.",
+  keywords: [
+    "digital marketing blog",
+    "AI insights blog",
+    "web development articles",
+    "BuzingBee blog",
+    "business growth tips",
+  ],
+  alternates: {
+    canonical: "/blog",
+  },
+  openGraph: {
+    title: "Blog — Digital Marketing & AI Insights",
+    description:
+      "Read BuzingBee blog articles on digital marketing, AI, web development, and practical growth strategies.",
+    url: "/blog",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Blog — Digital Marketing & AI Insights",
+    description:
+      "Read BuzingBee blog articles on digital marketing, AI, web development, and practical growth strategies.",
+  },
 };
 
 export default async function BlogPage() {

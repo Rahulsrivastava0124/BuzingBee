@@ -205,7 +205,7 @@ export default function Navbar() {
               <a
                 href={`tel:${SITE_CONFIG.phone}`}
                 aria-label="Call us"
-                className="hidden md:inline-flex w-10 h-10 items-center justify-center rounded-full border border-[#FACC15]/60 text-[#FACC15] hover:bg-[#1f1b12] hover:border-[#FACC15] transition-colors"
+                className="hidden md:inline-flex w-10 h-10 items-center justify-center rounded-full border border-[#FACC15] bg-[#1f1b12] text-[#FACC15] hover:bg-[#2a2418] shadow-[0_8px_22px_rgba(31,27,18,0.18)] transition-colors"
               >
                 <Phone className="w-4.5 h-4.5" />
               </a>
@@ -214,7 +214,7 @@ export default function Navbar() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="WhatsApp us"
-                className="hidden md:inline-flex w-10 h-10 items-center justify-center rounded-full border border-[#FACC15]/60 text-[#FACC15] hover:bg-[#1f1b12] hover:border-[#FACC15] transition-colors"
+                className="hidden md:inline-flex w-10 h-10 items-center justify-center rounded-full border border-[#FACC15] bg-[#1f1b12] text-[#FACC15] hover:bg-[#2a2418] shadow-[0_8px_22px_rgba(31,27,18,0.18)] transition-colors"
               >
                 <MessageCircle className="w-4.5 h-4.5" />
               </a>
@@ -274,7 +274,7 @@ export default function Navbar() {
                   <a
                     href={`tel:${SITE_CONFIG.phone}`}
                     aria-label="Call us"
-                    className="inline-flex w-11 h-11 items-center justify-center rounded-full border border-[#FACC15]/60 text-[#FACC15] hover:bg-[#1f1b12] hover:border-[#FACC15] transition-colors"
+                    className="inline-flex w-11 h-11 items-center justify-center rounded-full border border-[#FACC15] bg-[#1f1b12] text-[#FACC15] hover:bg-[#2a2418] shadow-[0_8px_22px_rgba(31,27,18,0.18)] transition-colors"
                   >
                     <Phone className="w-5 h-5" />
                   </a>
@@ -283,7 +283,7 @@ export default function Navbar() {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="WhatsApp us"
-                    className="inline-flex w-11 h-11 items-center justify-center rounded-full border border-[#FACC15]/60 text-[#FACC15] hover:bg-[#1f1b12] hover:border-[#FACC15] transition-colors"
+                    className="inline-flex w-11 h-11 items-center justify-center rounded-full border border-[#FACC15] bg-[#1f1b12] text-[#FACC15] hover:bg-[#2a2418] shadow-[0_8px_22px_rgba(31,27,18,0.18)] transition-colors"
                   >
                     <MessageCircle className="w-5 h-5" />
                   </a>

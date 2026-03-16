@@ -5,17 +5,28 @@ export const metadata: Metadata = {
     "Startup Plans | BuzingBee - Minimal Cost Plans for Growing Businesses",
   description:
     "Affordable startup plans across all services. Get started with minimal investment and scale as you grow. Perfect for new businesses and startups.",
-  keywords:
-    "startup plans, affordable pricing, minimal cost, startup services, digital marketing startup, web development startup",
+  keywords: [
+    "startup plans",
+    "affordable pricing",
+    "minimal cost startup services",
+    "digital marketing startup plan",
+    "web development startup package",
+  ],
   openGraph: {
     title: "Startup Plans | BuzingBee",
     description:
       "Affordable startup plans across all services. Get started with minimal investment and scale as you grow.",
     type: "website",
-    url: "https://buzingbee.com/startup",
+    url: "/startup",
   },
   alternates: {
-    canonical: "https://buzingbee.com/startup",
+    canonical: "/startup",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Startup Plans | BuzingBee",
+    description:
+      "Affordable startup plans across all services. Get started with minimal investment and scale as you grow.",
   },
 };
 
