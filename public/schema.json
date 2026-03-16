@@ -3,11 +3,15 @@
   "@graph": [
     {
       "@type": "Organization",
+      "@id": "https://buzingbee.com/#organization",
       "name": "BuzingBee",
       "url": "https://buzingbee.com",
-      "description": "BuzingBee provides digital marketing services and AI services for business growth, including SEO, paid ads, intelligent automation, and AI agents.",
-      "logo": "https://buzingbee.com/logo.png",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://buzingbee.com/logo.png"
+      },
       "image": "https://buzingbee.com/og-image.png",
+      "description": "BuzingBee provides digital marketing services and AI services for business growth, including SEO, paid ads, intelligent automation, and AI agents.",
       "keywords": "digital marketing services, AI services, business growth, SEO, Google Ads, Meta Ads, email marketing, AI agents",
       "sameAs": [
         "https://www.instagram.com/buzingbee_/",
@@ -17,82 +21,72 @@
       ],
       "contactPoint": {
         "@type": "ContactPoint",
-        "contactType": "Sales",
+        "contactType": "customer service",
         "telephone": "+1-950-798-1942",
         "areaServed": "Worldwide"
       },
       "address": {
         "@type": "PostalAddress",
         "addressCountry": "US"
-      },
-      "service": [
-        {
-          "@type": "Service",
-          "name": "AI Agent Development",
-          "description": "Custom AI agents that automate digital marketing tasks and improve lead conversion"
-        },
-        {
-          "@type": "Service",
-          "name": "Website Agent Development",
-          "description": "Intelligent website automation and personalized user journeys powered by AI"
-        },
-        {
-          "@type": "Service",
-          "name": "Google & Meta Ads Management",
-          "description": "Performance marketing and paid ad management across Google Ads and Meta platforms"
-        },
-        {
-          "@type": "Service",
-          "name": "App Development",
-          "description": "Custom mobile and web application development"
-        },
-        {
-          "@type": "Service",
-          "name": "AdSense & Monetization",
-          "description": "AdSense optimization and website monetization strategies"
-        },
-        {
-          "@type": "Service",
-          "name": "Email Marketing Automation",
-          "description": "Automated email campaigns and email marketing workflows"
-        }
-      ]
-    },
-    {
-      "@type": "WebSite",
-      "name": "BuzingBee",
-      "url": "https://buzingbee.com/",
-      "description": "Digital marketing services and AI services to grow your business online.",
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": "https://buzingbee.com/?q={search_term_string}",
-        "query-input": "required name=search_term_string"
       }
     },
     {
-      "@type": "SiteNavigationElement",
-      "name": "Home",
-      "url": "https://buzingbee.com/"
-    },
-    {
-      "@type": "SiteNavigationElement",
-      "name": "Services",
-      "url": "https://buzingbee.com/services"
-    },
-    {
-      "@type": "SiteNavigationElement",
-      "name": "About",
-      "url": "https://buzingbee.com/about"
-    },
-    {
-      "@type": "SiteNavigationElement",
-      "name": "Blog",
-      "url": "https://buzingbee.com/blog"
-    },
-    {
-      "@type": "SiteNavigationElement",
-      "name": "Contact",
-      "url": "https://buzingbee.com/contact"
+      "@type": "WebSite",
+      "@id": "https://buzingbee.com/#website",
+      "name": "BuzingBee",
+      "url": "https://buzingbee.com/",
+      "description": "Digital marketing services and AI services to grow your business online.",
+      "publisher": { "@id": "https://buzingbee.com/#organization" },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://buzingbee.com/?q={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      },
+      "hasPart": [
+        {
+          "@type": ["WebPage", "SiteNavigationElement"],
+          "@id": "https://buzingbee.com/#webpage",
+          "url": "https://buzingbee.com/",
+          "name": "Home",
+          "description": "BuzingBee: Digital Marketing Services & AI Services for Business Growth.",
+          "isPartOf": { "@id": "https://buzingbee.com/#website" }
+        },
+        {
+          "@type": ["WebPage", "SiteNavigationElement"],
+          "@id": "https://buzingbee.com/services#webpage",
+          "url": "https://buzingbee.com/services",
+          "name": "Services",
+          "description": "Explore BuzingBee digital marketing and AI services: AI agent development, SEO, Google Ads, Meta Ads, website automation, and email marketing automation.",
+          "isPartOf": { "@id": "https://buzingbee.com/#website" }
+        },
+        {
+          "@type": ["WebPage", "SiteNavigationElement"],
+          "@id": "https://buzingbee.com/about#webpage",
+          "url": "https://buzingbee.com/about",
+          "name": "About",
+          "description": "Learn how BuzingBee combines digital marketing expertise and AI services to help businesses grow with intelligent strategies and measurable results.",
+          "isPartOf": { "@id": "https://buzingbee.com/#website" }
+        },
+        {
+          "@type": ["WebPage", "SiteNavigationElement"],
+          "@id": "https://buzingbee.com/blog#webpage",
+          "url": "https://buzingbee.com/blog",
+          "name": "Blog",
+          "description": "Digital Marketing & AI Services Blog – insights, tips, and strategies by BuzingBee.",
+          "isPartOf": { "@id": "https://buzingbee.com/#website" }
+        },
+        {
+          "@type": ["WebPage", "SiteNavigationElement"],
+          "@id": "https://buzingbee.com/contact#webpage",
+          "url": "https://buzingbee.com/contact",
+          "name": "Contact",
+          "description": "Contact BuzingBee for digital marketing and AI services. Get in touch with our team today.",
+          "isPartOf": { "@id": "https://buzingbee.com/#website" }
+        }
+      ]
     }
   ]
 }

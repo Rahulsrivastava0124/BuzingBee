@@ -17,9 +17,13 @@ const structuredData = {
   "@graph": [
     {
       "@type": "Organization",
+      "@id": "https://buzingbee.com/#organization",
       name: "BuzingBee",
       url: "https://buzingbee.com",
-      logo: "https://buzingbee.com/logo.png",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://buzingbee.com/logo.png",
+      },
       image: "https://buzingbee.com/og-image.png",
       description:
         "BuzingBee provides digital marketing services and AI services to help businesses grow through intelligent automation, SEO, paid ads, and AI agents.",
@@ -31,80 +35,75 @@ const structuredData = {
         "https://x.com/BuzingBee_",
         "https://www.linkedin.com/company/buzing-bee/?viewAsMember=true",
       ],
+      contactPoint: {
+        "@type": "ContactPoint",
+        contactType: "customer service",
+        telephone: "+1-950-798-1942",
+        areaServed: "Worldwide",
+      },
     },
     {
       "@type": "WebSite",
+      "@id": "https://buzingbee.com/#website",
       name: "BuzingBee",
       url: "https://buzingbee.com/",
       description:
         "Digital marketing services and AI services for business growth by BuzingBee.",
+      publisher: { "@id": "https://buzingbee.com/#organization" },
       potentialAction: {
         "@type": "SearchAction",
-        target: "https://buzingbee.com/?q={search_term_string}",
+        target: {
+          "@type": "EntryPoint",
+          urlTemplate: "https://buzingbee.com/?q={search_term_string}",
+        },
         "query-input": "required name=search_term_string",
       },
-    },
-    {
-      "@type": "Service",
-      name: "Digital Marketing Services",
-      provider: {
-        "@type": "Organization",
-        name: "BuzingBee",
-      },
-      serviceType: [
-        "SEO Services",
-        "Google Ads Management",
-        "Meta Ads Management",
-        "Email Marketing Automation",
-        "AI Agent Development",
-      ],
-      areaServed: "Worldwide",
-    },
-    {
-      "@type": "ItemList",
-      name: "Primary site links",
-      itemListElement: [
+      hasPart: [
         {
-          "@type": "ListItem",
-          position: 1,
-          name: "Home",
+          "@type": ["WebPage", "SiteNavigationElement"],
+          "@id": "https://buzingbee.com/#webpage",
           url: "https://buzingbee.com/",
+          name: "Home",
+          description:
+            "BuzingBee: Digital Marketing Services & AI Services for Business Growth.",
+          isPartOf: { "@id": "https://buzingbee.com/#website" },
         },
         {
-          "@type": "ListItem",
-          position: 2,
-          name: "Services",
+          "@type": ["WebPage", "SiteNavigationElement"],
+          "@id": "https://buzingbee.com/services#webpage",
           url: "https://buzingbee.com/services",
+          name: "Services",
+          description:
+            "Explore BuzingBee digital marketing and AI services: AI agent development, SEO, Google Ads, Meta Ads, website automation, and email marketing automation.",
+          isPartOf: { "@id": "https://buzingbee.com/#website" },
         },
         {
-          "@type": "ListItem",
-          position: 3,
-          name: "About",
+          "@type": ["WebPage", "SiteNavigationElement"],
+          "@id": "https://buzingbee.com/about#webpage",
           url: "https://buzingbee.com/about",
+          name: "About",
+          description:
+            "Learn how BuzingBee combines digital marketing expertise and AI services to help businesses grow with intelligent strategies and measurable results.",
+          isPartOf: { "@id": "https://buzingbee.com/#website" },
         },
         {
-          "@type": "ListItem",
-          position: 4,
-          name: "Blog",
+          "@type": ["WebPage", "SiteNavigationElement"],
+          "@id": "https://buzingbee.com/blog#webpage",
           url: "https://buzingbee.com/blog",
+          name: "Blog",
+          description:
+            "Digital Marketing & AI Services Blog – insights, tips, and strategies by BuzingBee.",
+          isPartOf: { "@id": "https://buzingbee.com/#website" },
         },
         {
-          "@type": "ListItem",
-          position: 5,
-          name: "Contact",
+          "@type": ["WebPage", "SiteNavigationElement"],
+          "@id": "https://buzingbee.com/contact#webpage",
           url: "https://buzingbee.com/contact",
+          name: "Contact",
+          description:
+            "Contact BuzingBee for digital marketing and AI services. Get in touch with our team today.",
+          isPartOf: { "@id": "https://buzingbee.com/#website" },
         },
-      ],
-    },
-    {
-      "@type": "SiteNavigationElement",
-      name: ["Home", "Services", "About", "Blog", "Contact"],
-      url: [
-        "https://buzingbee.com/",
-        "https://buzingbee.com/services",
-        "https://buzingbee.com/about",
-        "https://buzingbee.com/blog",
-        "https://buzingbee.com/contact",
       ],
     },
   ],
@@ -123,7 +122,8 @@ export default function App({ Component, pageProps }) {
           content="width=device-width, initial-scale=1, maximum-scale=5"
         />
         <meta name="theme-color" content="#000000" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" href="/bee1-removebg-preview.png" />
+        <link rel="apple-touch-icon" href="/bee1-removebg-preview.png" />
         <link rel="manifest" href="/site.webmanifest" />
         <script
           type="application/ld+json"

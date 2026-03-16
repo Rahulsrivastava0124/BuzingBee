@@ -14,6 +14,41 @@ const normalizePath = (path) => {
   return path.startsWith("/") ? path : `/${path}`;
 };
 
+const buildPageSchema = (
+  canonicalUrl,
+  fullTitle,
+  finalDescription,
+  finalPath,
+  title,
+) => {
+  const breadcrumbItems = [
+    { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
+  ];
+  if (finalPath !== "/") {
+    breadcrumbItems.push({
+      "@type": "ListItem",
+      position: 2,
+      name: title || SITE_NAME,
+      item: canonicalUrl,
+    });
+  }
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": `${canonicalUrl}#webpage`,
+    url: canonicalUrl,
+    name: fullTitle,
+    description: finalDescription,
+    isPartOf: { "@id": `${SITE_URL}/#website` },
+    about: { "@id": `${SITE_URL}/#organization` },
+    breadcrumb: {
+      "@type": "BreadcrumbList",
+      itemListElement: breadcrumbItems,
+    },
+  };
+};
+
 export default function Seo({
   title,
   description,
@@ -33,6 +68,14 @@ export default function Seo({
   const robots = noindex
     ? "noindex, nofollow"
     : "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1";
+
+  const pageSchema = buildPageSchema(
+    canonicalUrl,
+    fullTitle,
+    finalDescription,
+    finalPath,
+    title,
+  );
 
   return (
     <Head>
@@ -62,6 +105,11 @@ export default function Seo({
       <link rel="alternate" hrefLang="en" href={canonicalUrl} />
       <link rel="alternate" hrefLang="en-US" href={canonicalUrl} />
       <link rel="alternate" hrefLang="x-default" href={canonicalUrl} />
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(pageSchema) }}
+      />
     </Head>
   );
 }
