@@ -58,7 +58,7 @@ export default function ContactPage() {
           <span className="inline-block bg-accent/10 text-accent text-sm font-semibold px-4 py-1.5 rounded-full mb-4 border border-accent/20">
             Let&apos;s Talk
           </span>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-textHeading font-heading">
+          <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-textHeading font-heading">
             Contact <span className="text-accent">Us</span>
           </h1>
           <p className="mt-4 text-textBody max-w-2xl mx-auto text-base md:text-lg leading-relaxed">

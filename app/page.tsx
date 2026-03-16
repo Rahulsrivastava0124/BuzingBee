@@ -273,7 +273,7 @@ export default function HomePage() {
             initial={false}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.65, delay: 0.1 }}
-            className="text-5xl sm:text-6xl md:text-7xl font-bold font-heading text-textHeading leading-[1.08] tracking-tight"
+            className="text-4xl sm:text-6xl md:text-7xl font-bold font-heading text-textHeading leading-[1.08] tracking-tight"
           >
             Build Faster with{" "}
             <span className="relative inline-block">

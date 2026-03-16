@@ -30,7 +30,7 @@ export default function PricingPage() {
       <section className="pt-32 pb-16 px-4 sm:px-6 lg:px-8 text-center relative overflow-hidden">
         <div className="absolute top-20 left-0 w-72 h-72 bg-accent/10 rounded-full blur-[120px]" />
         <div className="container-max relative z-10">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-textHeading font-heading">
+          <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-textHeading font-heading">
             Pricing <span className="text-accent">Plans</span>
           </h1>
           <p className="mt-4 text-textBody max-w-2xl mx-auto text-base md:text-lg leading-relaxed">

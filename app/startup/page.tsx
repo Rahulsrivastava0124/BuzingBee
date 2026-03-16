@@ -32,7 +32,7 @@ export default function StartupPlanPage() {
               🚀 Startup Plans
             </div>
 
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-textHeading font-heading">
+            <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-textHeading font-heading">
               Minimal Cost Plans for{" "}
               <span className="text-accent">Startups</span>
             </h1>
