@@ -1,30 +1,33 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./pages/**/*.{js,jsx}",
-    "./src/**/*.{html,js,jsx}",
-    "./app/**/*.{js,jsx}",
+    "./pages/**/*.{js,jsx,ts,tsx}",
+    "./src/**/*.{html,js,jsx,ts,tsx}",
+    "./app/**/*.{js,jsx,ts,tsx}",
+    "./components/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
     extend: {
-      // fontFamily: {
-      //   fontLogo :["Roboto Slab", serif]
-      // }
+      colors: {
+        bgPrimary: "#fffdf5",
+        card: "#ffffff",
+        bgSection: "#fff7d6",
+        accent: "#ecad10",
+        accentHover: "#a97300",
+        textHeading: "#1f1b12",
+        textBody: "#3f3a2d",
+        textMuted: "#7a725f",
+        border: "#f1e2a8",
+        borderHover: "#eab308",
+      },
+      fontFamily: {
+        heading: ["var(--font-syne)", "system-ui", "sans-serif"],
+        body: ["var(--font-dm-sans)", "system-ui", "sans-serif"],
+      },
+      borderRadius: {
+        card: "14px",
+      },
     },
   },
-  daisyui: {
-    // themes: false, // false: only light + dark | true: all themes | array: specific themes like this ["light", "dark", "cupcake"]
-    themes: ["light", "cupcake"],
-    // darkTheme: "dark", // name of one of the included themes for dark mode
-    base: true, // applies background color and foreground color for root element by default
-    styled: true, // include daisyUI colors and design decisions for all components
-    utils: true, // adds responsive and modifier utility classes
-    prefix: "", // prefix for daisyUI classnames (components, modifiers and responsive class names. Not colors)
-    logs: true, // Shows info about daisyUI version and used config in the console when building your CSS
-    themeRoot: ":root", // The element that receives theme color CSS variables
-  },
-  plugins: [
-    require("daisyui"),
-    require("@tailwindcss/forms")({ strategy: "class" }),
-  ],
+  plugins: [require("@tailwindcss/forms")({ strategy: "class" })],
 };

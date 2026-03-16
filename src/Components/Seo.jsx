@@ -14,13 +14,7 @@ const normalizePath = (path) => {
   return path.startsWith("/") ? path : `/${path}`;
 };
 
-const buildPageSchema = (
-  canonicalUrl,
-  fullTitle,
-  finalDescription,
-  finalPath,
-  title,
-) => {
+const buildPageSchema = (canonicalUrl, fullTitle, finalDescription, finalPath, title) => {
   const breadcrumbItems = [
     { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
   ];
@@ -74,7 +68,7 @@ export default function Seo({
     fullTitle,
     finalDescription,
     finalPath,
-    title,
+    title
   );
 
   return (

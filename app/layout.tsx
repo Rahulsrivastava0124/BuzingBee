@@ -1,0 +1,190 @@
+import type { Metadata } from "next";
+import { Syne, DM_Sans, Roboto } from "next/font/google";
+import "@/styles/globals.css";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import FloatingButtons from "@/components/FloatingButtons";
+import { SITE_CONFIG } from "@/lib/constants";
+
+const syne = Syne({
+  subsets: ["latin"],
+  variable: "--font-syne",
+  display: "swap",
+});
+
+const dmSans = DM_Sans({
+  subsets: ["latin"],
+  variable: "--font-dm-sans",
+  display: "swap",
+});
+
+const roboto = Roboto({
+  subsets: ["latin"],
+  variable: "--font-roboto",
+  display: "swap",
+});
+
+export const metadata: Metadata = {
+  title: {
+    default: `${SITE_CONFIG.name} — Digital Marketing & AI Services Agency`,
+    template: `%s | ${SITE_CONFIG.name}`,
+  },
+  alternates: {
+    canonical: "/",
+  },
+  description:
+    "BuzingBee is a leading digital marketing and AI services agency. We help businesses grow with web development, mobile apps, SEO, paid ads, and AI-powered automation.",
+  keywords: [
+    "digital marketing agency",
+    "AI services",
+    "web development",
+    "mobile app development",
+    "SEO services",
+    "Google Ads",
+    "social media marketing",
+    "BuzingBee",
+  ],
+  metadataBase: new URL(SITE_CONFIG.url),
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: SITE_CONFIG.url,
+    siteName: SITE_CONFIG.name,
+    title: `${SITE_CONFIG.name} — Digital Marketing & AI Services Agency`,
+    description:
+      "BuzingBee is a leading digital marketing and AI services agency helping businesses grow with intelligent solutions.",
+    images: [{ url: "/og-image.png", width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `${SITE_CONFIG.name} — Digital Marketing & AI Services Agency`,
+    description:
+      "BuzingBee is a leading digital marketing and AI services agency.",
+    images: ["/og-image.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
+  icons: {
+    icon: "/bee1-removebg-preview.png",
+    apple: "/bee1-removebg-preview.png",
+  },
+  manifest: "/site.webmanifest",
+};
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": `${SITE_CONFIG.url}/#organization`,
+      name: SITE_CONFIG.name,
+      url: SITE_CONFIG.url,
+      logo: {
+        "@type": "ImageObject",
+        url: `${SITE_CONFIG.url}/bee1-removebg-preview.png`,
+      },
+      image: `${SITE_CONFIG.url}/og-image.png`,
+      description:
+        "BuzingBee provides digital marketing services and AI services to help businesses grow.",
+      sameAs: Object.values(SITE_CONFIG.socials),
+      contactPoint: {
+        "@type": "ContactPoint",
+        contactType: "customer service",
+        telephone: SITE_CONFIG.phone,
+        areaServed: "Worldwide",
+      },
+    },
+    {
+      "@type": "WebSite",
+      "@id": `${SITE_CONFIG.url}/#website`,
+      name: SITE_CONFIG.name,
+      url: SITE_CONFIG.url,
+      publisher: { "@id": `${SITE_CONFIG.url}/#organization` },
+      potentialAction: {
+        "@type": "SearchAction",
+        target: {
+          "@type": "EntryPoint",
+          urlTemplate: `${SITE_CONFIG.url}/?q={search_term_string}`,
+        },
+        "query-input": "required name=search_term_string",
+      },
+      hasPart: [
+        {
+          "@type": "SiteNavigationElement",
+          name: "Home",
+          url: `${SITE_CONFIG.url}/`,
+        },
+        {
+          "@type": "SiteNavigationElement",
+          name: "About",
+          url: `${SITE_CONFIG.url}/about`,
+        },
+        {
+          "@type": "SiteNavigationElement",
+          name: "Services",
+          url: `${SITE_CONFIG.url}/services`,
+        },
+        {
+          "@type": "SiteNavigationElement",
+          name: "Pricing",
+          url: `${SITE_CONFIG.url}/pricing`,
+        },
+        {
+          "@type": "SiteNavigationElement",
+          name: "Startup Plans",
+          url: `${SITE_CONFIG.url}/startup`,
+        },
+        {
+          "@type": "SiteNavigationElement",
+          name: "Portfolio",
+          url: `${SITE_CONFIG.url}/portfolio`,
+        },
+        {
+          "@type": "SiteNavigationElement",
+          name: "Blog",
+          url: `${SITE_CONFIG.url}/blog`,
+        },
+        {
+          "@type": "SiteNavigationElement",
+          name: "Contact",
+          url: `${SITE_CONFIG.url}/contact`,
+        },
+      ],
+    },
+  ],
+};
+
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
+  return (
+    <html
+      lang="en"
+      className={`${syne.variable} ${dmSans.variable} ${roboto.variable}`}
+    >
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+        />
+      </head>
+      <body className="font-body antialiased overflow-x-hidden">
+        <Navbar />
+        <main className="min-h-screen">{children}</main>
+        <Footer />
+        <FloatingButtons />
+      </body>
+    </html>
+  );
+}

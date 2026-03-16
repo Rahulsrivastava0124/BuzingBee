@@ -1,0 +1,72 @@
+import type { Metadata } from "next";
+import BlogCard from "@/components/BlogCard";
+import { blogPosts } from "@/lib/data";
+import { fetchBlogCards } from "@/lib/blog";
+
+type BlogListItem = {
+  id: string | number;
+  title: string;
+  excerpt: string;
+  category: string;
+  date: string;
+  image: string;
+  slug: string;
+};
+
+export const metadata: Metadata = {
+  title: "Blog — Digital Marketing & AI Insights",
+  description:
+    "Read the latest insights, tips, and strategies on digital marketing, web development, AI, and business growth from the BuzingBee team.",
+};
+
+export default async function BlogPage() {
+  let posts: BlogListItem[] = blogPosts;
+
+  try {
+    const apiPosts = await fetchBlogCards();
+    if (apiPosts.length > 0) {
+      posts = apiPosts;
+    }
+  } catch {
+    posts = blogPosts;
+  }
+
+  return (
+    <>
+      {/* Hero */}
+      <section className="pt-32 pb-16 px-4 sm:px-6 lg:px-8 text-center relative overflow-hidden">
+        <div className="absolute top-10 left-10 w-72 h-72 bg-accent/10 rounded-full blur-[120px]" />
+        <div className="container-max relative z-10">
+          <span className="inline-block bg-accent/10 text-accent text-sm font-semibold px-4 py-1.5 rounded-full mb-4 border border-accent/20">
+            Insights & Articles
+          </span>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-textHeading font-heading">
+            Our <span className="text-accent">Blog</span>
+          </h1>
+          <p className="mt-4 text-textBody max-w-2xl mx-auto text-base md:text-lg leading-relaxed">
+            Stay ahead of the curve with expert insights on digital marketing,
+            AI, technology, and business growth.
+          </p>
+        </div>
+      </section>
+
+      {/* Blog Grid */}
+      <section className="section-padding pt-4">
+        <div className="container-max grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+          {posts.map((post, i) => (
+            <BlogCard
+              key={post.id}
+              title={post.title}
+              excerpt={post.excerpt}
+              category={post.category}
+              date={post.date}
+              image={post.image}
+              slug={post.slug}
+              index={i}
+            />
+          ))}
+        </div>
+      </section>
+    </>
+  );
+}

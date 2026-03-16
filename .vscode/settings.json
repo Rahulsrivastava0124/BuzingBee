@@ -28,6 +28,7 @@
       "approve": true,
       "matchCommandLine": true
     },
-    "npx tailwindcss": true
+    "npx tailwindcss": true,
+    "npx next": true
   }
 }

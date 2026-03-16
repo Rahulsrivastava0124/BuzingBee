@@ -2,8 +2,12 @@
 const nextConfig = {
   reactStrictMode: true,
   output: "standalone",
+  pageExtensions: ["ts", "tsx"],
   experimental: {
     forceSwcTransforms: true,
+  },
+  images: {
+    domains: ["buzingbee.com", "images.unsplash.com"],
   },
   webpack: (config) => {
     config.module.rules.push({
