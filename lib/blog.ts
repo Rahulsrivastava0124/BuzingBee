@@ -105,7 +105,7 @@ const normalizeImageUrl = (value?: string) => {
 };
 
 export const fetchBlogBySlug = async (
-  slug: string
+  slug: string,
 ): Promise<BlogCardItem | null> => {
   try {
     const all = await fetchBlogCards();

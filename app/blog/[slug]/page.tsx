@@ -11,9 +11,9 @@ const toTitleFromSlug = (slug = "") =>
 export default async function BlogDetailPage({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }) {
-  const slug = params?.slug as string;
+  const { slug } = await params;
   const post = await fetchBlogBySlug(slug);
   const title = post?.title || (slug ? toTitleFromSlug(slug) : "Blog Detail");
   const image = post?.image || "";
