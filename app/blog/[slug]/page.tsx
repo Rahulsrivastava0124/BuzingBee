@@ -43,12 +43,12 @@ export default async function BlogDetailPage({
           </div>
         </div>
 
-        <div className="h-64 md:h-96 bg-bgSection rounded-[14px] mb-10 relative overflow-hidden">
+        <div className="w-full aspect-video bg-bgSection rounded-[14px] mb-10 relative overflow-hidden">
           {image ? (
             <img
               src={image}
               alt={title}
-              className="h-full w-full object-cover"
+              className="absolute inset-0 h-full w-full object-cover"
             />
           ) : null}
           <div className="absolute inset-0 bg-gradient-to-br from-accent/20 to-transparent" />
