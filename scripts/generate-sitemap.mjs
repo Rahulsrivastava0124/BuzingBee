@@ -12,8 +12,11 @@ const BLOG_API_URL =
 
 const STATIC_ROUTES = [
   { path: "/", changefreq: "weekly", priority: "1.0" },
-  { path: "/services", changefreq: "monthly", priority: "0.9" },
   { path: "/about", changefreq: "monthly", priority: "0.8" },
+  { path: "/services", changefreq: "monthly", priority: "0.9" },
+  { path: "/pricing", changefreq: "monthly", priority: "0.8" },
+  { path: "/startup", changefreq: "monthly", priority: "0.8" },
+  { path: "/portfolio", changefreq: "monthly", priority: "0.8" },
   { path: "/blog", changefreq: "weekly", priority: "0.8" },
   { path: "/contact", changefreq: "monthly", priority: "0.7" },
 ];
