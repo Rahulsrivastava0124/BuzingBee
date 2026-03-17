@@ -7,7 +7,7 @@ const nextConfig = {
     forceSwcTransforms: true,
   },
   images: {
-    domains: ["buzingbee.com", "images.unsplash.com"],
+    domains: ["buzingbee.com", "api.buzingbee.com", "images.unsplash.com"],
   },
   webpack: (config) => {
     config.module.rules.push({

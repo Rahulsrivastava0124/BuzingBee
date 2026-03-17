@@ -104,6 +104,17 @@ const normalizeImageUrl = (value?: string) => {
   return `${DEFAULT_BLOG_IMAGE_BASE_URL}/${trimmed.replace(/^\/+/, "")}`;
 };
 
+export const fetchBlogBySlug = async (
+  slug: string
+): Promise<BlogCardItem | null> => {
+  try {
+    const all = await fetchBlogCards();
+    return all.find((b) => b.slug === slug) ?? null;
+  } catch {
+    return null;
+  }
+};
+
 export const fetchBlogCards = async (): Promise<BlogCardItem[]> => {
   const blogApiUrl = readBlogApiUrl() || DEFAULT_BLOG_API_URL;
 

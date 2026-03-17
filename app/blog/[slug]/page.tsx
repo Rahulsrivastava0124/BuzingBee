@@ -1,7 +1,5 @@
-"use client";
-
 import Link from "next/link";
-import { useParams } from "next/navigation";
+import { fetchBlogBySlug } from "@/lib/blog";
 
 const toTitleFromSlug = (slug = "") =>
   slug
@@ -10,30 +8,55 @@ const toTitleFromSlug = (slug = "") =>
     .map((word: string) => word.charAt(0).toUpperCase() + word.slice(1))
     .join(" ");
 
-export default function BlogDetailPage() {
-  const params = useParams();
+export default async function BlogDetailPage({
+  params,
+}: {
+  params: { slug: string };
+}) {
   const slug = params?.slug as string;
-  const title = slug ? toTitleFromSlug(slug) : "Blog Detail";
+  const post = await fetchBlogBySlug(slug);
+  const title = post?.title || (slug ? toTitleFromSlug(slug) : "Blog Detail");
+  const image = post?.image || "";
+  const category = post?.category || "Blog";
+  const date = post?.date || "";
 
   return (
     <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
       <div className="container-max max-w-3xl">
         <div className="mb-8">
           <span className="inline-block bg-accent/10 text-accent text-xs font-bold px-3 py-1 rounded-full mb-4 border border-accent/20">
-            Blog
+            {category}
           </span>
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-textHeading font-heading leading-tight">
             {title}
           </h1>
           <div className="mt-4 flex items-center gap-4 text-textMuted text-sm">
             <span>BuzingBee Team</span>
+            {date && (
+              <>
+                <span>•</span>
+                <span>{date}</span>
+              </>
+            )}
             <span>•</span>
             <span>5 min read</span>
           </div>
         </div>
 
         <div className="h-64 md:h-96 bg-bgSection rounded-[14px] mb-10 relative overflow-hidden">
+          {image ? (
+            <img
+              src={image}
+              alt={title}
+              className="h-full w-full object-cover"
+            />
+          ) : null}
           <div className="absolute inset-0 bg-gradient-to-br from-accent/20 to-transparent" />
+          {!image && (
+            <div className="absolute inset-0 flex items-center justify-center text-accent/50">
+              <span className="text-sm font-semibold">BuzingBee Blog</span>
+            </div>
+          )}
         </div>
 
         <article className="prose prose-invert max-w-none">
