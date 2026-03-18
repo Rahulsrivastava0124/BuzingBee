@@ -129,19 +129,34 @@ export const fetchBlogBySlug = async (
   }
 };
 
-const FALLBACK_BLOG_API_URL = "https://api.buzingbee.com/api/blog?";
+const FALLBACK_BLOG_API_URL = "https://api.buzingbee.com/api/blog";
+
+const resolvedBlogApiUrl = (): string => {
+  const raw = readBlogApiUrl() || FALLBACK_BLOG_API_URL;
+  // Validate it's a proper http(s) URL; if not, fall back to hardcoded default
+  if (!raw.startsWith("http://") && !raw.startsWith("https://")) {
+    console.warn(
+      `[blog] BLOG_API_URL value "${raw}" is not a valid URL. Using fallback.`,
+    );
+    return FALLBACK_BLOG_API_URL;
+  }
+  // Strip trailing ? which can cause DNS lookup issues on some platforms
+  return raw.replace(/\?+$/, "");
+};
 
 export const fetchBlogCards = async (): Promise<BlogCardItem[]> => {
-  const blogApiUrl = readBlogApiUrl() || FALLBACK_BLOG_API_URL;
+  const blogApiUrl = resolvedBlogApiUrl();
 
   const blogApiOrigin = readBlogApiOrigin(blogApiUrl);
+
+  console.log(`[blog] Fetching from: ${blogApiUrl}`);
 
   const response = await fetch(blogApiUrl, {
     cache: "no-store",
   });
 
   if (!response.ok) {
-    throw new Error("Unable to fetch blog posts");
+    throw new Error(`Unable to fetch blog posts from ${blogApiUrl} (${response.status})`);
   }
 
   const payload = await response.json();

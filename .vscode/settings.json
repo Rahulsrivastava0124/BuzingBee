@@ -29,6 +29,11 @@
       "matchCommandLine": true
     },
     "npx tailwindcss": true,
-    "npx next": true
+    "npx next": true,
+    "xxd": true,
+    "/^node -e \"const u = new URL\\('https://api\\.buzingbee\\.com/api/blog\\?'\\); console\\.log\\('hostname:', u\\.hostname, '\\| href:', u\\.href\\)\"$/": {
+      "approve": true,
+      "matchCommandLine": true
+    }
   }
 }
