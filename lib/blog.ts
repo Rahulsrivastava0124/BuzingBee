@@ -119,7 +119,7 @@ export const fetchBlogCards = async (): Promise<BlogCardItem[]> => {
   const blogApiUrl = readBlogApiUrl() || DEFAULT_BLOG_API_URL;
 
   const response = await fetch(blogApiUrl, {
-    next: { revalidate: 300 },
+    cache: "no-store",
   });
 
   if (!response.ok) {

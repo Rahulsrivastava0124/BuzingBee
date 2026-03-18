@@ -3,6 +3,8 @@ import BlogCard from "@/components/BlogCard";
 import { blogPosts } from "@/lib/data";
 import { fetchBlogCards } from "@/lib/blog";
 
+export const dynamic = "force-dynamic";
+
 type BlogListItem = {
   id: string | number;
   title: string;
@@ -50,7 +52,8 @@ export default async function BlogPage() {
     if (apiPosts.length > 0) {
       posts = apiPosts;
     }
-  } catch {
+  } catch (err) {
+    console.error("[BlogPage] Failed to fetch API posts, using fallback:", err);
     posts = blogPosts;
   }
 
