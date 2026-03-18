@@ -26,6 +26,7 @@ import {
 import AnimatedCounter from "@/components/AnimatedCounter";
 import SectionHeading from "@/components/SectionHeading";
 import TestimonialCard from "@/components/TestimonialCard";
+import GridBackground from "@/components/GridBackground";
 import {
   stats,
   serviceCategories,
@@ -201,6 +202,7 @@ export default function HomePage() {
       <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden pt-24 pb-16">
         {/* ── Background layer z-0 — all purely decorative ── */}
         <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
+          <GridBackground />
           {/* Persistent non-circular background glow */}
           <div className="absolute inset-x-0 top-0 h-[68%] bg-gradient-to-b from-accent/[0.16] via-accent/[0.08] to-transparent" />
           <div className="absolute inset-x-0 bottom-0 h-[40%] bg-gradient-to-t from-accent/[0.08] to-transparent" />

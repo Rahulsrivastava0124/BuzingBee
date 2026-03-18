@@ -3,7 +3,7 @@ import { Syne, DM_Sans, Roboto } from "next/font/google";
 import "@/styles/globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import FloatingButtons from "@/components/FloatingButtons";
+import ChatWidget from "@/components/ChatWidget";
 import { SITE_CONFIG } from "@/lib/constants";
 
 const syne = Syne({
@@ -226,7 +226,7 @@ export default function RootLayout({
         <Navbar />
         <main className="min-h-screen">{children}</main>
         <Footer />
-        <FloatingButtons />
+        <ChatWidget />
       </body>
     </html>
   );

@@ -5,12 +5,16 @@ export interface BlogApiItem {
   excerpt?: string;
   category?: string;
   image?: string;
+  content?: string;
   slug?: string;
   publishedAt?: string;
   createdAt?: string;
   status?: string;
   seo?: {
+    title?: string;
     description?: string;
+    keywords?: string[] | string;
+    canonicalUrl?: string;
     ogImage?: string;
   };
 }
@@ -23,6 +27,14 @@ export interface BlogCardItem {
   date: string;
   image: string;
   slug: string;
+}
+
+export interface BlogPostItem extends BlogCardItem {
+  content: string;
+  seoTitle: string;
+  seoDescription: string;
+  seoKeywords: string[];
+  canonicalUrl: string;
 }
 
 const readBlogApiUrl = () => {
@@ -93,6 +105,21 @@ const toSlug = (title = "") =>
     .replace(/\s+/g, "-")
     .replace(/-+/g, "-");
 
+const normalizeKeywords = (value?: string[] | string): string[] => {
+  if (Array.isArray(value)) {
+    return value.map((item) => String(item).trim()).filter(Boolean);
+  }
+
+  if (typeof value === "string") {
+    return value
+      .split(",")
+      .map((item) => item.trim())
+      .filter(Boolean);
+  }
+
+  return [];
+};
+
 const normalizeImageUrl = (value?: string, apiOrigin?: string) => {
   if (!value) return "";
 
@@ -120,10 +147,18 @@ const normalizeImageUrl = (value?: string, apiOrigin?: string) => {
 
 export const fetchBlogBySlug = async (
   slug: string,
-): Promise<BlogCardItem | null> => {
+): Promise<BlogPostItem | null> => {
   try {
-    const all = await fetchBlogCards();
-    return all.find((b) => b.slug === slug) ?? null;
+    const all = await fetchBlogPosts();
+    const requested = String(slug || "")
+      .trim()
+      .toLowerCase();
+
+    return (
+      all.find((b) => b.slug.toLowerCase() === requested) ||
+      all.find((b) => toSlug(b.title).toLowerCase() === requested) ||
+      null
+    );
   } catch {
     return null;
   }
@@ -145,6 +180,20 @@ const resolvedBlogApiUrl = (): string => {
 };
 
 export const fetchBlogCards = async (): Promise<BlogCardItem[]> => {
+  const posts = await fetchBlogPosts();
+
+  return posts.map(({ id, title, excerpt, category, date, image, slug }) => ({
+    id,
+    title,
+    excerpt,
+    category,
+    date,
+    image,
+    slug,
+  }));
+};
+
+export const fetchBlogPosts = async (): Promise<BlogPostItem[]> => {
   const blogApiUrl = resolvedBlogApiUrl();
 
   const blogApiOrigin = readBlogApiOrigin(blogApiUrl);
@@ -180,5 +229,13 @@ export const fetchBlogCards = async (): Promise<BlogCardItem[]> => {
     date: toReadableDate(blog.publishedAt || blog.createdAt),
     image: normalizeImageUrl(blog.image || blog.seo?.ogImage, blogApiOrigin),
     slug: blog.slug || toSlug(blog.title || `blog-${index + 1}`),
+    content: blog.content || "",
+    seoTitle: blog.seo?.title || blog.title || "BuzingBee Blog",
+    seoDescription:
+      blog.seo?.description ||
+      blog.excerpt ||
+      "Read full details in the article.",
+    seoKeywords: normalizeKeywords(blog.seo?.keywords),
+    canonicalUrl: blog.seo?.canonicalUrl || "",
   }));
 };

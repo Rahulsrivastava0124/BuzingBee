@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import BlogCard from "@/components/BlogCard";
 import { fetchBlogCards } from "@/lib/blog";
+import { SITE_CONFIG } from "@/lib/constants";
 
 export const dynamic = "force-dynamic";
 
@@ -34,12 +35,18 @@ export const metadata: Metadata = {
       "Read BuzingBee blog articles on digital marketing, AI, web development, and practical growth strategies.",
     url: "/blog",
     type: "website",
+    images: [{ url: "/og-image.png", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Blog — Digital Marketing & AI Insights",
     description:
       "Read BuzingBee blog articles on digital marketing, AI, web development, and practical growth strategies.",
+    images: ["/og-image.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
   },
 };
 
@@ -53,8 +60,31 @@ export default async function BlogPage() {
     posts = [];
   }
 
+  const itemListSchema = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name: "BuzingBee Blog",
+    description:
+      "Insights on digital marketing, AI, web development, and business growth.",
+    url: `${SITE_CONFIG.url}/blog`,
+    mainEntity: {
+      "@type": "ItemList",
+      itemListElement: posts.map((post, index) => ({
+        "@type": "ListItem",
+        position: index + 1,
+        url: `${SITE_CONFIG.url}/blog/${post.slug}`,
+        name: post.title,
+      })),
+    },
+  };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }}
+      />
+
       {/* Hero */}
       <section className="pt-32 pb-16 px-4 sm:px-6 lg:px-8 text-center relative overflow-hidden">
         <div className="absolute top-10 left-10 w-72 h-72 bg-accent/10 rounded-full blur-[120px]" />
