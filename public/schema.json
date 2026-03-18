@@ -22,12 +22,14 @@
       "contactPoint": {
         "@type": "ContactPoint",
         "contactType": "customer service",
-        "telephone": "+1-950-798-1942",
+        "telephone": "+91 95079 81942",
         "areaServed": "Worldwide"
       },
       "address": {
         "@type": "PostalAddress",
-        "addressCountry": "US"
+        "addressLocality": "Kolkata",
+        "addressRegion": "West Bengal",
+        "addressCountry": "IN"
       }
     },
     {
@@ -60,6 +62,30 @@
           "url": "https://buzingbee.com/services",
           "name": "Services",
           "description": "Explore BuzingBee digital marketing and AI services: AI agent development, SEO, Google Ads, Meta Ads, website automation, and email marketing automation.",
+          "isPartOf": { "@id": "https://buzingbee.com/#website" }
+        },
+        {
+          "@type": ["WebPage", "SiteNavigationElement"],
+          "@id": "https://buzingbee.com/pricing#webpage",
+          "url": "https://buzingbee.com/pricing",
+          "name": "Pricing",
+          "description": "Compare monthly, yearly, and project-based pricing plans for development, marketing, and AI services.",
+          "isPartOf": { "@id": "https://buzingbee.com/#website" }
+        },
+        {
+          "@type": ["WebPage", "SiteNavigationElement"],
+          "@id": "https://buzingbee.com/startup#webpage",
+          "url": "https://buzingbee.com/startup",
+          "name": "Startup Plans",
+          "description": "Affordable startup plans with minimal cost entry points across all BuzingBee services.",
+          "isPartOf": { "@id": "https://buzingbee.com/#website" }
+        },
+        {
+          "@type": ["WebPage", "SiteNavigationElement"],
+          "@id": "https://buzingbee.com/portfolio#webpage",
+          "url": "https://buzingbee.com/portfolio",
+          "name": "Portfolio",
+          "description": "Browse BuzingBee portfolio and case studies for websites, apps, and digital growth campaigns.",
           "isPartOf": { "@id": "https://buzingbee.com/#website" }
         },
         {

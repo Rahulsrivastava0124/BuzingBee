@@ -379,6 +379,33 @@ export default function HomePage() {
             </Link>
           </motion.div>
 
+          <motion.div
+            initial={false}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.55, delay: 0.52 }}
+            className="mt-6 w-full max-w-3xl"
+          >
+            <p className="text-xs uppercase tracking-[0.2em] text-textMuted mb-3">
+              Explore Popular Pages
+            </p>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-2.5">
+              {[
+                { label: "Services", href: "/services" },
+                { label: "Pricing", href: "/pricing" },
+                { label: "Startup Plans", href: "/startup" },
+                { label: "Portfolio", href: "/portfolio" },
+              ].map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className="rounded-xl border border-border bg-card/80 px-3 py-2.5 text-sm font-semibold text-textHeading hover:border-accent/45 hover:text-accent transition-colors"
+                >
+                  {item.label}
+                </Link>
+              ))}
+            </div>
+          </motion.div>
+
           {/* ── Stats strip ── */}
           <motion.div
             initial={false}

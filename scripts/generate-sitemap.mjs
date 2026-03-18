@@ -5,8 +5,23 @@ const SITE_URL = (process.env.SITE_URL || "https://buzingbee.com").replace(
   /\/$/,
   "",
 );
-const BLOG_API_URL =
-  process.env.BLOG_API_URL || process.env.NEXT_PUBLIC_BLOG_API_URL || "";
+const FALLBACK_BLOG_API_URL = "https://api.buzingbee.com/api/blog";
+
+const resolvedBlogApiUrl = () => {
+  const raw =
+    process.env.BLOG_API_URL ||
+    process.env.NEXT_PUBLIC_BLOG_API_URL ||
+    FALLBACK_BLOG_API_URL;
+
+  if (!raw.startsWith("http://") && !raw.startsWith("https://")) {
+    console.warn(
+      `Invalid BLOG_API_URL value "${raw}". Using fallback ${FALLBACK_BLOG_API_URL}.`,
+    );
+    return FALLBACK_BLOG_API_URL;
+  }
+
+  return raw.replace(/\?+$/, "");
+};
 
 const STATIC_ROUTES = [
   { path: "/", changefreq: "weekly", priority: "1.0" },
@@ -37,15 +52,10 @@ const escapeXml = (value = "") =>
 const today = () => new Date().toISOString().split("T")[0];
 
 const fetchBlogRoutes = async () => {
-  if (!BLOG_API_URL) {
-    console.warn(
-      "Skipping blog routes in sitemap: BLOG_API_URL/NEXT_PUBLIC_BLOG_API_URL is not set.",
-    );
-    return [];
-  }
+  const blogApiUrl = resolvedBlogApiUrl();
 
   try {
-    const response = await fetch(BLOG_API_URL);
+    const response = await fetch(blogApiUrl);
     if (!response.ok) return [];
 
     const payload = await response.json();

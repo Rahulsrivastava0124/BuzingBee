@@ -27,10 +27,13 @@
     "typescript": "^5.9.3"
   },
   "scripts": {
-    "predev": "pkill -f \"next dev\" >/dev/null 2>&1 || true && kill -9 $(lsof -ti:3000) >/dev/null 2>&1 || true && sleep 1 && rm -rf .next",
+    "seo:generate": "node scripts/generate-sitemap.mjs",
+    "predev": "pkill -f \"next dev\" >/dev/null 2>&1 || true && kill -9 $(lsof -ti:3000) >/dev/null 2>&1 || true && sleep 1 && rm -rf .next && npm run seo:generate",
     "dev": "next dev -p 3000",
+    "prebuild": "npm run seo:generate",
+    "prestart": "npm run seo:generate",
     "start": "next start",
-    "build": "node scripts/generate-sitemap.mjs && next build",
+    "build": "next build",
     "test": "jest",
     "lint": "next lint"
   },
