@@ -1,6 +1,5 @@
 import { NextResponse } from "next/server";
 import { fetchBlogCards } from "@/lib/blog";
-import { blogPosts } from "@/lib/data";
 
 export const revalidate = 300;
 
@@ -12,8 +11,12 @@ export async function GET() {
       return NextResponse.json({ posts }, { status: 200 });
     }
 
-    return NextResponse.json({ posts: blogPosts }, { status: 200 });
-  } catch {
-    return NextResponse.json({ posts: blogPosts }, { status: 200 });
+    return NextResponse.json({ posts: [] }, { status: 200 });
+  } catch (error) {
+    console.error("[API /blog] Failed to fetch live posts:", error);
+    return NextResponse.json(
+      { posts: [], error: "Unable to fetch live blog posts" },
+      { status: 502 },
+    );
   }
 }

@@ -11,6 +11,7 @@ export interface BlogApiItem {
   status?: string;
   seo?: {
     description?: string;
+    ogImage?: string;
   };
 }
 
@@ -24,14 +25,19 @@ export interface BlogCardItem {
   slug: string;
 }
 
-const DEFAULT_BLOG_API_URL = "https://api.buzingbee.com/api/blog?";
-const DEFAULT_BLOG_IMAGE_BASE_URL = "https://api.buzingbee.com";
-
 const readBlogApiUrl = () => {
   const value =
     process.env.BLOG_API_URL || process.env.NEXT_PUBLIC_BLOG_API_URL || "";
 
   return typeof value === "string" ? value.trim() : "";
+};
+
+const readBlogApiOrigin = (blogApiUrl: string) => {
+  try {
+    return new URL(blogApiUrl).origin;
+  } catch {
+    return "";
+  }
 };
 
 const normalizePayload = (payload: unknown): BlogApiItem[] => {
@@ -53,6 +59,14 @@ const normalizePayload = (payload: unknown): BlogApiItem[] => {
     Array.isArray((payload as { blogs?: BlogApiItem[] }).blogs)
   ) {
     return (payload as { blogs: BlogApiItem[] }).blogs;
+  }
+
+  if (
+    payload &&
+    typeof payload === "object" &&
+    Array.isArray((payload as { posts?: BlogApiItem[] }).posts)
+  ) {
+    return (payload as { posts: BlogApiItem[] }).posts;
   }
 
   return [];
@@ -79,7 +93,7 @@ const toSlug = (title = "") =>
     .replace(/\s+/g, "-")
     .replace(/-+/g, "-");
 
-const normalizeImageUrl = (value?: string) => {
+const normalizeImageUrl = (value?: string, apiOrigin?: string) => {
   if (!value) return "";
 
   const trimmed = value.trim();
@@ -98,10 +112,10 @@ const normalizeImageUrl = (value?: string) => {
   }
 
   if (trimmed.startsWith("/")) {
-    return `${DEFAULT_BLOG_IMAGE_BASE_URL}${trimmed}`;
+    return apiOrigin ? `${apiOrigin}${trimmed}` : trimmed;
   }
 
-  return `${DEFAULT_BLOG_IMAGE_BASE_URL}/${trimmed.replace(/^\/+/, "")}`;
+  return apiOrigin ? `${apiOrigin}/${trimmed.replace(/^\/+/, "")}` : trimmed;
 };
 
 export const fetchBlogBySlug = async (
@@ -116,7 +130,14 @@ export const fetchBlogBySlug = async (
 };
 
 export const fetchBlogCards = async (): Promise<BlogCardItem[]> => {
-  const blogApiUrl = readBlogApiUrl() || DEFAULT_BLOG_API_URL;
+  const blogApiUrl = readBlogApiUrl();
+  if (!blogApiUrl) {
+    throw new Error(
+      "Missing blog API URL. Set BLOG_API_URL or NEXT_PUBLIC_BLOG_API_URL.",
+    );
+  }
+
+  const blogApiOrigin = readBlogApiOrigin(blogApiUrl);
 
   const response = await fetch(blogApiUrl, {
     cache: "no-store",
@@ -128,7 +149,10 @@ export const fetchBlogCards = async (): Promise<BlogCardItem[]> => {
 
   const payload = await response.json();
   const blogs = normalizePayload(payload)
-    .filter((blog) => !blog?.status || blog.status === "published")
+    .filter(
+      (blog) =>
+        !blog?.status || blog.status.trim().toLowerCase() === "published",
+    )
     .filter((blog) => blog?.title);
 
   return blogs.map((blog, index) => ({
@@ -140,7 +164,7 @@ export const fetchBlogCards = async (): Promise<BlogCardItem[]> => {
       "Read full details in the article.",
     category: blog.category || "Blog",
     date: toReadableDate(blog.publishedAt || blog.createdAt),
-    image: normalizeImageUrl(blog.image),
+    image: normalizeImageUrl(blog.image || blog.seo?.ogImage, blogApiOrigin),
     slug: blog.slug || toSlug(blog.title || `blog-${index + 1}`),
   }));
 };

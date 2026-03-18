@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import BlogCard from "@/components/BlogCard";
-import { blogPosts } from "@/lib/data";
 import { fetchBlogCards } from "@/lib/blog";
 
 export const dynamic = "force-dynamic";
@@ -45,16 +44,13 @@ export const metadata: Metadata = {
 };
 
 export default async function BlogPage() {
-  let posts: BlogListItem[] = blogPosts;
+  let posts: BlogListItem[] = [];
 
   try {
-    const apiPosts = await fetchBlogCards();
-    if (apiPosts.length > 0) {
-      posts = apiPosts;
-    }
+    posts = await fetchBlogCards();
   } catch (err) {
-    console.error("[BlogPage] Failed to fetch API posts, using fallback:", err);
-    posts = blogPosts;
+    console.error("[BlogPage] Failed to fetch API posts:", err);
+    posts = [];
   }
 
   return (
@@ -78,20 +74,26 @@ export default async function BlogPage() {
 
       {/* Blog Grid */}
       <section className="section-padding pt-4">
-        <div className="container-max grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-          {posts.map((post, i) => (
-            <BlogCard
-              key={post.id}
-              title={post.title}
-              excerpt={post.excerpt}
-              category={post.category}
-              date={post.date}
-              image={post.image}
-              slug={post.slug}
-              index={i}
-            />
-          ))}
-        </div>
+        {posts.length > 0 ? (
+          <div className="container-max grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+            {posts.map((post, i) => (
+              <BlogCard
+                key={post.id}
+                title={post.title}
+                excerpt={post.excerpt}
+                category={post.category}
+                date={post.date}
+                image={post.image}
+                slug={post.slug}
+                index={i}
+              />
+            ))}
+          </div>
+        ) : (
+          <div className="container-max text-center text-textMuted">
+            No blog posts available right now.
+          </div>
+        )}
       </section>
     </>
   );

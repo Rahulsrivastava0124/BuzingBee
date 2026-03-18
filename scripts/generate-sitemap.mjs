@@ -6,9 +6,7 @@ const SITE_URL = (process.env.SITE_URL || "https://buzingbee.com").replace(
   "",
 );
 const BLOG_API_URL =
-  process.env.BLOG_API_URL ||
-  process.env.NEXT_PUBLIC_BLOG_API_URL ||
-  "https://api.buzingbee.com/api/blog?";
+  process.env.BLOG_API_URL || process.env.NEXT_PUBLIC_BLOG_API_URL || "";
 
 const STATIC_ROUTES = [
   { path: "/", changefreq: "weekly", priority: "1.0" },
@@ -39,6 +37,13 @@ const escapeXml = (value = "") =>
 const today = () => new Date().toISOString().split("T")[0];
 
 const fetchBlogRoutes = async () => {
+  if (!BLOG_API_URL) {
+    console.warn(
+      "Skipping blog routes in sitemap: BLOG_API_URL/NEXT_PUBLIC_BLOG_API_URL is not set.",
+    );
+    return [];
+  }
+
   try {
     const response = await fetch(BLOG_API_URL);
     if (!response.ok) return [];
