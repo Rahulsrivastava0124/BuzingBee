@@ -129,13 +129,10 @@ export const fetchBlogBySlug = async (
   }
 };
 
+const FALLBACK_BLOG_API_URL = "https://api.buzingbee.com/api/blog?";
+
 export const fetchBlogCards = async (): Promise<BlogCardItem[]> => {
-  const blogApiUrl = readBlogApiUrl();
-  if (!blogApiUrl) {
-    throw new Error(
-      "Missing blog API URL. Set BLOG_API_URL or NEXT_PUBLIC_BLOG_API_URL.",
-    );
-  }
+  const blogApiUrl = readBlogApiUrl() || FALLBACK_BLOG_API_URL;
 
   const blogApiOrigin = readBlogApiOrigin(blogApiUrl);
 

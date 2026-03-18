@@ -23,6 +23,14 @@ FROM node:20-alpine AS runner
 WORKDIR /app
 ENV NODE_ENV=production
 
+ARG NEXT_PUBLIC_BLOG_API_URL=https://api.buzingbee.com/api/blog?
+ARG BLOG_API_URL=https://api.buzingbee.com/api/blog?
+ARG SITE_URL=https://buzingbee.com
+
+ENV NEXT_PUBLIC_BLOG_API_URL=$NEXT_PUBLIC_BLOG_API_URL
+ENV BLOG_API_URL=$BLOG_API_URL
+ENV SITE_URL=$SITE_URL
+
 COPY --from=builder /app/public ./public
 COPY --from=builder /app/.next/standalone ./
 COPY --from=builder /app/.next/static ./.next/static
