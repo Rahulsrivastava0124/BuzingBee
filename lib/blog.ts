@@ -156,7 +156,9 @@ export const fetchBlogCards = async (): Promise<BlogCardItem[]> => {
   });
 
   if (!response.ok) {
-    throw new Error(`Unable to fetch blog posts from ${blogApiUrl} (${response.status})`);
+    throw new Error(
+      `Unable to fetch blog posts from ${blogApiUrl} (${response.status})`,
+    );
   }
 
   const payload = await response.json();
