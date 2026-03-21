@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ChatWidget from "@/components/ChatWidget";
 import { SITE_CONFIG } from "@/lib/constants";
+ 
 
 const syne = Syne({
   subsets: ["latin"],
