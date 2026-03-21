@@ -27,26 +27,22 @@ const roboto = Roboto({
 
 export const metadata: Metadata = {
   title: {
-    default: `Best Digital Marketing Agency in Dhanbad | ${SITE_CONFIG.name}`,
+    default: `${SITE_CONFIG.name} — Digital Marketing & AI Services Agency`,
     template: `%s | ${SITE_CONFIG.name}`,
   },
   alternates: {
     canonical: "/",
   },
   description:
-    "BuzingBee is a leading digital marketing agency in Dhanbad delivering SEO, paid ads, social media marketing, web development, and AI-powered automation for measurable growth.",
+    "BuzingBee is a leading digital marketing and AI services agency. We help businesses grow with web development, mobile apps, SEO, paid ads, and AI-powered automation.",
   keywords: [
     "digital marketing agency",
-    "best digital marketing agency in dhanbad",
+    "dhanbad degital marketing agency",
     "dhanbad digital marketing agency",
     "digital marketing agency in dhanbad",
-    "top digital marketing agency in dhanbad",
+    "best digital marketing agency in dhanbad",
     "digital marketing company in dhanbad",
     "seo agency in dhanbad",
-    "local seo services in dhanbad",
-    "social media marketing in dhanbad",
-    "google ads agency in dhanbad",
-    "website development company in dhanbad",
     "google ads agency",
     "meta ads agency",
     "social media marketing agency",
@@ -81,16 +77,16 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: SITE_CONFIG.url,
     siteName: SITE_CONFIG.name,
-    title: `Best Digital Marketing Agency in Dhanbad  & AI Services Agency | ${SITE_CONFIG.name}`,
+    title: `${SITE_CONFIG.name} — Digital Marketing & AI Services Agency`,
     description:
-      "Looking for the best digital marketing agency in Dhanbad? BuzingBee helps brands grow with SEO, ads, social media, websites, and AI solutions.",
+      "BuzingBee is a leading digital marketing and AI services agency helping businesses grow with intelligent solutions.",
     images: [{ url: "/og-image.png", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
-    title: `Best Digital Marketing Agency in Dhanbad | ${SITE_CONFIG.name}`,
+    title: `${SITE_CONFIG.name} — Digital Marketing & AI Services Agency`,
     description:
-      "BuzingBee is a trusted digital marketing agency in Dhanbad for SEO, paid ads, social media, and AI-driven growth.",
+      "BuzingBee is a leading digital marketing and AI services agency.",
     images: ["/og-image.png"],
   },
   robots: {
@@ -125,7 +121,7 @@ const structuredData = {
       },
       image: `${SITE_CONFIG.url}/og-image.png`,
       description:
-        "BuzingBee provides digital marketing, web development, and AI services to help businesses grow in Dhanbad and across India.",
+        "BuzingBee provides digital marketing services and AI services to help businesses grow.",
       knowsAbout: [
         "SEO",
         "AI SEO",
@@ -148,30 +144,8 @@ const structuredData = {
         "@type": "ContactPoint",
         contactType: "customer service",
         telephone: SITE_CONFIG.phone,
-        areaServed: ["Dhanbad", "Jharkhand", "India", "Worldwide"],
+        areaServed: "Worldwide",
       },
-    },
-    {
-      "@type": "ProfessionalService",
-      "@id": `${SITE_CONFIG.url}/#digital-marketing-agency`,
-      name: `${SITE_CONFIG.name} Digital Marketing Agency`,
-      url: SITE_CONFIG.url,
-      description:
-        "Digital marketing agency in Dhanbad offering SEO, Google Ads, Meta Ads, social media marketing, web development, and AI automation services.",
-      provider: { "@id": `${SITE_CONFIG.url}/#organization` },
-      areaServed: [
-        { "@type": "City", name: "Dhanbad" },
-        { "@type": "State", name: "Jharkhand" },
-        { "@type": "Country", name: "India" },
-      ],
-      serviceType: [
-        "SEO Services",
-        "Google Ads Management",
-        "Meta Ads Management",
-        "Social Media Marketing",
-        "Web Development",
-        "AI Automation",
-      ],
     },
     {
       "@type": "WebSite",
@@ -251,20 +225,6 @@ const structuredData = {
           isPartOf: { "@id": `${SITE_CONFIG.url}/#website` },
         },
       ],
-    },
-    {
-      "@type": "WebPage",
-      "@id": `${SITE_CONFIG.url}/#home-webpage`,
-      url: `${SITE_CONFIG.url}/`,
-      name: "Best Digital Marketing Agency in Dhanbad",
-      isPartOf: { "@id": `${SITE_CONFIG.url}/#website` },
-      about: { "@id": `${SITE_CONFIG.url}/#digital-marketing-agency` },
-      primaryImageOfPage: {
-        "@type": "ImageObject",
-        url: `${SITE_CONFIG.url}/og-image.png`,
-      },
-      description:
-        "BuzingBee helps businesses in Dhanbad grow with SEO, paid ads, social media marketing, web development, and AI-powered growth systems.",
     },
   ],
 };

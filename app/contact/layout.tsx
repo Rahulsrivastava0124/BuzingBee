@@ -1,13 +1,11 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Contact Best Digital Marketing Agency in Dhanbad",
+  title: "Contact Us — Get a Free Quote",
   description:
-    "Contact BuzingBee, a trusted digital marketing agency in Dhanbad, for SEO, paid ads, social media marketing, web development, and AI services.",
+    "Contact BuzingBee for digital marketing, web development, and AI services. Fill out our form or call us to get a free quote for your project.",
   keywords: [
     "contact BuzingBee",
-    "best digital marketing agency in dhanbad",
-    "digital marketing agency in dhanbad contact",
     "get a free quote",
     "digital agency contact",
     "web development quote",
@@ -17,17 +15,17 @@ export const metadata: Metadata = {
     canonical: "/contact",
   },
   openGraph: {
-    title: "Contact Best Digital Marketing Agency in Dhanbad",
+    title: "Contact Us — Get a Free Quote",
     description:
-      "Reach out to BuzingBee for SEO, paid ads, social media, web development, and AI services in Dhanbad. Get a free quote.",
+      "Reach out to BuzingBee for development, marketing, AI, and growth services. Get a free quote for your project.",
     url: "/contact",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Contact Best Digital Marketing Agency in Dhanbad",
+    title: "Contact Us — Get a Free Quote",
     description:
-      "Reach out to BuzingBee for SEO, paid ads, social media, web development, and AI services in Dhanbad. Get a free quote.",
+      "Reach out to BuzingBee for development, marketing, AI, and growth services. Get a free quote for your project.",
   },
 };
 
