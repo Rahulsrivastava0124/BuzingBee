@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Services — Development, Marketing, AI, LLM SEO & GEO",
+  title: "Digital Marketing Services in Dhanbad — SEO, Ads, Social & AI",
   description:
-    "Explore BuzingBee services: website development, web application development, mobile app development, digital marketing, paid ads, AI automation, LLM SEO, AI SEO, and GEO strategies for business growth.",
+    "Explore BuzingBee digital marketing services in Dhanbad: local SEO, Google Ads, Meta Ads, social media marketing, website development, and AI automation for business growth.",
   keywords: [
     "digital marketing services",
     "dhanbad degital marketing agency",
@@ -52,17 +52,17 @@ export const metadata: Metadata = {
     canonical: "/services",
   },
   openGraph: {
-    title: "Services — Development, Marketing, AI, LLM SEO & GEO",
+    title: "Digital Marketing Services in Dhanbad — SEO, Ads, Social & AI",
     description:
-      "Explore BuzingBee services across website development, web app development, mobile app development, digital marketing, AI automation, LLM SEO, AI SEO, and generative engine optimization.",
+      "BuzingBee offers result-driven digital marketing services in Dhanbad, including SEO, paid ads, social media, web development, and AI automation.",
     url: "/services",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Services — Development, Marketing, AI, LLM SEO & GEO",
+    title: "Digital Marketing Services in Dhanbad — SEO, Ads, Social & AI",
     description:
-      "Explore BuzingBee services across website development, web app development, mobile app development, digital marketing, AI automation, LLM SEO, AI SEO, and generative engine optimization.",
+      "BuzingBee offers result-driven digital marketing services in Dhanbad, including SEO, paid ads, social media, web development, and AI automation.",
   },
 };
 

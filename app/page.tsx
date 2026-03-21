@@ -266,7 +266,7 @@ export default function HomePage() {
           >
             <span className="inline-flex items-center gap-2 bg-[#1f1b12]/70 text-[#FACC15] text-sm font-semibold px-5 py-2 rounded-full border border-[#FACC15]/35 shadow-sm">
               <Zap className="w-4 h-4" />
-              🐝 AI-First Development Agency
+              🐝 Digital Marketing Agency in Dhanbad
             </span>
           </motion.div>
 
@@ -277,9 +277,9 @@ export default function HomePage() {
             transition={{ duration: 0.65, delay: 0.1 }}
             className="text-4xl sm:text-6xl md:text-7xl font-bold font-heading text-textHeading leading-[1.08] tracking-tight"
           >
-            Build Faster with{" "}
+            Best Digital Marketing Agency in{" "}
             <span className="relative inline-block">
-              <span className="text-[#FACC15]">AI-Powered</span>
+              <span className="text-[#FACC15]">Dhanbad</span>
               <svg
                 className="absolute -bottom-2 left-0 w-full"
                 viewBox="0 0 300 12"
@@ -295,8 +295,7 @@ export default function HomePage() {
                   className="text-[#FACC15]"
                 />
               </svg>
-            </span>{" "}
-            Development
+            </span>
           </motion.h1>
 
           {/* ── Sub-headline ── */}
@@ -306,9 +305,9 @@ export default function HomePage() {
             transition={{ duration: 0.65, delay: 0.22 }}
             className="mt-8 text-base md:text-lg text-textBody max-w-2xl leading-relaxed"
           >
-            BuzingBee delivers AI-powered web and app development that is
-            cost-effective, faster to launch, and built for real business growth
-            — without agency delays or inflated budgets.
+            BuzingBee helps local and growing brands with ROI-focused SEO,
+            Google Ads, Meta Ads, social media marketing, web development, and
+            AI-powered automation to generate consistent leads and revenue.
           </motion.p>
 
           {/* ── Trust signals row ── */}

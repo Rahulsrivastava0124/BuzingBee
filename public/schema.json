@@ -11,8 +11,8 @@
         "url": "https://buzingbee.com/logo.png"
       },
       "image": "https://buzingbee.com/og-image.png",
-      "description": "BuzingBee provides digital marketing services and AI services for business growth, including SEO, paid ads, intelligent automation, and AI agents.",
-      "keywords": "digital marketing services, AI services, business growth, SEO, Google Ads, Meta Ads, email marketing, AI agents",
+      "description": "BuzingBee provides digital marketing, web development, and AI services for business growth in Dhanbad and across India, including SEO, paid ads, social media marketing, and intelligent automation.",
+      "keywords": "best digital marketing agency in dhanbad, digital marketing agency in dhanbad, SEO services in dhanbad, Google Ads, Meta Ads, social media marketing, AI services",
       "sameAs": [
         "https://www.instagram.com/buzingbee_/",
         "https://www.facebook.com/profile.php?id=61562079487441",
@@ -23,7 +23,7 @@
         "@type": "ContactPoint",
         "contactType": "customer service",
         "telephone": "+91 95079 81942",
-        "areaServed": "Worldwide"
+        "areaServed": ["Dhanbad", "Jharkhand", "India", "Worldwide"]
       },
       "address": {
         "@type": "PostalAddress",
@@ -53,7 +53,7 @@
           "@id": "https://buzingbee.com/#webpage",
           "url": "https://buzingbee.com/",
           "name": "Home",
-          "description": "BuzingBee: Digital Marketing Services & AI Services for Business Growth.",
+          "description": "Best digital marketing agency in Dhanbad for SEO, paid ads, social media, website development, and AI services.",
           "isPartOf": { "@id": "https://buzingbee.com/#website" }
         },
         {

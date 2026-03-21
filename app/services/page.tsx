@@ -20,8 +20,9 @@ export default function ServicesPage() {
             Our <span className="text-accent">Services</span>
           </h1>
           <p className="mt-4 text-textBody max-w-2xl mx-auto text-base md:text-lg leading-relaxed">
-            Comprehensive digital solutions tailored to accelerate your business
-            growth — from development to marketing.
+            Comprehensive digital solutions from the best digital marketing
+            agency in Dhanbad, tailored to accelerate your business growth —
+            from development to marketing.
           </p>
         </div>
       </section>
